@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-12T15:37:52.964Z</updated>
+  <updated>2019-07-15T08:12:41.224Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mac Custom</title>
+    <link href="http://yoursite.com/2019/07/15/mac-custom/"/>
+    <id>http://yoursite.com/2019/07/15/mac-custom/</id>
+    <published>2019-07-15T08:09:25.000Z</published>
+    <updated>2019-07-15T08:12:41.224Z</updated>
+    
+    <content type="html"><![CDATA[<p>Mac 电脑整体的设计思路和机甲片里的「特装机」一样——不惜工本，提升某几个方面的性能，不易整备，零件/技能不易通用。</p><a id="more"></a><p>但 Mac 好的是在特化的同时保持了界面友好性，学习成本相当低，比起难以驾驭的「古铁巨人」更像界面友好的「初代高达」——并不需要太多特殊技术也能发挥相当一部分性能，单纯只是造价高昂、不易维护而已。</p><p>特机给一般操纵士来开，当然会有诸多怨言——难以后勤补给、和队友的兼容性差、某些方面因为特殊设计而产生缺陷。同时对特机的特化性能优势，如果抱着一般操纵士的思维，也难以有效利用。</p><p>当然也有「相良宗介」这种量产大神……但是人家嘴上百般嫌弃特机「强弩」，最后还是乖乖一路用「强弩」和「利维坦」打到了破关:) </p><p>特机是设计出来在特殊情境下发挥非凡价值的机械，其能力的发挥需要配得上它的特殊操纵士和合适的场景。一般操纵士开特机会有反效果，是因为他们承受了特机带来的问题，却没能发挥出特机的价值。</p><blockquote><p>Macintosh、出る！</p></blockquote><p>另外HHKB是真的需要一些特殊技巧。</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Mac 电脑整体的设计思路和机甲片里的「特装机」一样——不惜工本，提升某几个方面的性能，不易整备，零件/技能不易通用。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Hardware" scheme="http://yoursite.com/categories/Hardware/"/>
+    
+      <category term="MacBook" scheme="http://yoursite.com/categories/Hardware/MacBook/"/>
+    
+    
+      <category term="Robot" scheme="http://yoursite.com/tags/Robot/"/>
+    
+      <category term="lan-chinese" scheme="http://yoursite.com/tags/lan-chinese/"/>
+    
+      <category term="design" scheme="http://yoursite.com/tags/design/"/>
+    
+      <category term="productivity" scheme="http://yoursite.com/tags/productivity/"/>
+    
+  </entry>
   
   <entry>
     <title>Web Scraping Introduction with Scrapy</title>
