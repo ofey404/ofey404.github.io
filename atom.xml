@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-07-17T12:36:51.808Z</updated>
+  <updated>2019-07-18T02:22:55.336Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>用 RSS Hub 自建 RSS 订阅</title>
+    <link href="http://yoursite.com/2019/07/18/my-rss-hub/"/>
+    <id>http://yoursite.com/2019/07/18/my-rss-hub/</id>
+    <published>2019-07-18T02:18:36.000Z</published>
+    <updated>2019-07-18T02:22:55.336Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>日常手册/指北 分享</p></blockquote><h2 id="综述和背景"><a href="#综述和背景" class="headerlink" title="综述和背景"></a>综述和背景</h2><p>RSS Hub 是一个活跃开发的开源项目，「万物皆可 RSS」的口号表明了它是一个能把各种乱七八糟的东西制作成 RSS feed，包括 twitter、微信公众号……的项目。</p><p>正好最近入手了 Reeder 4，同时又有通过 RSS 订阅 Issue 的需求，所以就复活自己在 DigitalOcean 上吃灰的云主机，来建他一个。</p><a id="more"></a><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><blockquote><p>解决办法适用的环境/版本</p></blockquote><ul><li>RSS Hub <a href="https://hub.docker.com/r/diygod/rsshub" target="_blank" rel="noopener">Docker 版本</a></li><li>DigitalOcean 云主机一只</li></ul><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><blockquote><p>逐步说明用什么工具, 在哪儿, 进行什么操作, 如何检验, 应该获得什么输出 …</p></blockquote><h3 id="安装-Docker"><a href="#安装-Docker" class="headerlink" title="安装 Docker"></a>安装 Docker</h3><p>使用 Docker 的方式来部署 RSS Hub，这是<a href="https://docs.rsshub.app/install/#%E5%AE%89%E8%A3%85-2" target="_blank" rel="noopener">官方手册</a>上的推荐方案之一。</p><p>主要还是 Docker 省心。</p><p>DO 竟然自带<a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04" target="_blank" rel="noopener">安装 Docker 的说明</a>。省心程度+1</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">sudo apt update</span><br><span class="line">sudo apt install apt-transport-https ca-certificates curl software-properties-common</span><br><span class="line">curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -</span><br><span class="line">sudo add-apt-repository <span class="string">"deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"</span></span><br><span class="line"></span><br><span class="line">sudo apt update</span><br><span class="line">apt-cache policy docker-ce</span><br><span class="line">sudo apt install docker-ce</span><br><span class="line"></span><br><span class="line">sudo systemctl status docker</span><br></pre></td></tr></table></figure><p>DO 的该说明竟然连 Docker 命令的使用、Use docker without sudo 都讲到了，简直是入门手册……配套服务真的好。</p><h3 id="使用-Docker-部署"><a href="#使用-Docker-部署" class="headerlink" title="使用 Docker 部署"></a>使用 Docker 部署</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">docker pull diygod/rsshub</span><br><span class="line">docker run -d --name rsshub -p 1200:1200 diygod/rsshub</span><br></pre></td></tr></table></figure><p>访问 (ip of VPS):1200 可以看到一个光秃秃的界面。</p><h3 id="添加订阅源"><a href="#添加订阅源" class="headerlink" title="添加订阅源"></a>添加订阅源</h3><p><a href="https://docs.rsshub.app" target="_blank" rel="noopener">官方手册</a>的「路由」页面放了许多写好的路由规则，直接按照规则订阅就完事了。</p><p>自己写规则贡献规则什么的以后再说吧……说着就冲动消费入了个 Reeder 4 for iOS。</p><p>对某个源生成订阅的方法：</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">http://(your RSS Hub VPS ip):1200/路由</span><br><span class="line"><span class="comment"># eg:</span></span><br><span class="line">http://(your RSS Hub VPS ip):1200/nytimes/dual  <span class="comment"># 纽约时报</span></span><br></pre></td></tr></table></figure><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>再次说明经验应用要注意的, 容易出问题的点, 以及有助记忆的作弊条…</p></blockquote><p>真的很简单，没有什么出问题的点，一个坑都没踩到，二十分钟弄完了。</p><p>主要还是要找到最官方的手册，比如 DO 自己部署 Docker 的说明，和 RSS Hub 的官方手册，这样可以最大程度地避免踩到特殊环境的坑。</p><p>订阅生成法：<code>http://(your RSS Hub VPS ip):1200/路由</code></p><p>路由在<a href="https://docs.rsshub.app" target="_blank" rel="noopener">官方手册</a></p><h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><blockquote><p>过程中参考过的重要文章/图书/模块/代码/…</p></blockquote><ul><li><a href="http://diygod.me/ohmyrss/" target="_blank" rel="noopener">我有特别的 RSS 技巧-DIYGOD</a></li><li><a href="https://sspai.com/post/41302" target="_blank" rel="noopener">如何搭建属于自己的 RSS 服务，高效精准获取信息-少数派</a></li><li><a href="https://docs.rsshub.app" target="_blank" rel="noopener">RSS Hub 官方手册</a></li><li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-18-04" target="_blank" rel="noopener">DO 对安装 docker 的说明</a></li><li>永远的: <a href="https://gitlab.com/101camp/2py/tasks/wikis/HandBooks/Hb4Ask" target="_blank" rel="noopener">如何提问</a></li></ul><h2 id="logging"><a href="#logging" class="headerlink" title="logging"></a>logging</h2><ul><li>190718 ofey init</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;日常手册/指北 分享&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;综述和背景&quot;&gt;&lt;a href=&quot;#综述和背景&quot; class=&quot;headerlink&quot; title=&quot;综述和背景&quot;&gt;&lt;/a&gt;综述和背景&lt;/h2&gt;&lt;p&gt;RSS Hub 是一个活跃开发的开源项目，「万物皆可 RSS」的口号表明了它是一个能把各种乱七八糟的东西制作成 RSS feed，包括 twitter、微信公众号……的项目。&lt;/p&gt;
+&lt;p&gt;正好最近入手了 Reeder 4，同时又有通过 RSS 订阅 Issue 的需求，所以就复活自己在 DigitalOcean 上吃灰的云主机，来建他一个。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Digital Life" scheme="http://yoursite.com/categories/Digital-Life/"/>
+    
+    
+      <category term="lan-chinese" scheme="http://yoursite.com/tags/lan-chinese/"/>
+    
+      <category term="reading" scheme="http://yoursite.com/tags/reading/"/>
+    
+      <category term="rss" scheme="http://yoursite.com/tags/rss/"/>
+    
+      <category term="productivity" scheme="http://yoursite.com/tags/productivity/"/>
+    
+      <category term="handbook" scheme="http://yoursite.com/tags/handbook/"/>
+    
+  </entry>
   
   <entry>
     <title>COP CRAFT 动画版——超越原作</title>
@@ -36,9 +70,9 @@
       <category term="anime review" scheme="http://yoursite.com/categories/ACG/anime-review/"/>
     
     
-      <category term="cop craft" scheme="http://yoursite.com/tags/cop-craft/"/>
-    
       <category term="lan-chinese" scheme="http://yoursite.com/tags/lan-chinese/"/>
+    
+      <category term="cop craft" scheme="http://yoursite.com/tags/cop-craft/"/>
     
   </entry>
   
@@ -97,11 +131,11 @@
     
       <category term="lan-chinese" scheme="http://yoursite.com/tags/lan-chinese/"/>
     
+      <category term="productivity" scheme="http://yoursite.com/tags/productivity/"/>
+    
       <category term="robot" scheme="http://yoursite.com/tags/robot/"/>
     
       <category term="design" scheme="http://yoursite.com/tags/design/"/>
-    
-      <category term="productivity" scheme="http://yoursite.com/tags/productivity/"/>
     
   </entry>
   
