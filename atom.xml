@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ofey404.github.io/"/>
-  <updated>2019-07-18T05:56:23.140Z</updated>
+  <updated>2019-07-28T05:01:03.911Z</updated>
   <id>http://ofey404.github.io/</id>
   
   <author>
@@ -15,6 +15,42 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>log-julia-environment-with-docker</title>
+    <link href="http://ofey404.github.io/2019/07/28/log-julia-environment-with-docker/"/>
+    <id>http://ofey404.github.io/2019/07/28/log-julia-environment-with-docker/</id>
+    <published>2019-07-28T04:59:28.000Z</published>
+    <updated>2019-07-28T05:01:03.911Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>日常手册/指北 分享</p></blockquote><h2 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h2><blockquote><p>简洁描述可以以及如何解决当前问题</p></blockquote><p>julia 是先进的数据处理语言。要运行 julia 代码，就需要一个环境。</p><a id="more"></a><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><blockquote><p>问题产生场景和激发隐藏任务事件/链接/…</p></blockquote><p>实验室需要我跑一个代码，是用 julia 写的。</p><p><a href="https://github.com/jarvist/PolaronMobility.jl" target="_blank" rel="noopener">jarvist/PolaronMobility.jl</a></p><h3 id="隐藏任务：如何在终端里炫酷地展示系统信息"><a href="#隐藏任务：如何在终端里炫酷地展示系统信息" class="headerlink" title="隐藏任务：如何在终端里炫酷地展示系统信息"></a>隐藏任务：如何在终端里炫酷地展示系统信息</h3><p>mac 环境。</p><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">brew install screenfetch</span><br><span class="line"></span><br><span class="line">screenfetch</span><br><span class="line"></span><br><span class="line">                 -/+:.          ofey@OfeydeMacBook-Pro</span><br><span class="line">                :++++.          OS: 64bit Mac OS X 10.14.5 18F203</span><br><span class="line">               /+++/.           Kernel: x86_64 Darwin 18.6.0</span><br><span class="line">       .:-::- .+/:-``.::-       Uptime: 1d 10h 26m</span><br><span class="line">    .:/++++++/::::/++++++/:`    Packages: 56</span><br><span class="line">  .:///////////////////////:`   Shell: zsh 5.3</span><br><span class="line">  ////////////////////////`     Resolution: 2880x1800</span><br><span class="line"> -+++++++++++++++++++++++`      DE: Aqua</span><br><span class="line"> /++++++++++++++++++++++/       WM: Quartz Compositor</span><br><span class="line"> /sssssssssssssssssssssss.      WM Theme: Blue</span><br><span class="line"> :ssssssssssssssssssssssss-     Font: RobotoMonoForPowerline-Regular 12</span><br><span class="line">  osssssssssssssssssssssssso/`  CPU: Intel Core i7-8850H @ 2.60GHz</span><br><span class="line">  `syyyyyyyyyyyyyyyyyyyyyyyy+`  GPU: Intel UHD Graphics 630 / Radeon Pro 560X</span><br><span class="line">   `ossssssssssssssssssssss/    RAM: 8435MiB / 16384MiB</span><br><span class="line">     :ooooooooooooooooooo+.</span><br><span class="line">      `:+oo+/:-..-:/+o+/-</span><br></pre></td></tr></table></figure><p>ref：<a href="http://macappstore.org/screenfetch/" target="_blank" rel="noopener">Install screenfetch on Mac OSX</a></p><h3 id="隐藏任务：如何访问-docker-容器中的-jupyter-notebook"><a href="#隐藏任务：如何访问-docker-容器中的-jupyter-notebook" class="headerlink" title="隐藏任务：如何访问 docker 容器中的 jupyter notebook"></a>隐藏任务：如何访问 docker 容器中的 jupyter notebook</h3><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><blockquote><p>解决办法适用的环境/版本</p></blockquote><ul><li>Docker version 18.09.2, build 6247962</li><li>OS: 64bit Mac OS X 10.14.5 18F203</li><li>vscode: 1.36.1 2213894ea0415ee8c85c5eea0d0ff81ecc191529 x64</li></ul><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote><p>详细描述问题的范畴/条件/上下文/…</p></blockquote><p>如何迅速在 Mac OS X 上安装好可用好用的 julia 环境。</p><p>解决方案的几点要求</p><ul><li>简单，不容易掉坑；</li><li>最好可以用熟悉的开发环境；</li><li>最好跨平台，经验可以复用；</li></ul><p>所以选择全平台，容器化的应用 docker。控制 docker 的客户端使用 vscode 的插件，容器内开发使用 vscode 的远程模式。</p><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><blockquote><p>逐步说明用什么工具, 在哪儿, 进行什么操作, 如何检验, 应该获得什么输出 …</p></blockquote><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull julia  <span class="comment"># minimal version, official, without jupyter notebook support.</span></span><br></pre></td></tr></table></figure><h3 id="run-container-in-a-disposable-mode"><a href="#run-container-in-a-disposable-mode" class="headerlink" title="run container in a disposable mode"></a>run container in a disposable mode</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Starting the Julia REPL is as easy as the following:</span></span><br><span class="line">docker run -it --rm julia</span><br><span class="line"></span><br><span class="line"><span class="comment"># Run Julia script from your local directory inside container</span></span><br><span class="line">docker run -it --rm -v <span class="string">"<span class="variable">$PWD</span>"</span>:/usr/myapp -w /usr/myapp julia julia script.jl arg1 arg2</span><br></pre></td></tr></table></figure><h3 id="attach-with-vscode"><a href="#attach-with-vscode" class="headerlink" title="attach with vscode"></a>attach with vscode</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker run -it -v <span class="string">"<span class="variable">$PWD</span>"</span>:/root/ julia</span><br></pre></td></tr></table></figure><p>Then attach container with vscode-remote.</p><p>tutorial: <a href="https://code.visualstudio.com/docs/remote/containers" target="_blank" rel="noopener">Developing inside a Container</a></p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>再次说明经验应用要注意的, 容易出问题的点, 以及有助记忆的作弊条…</p></blockquote><p>直接用 docker 拉取镜像，运行就可以了。</p><h2 id="refer"><a href="#refer" class="headerlink" title="refer"></a>refer</h2><blockquote><p>过程中参考过的重要文章/图书/模块/代码/…</p></blockquote><ul><li>永远的: <a href="https://gitlab.com/101camp/2py/tasks/wikis/HandBooks/Hb4Ask" target="_blank" rel="noopener">如何提问</a></li><li><a href="https://lectures.quantecon.org/jl/getting_started.html" target="_blank" rel="noopener">Setting up Your Julia Environment¶</a></li><li><a href="https://medium.com/fundbox-engineering/overview-d3759e83969c" target="_blank" rel="noopener">Running local Jupyter (and JupyterLab) env with Docker</a></li><li><a href="https://hub.docker.com/_/julia" target="_blank" rel="noopener">julia Docker Official Images</a></li></ul><h2 id="logging"><a href="#logging" class="headerlink" title="logging:"></a>logging:</h2><blockquote><p>用倒序日期排列来从旧到新记要关键变化</p></blockquote><ul><li>190728 ofey init</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;日常手册/指北 分享&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;综述&quot;&gt;&lt;a href=&quot;#综述&quot; class=&quot;headerlink&quot; title=&quot;综述&quot;&gt;&lt;/a&gt;综述&lt;/h2&gt;&lt;blockquote&gt;
+&lt;p&gt;简洁描述可以以及如何解决当前问题&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;julia 是先进的数据处理语言。要运行 julia 代码，就需要一个环境。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Programming" scheme="http://ofey404.github.io/categories/Programming/"/>
+    
+      <category term="data science" scheme="http://ofey404.github.io/categories/Programming/data-science/"/>
+    
+    
+      <category term="lan-chinese" scheme="http://ofey404.github.io/tags/lan-chinese/"/>
+    
+      <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
+    
+      <category term="julia" scheme="http://ofey404.github.io/tags/julia/"/>
+    
+      <category term="docker" scheme="http://ofey404.github.io/tags/docker/"/>
+    
+  </entry>
   
   <entry>
     <title>用 miniflux 自建 RSS 服务的指南</title>
