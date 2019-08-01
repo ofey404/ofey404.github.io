@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ofey404.github.io/"/>
-  <updated>2019-08-01T08:56:24.587Z</updated>
+  <updated>2019-08-01T09:02:43.458Z</updated>
   <id>http://ofey404.github.io/</id>
   
   <author>
@@ -17,24 +17,40 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>relese-a-note</title>
+    <title>[LOG] 笔记从记录到可发布，最核心的变化是哪几点？</title>
     <link href="http://ofey404.github.io/2019/08/01/relese-a-note/"/>
     <id>http://ofey404.github.io/2019/08/01/relese-a-note/</id>
     <published>2019-08-01T08:56:24.000Z</published>
-    <updated>2019-08-01T08:56:24.587Z</updated>
+    <updated>2019-08-01T09:02:43.458Z</updated>
     
-    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>日常手册/指北 分享</p></blockquote><h2 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h2><p>总结从笔记记录到「可发布」笔记产生的工作流程，以统合知识管理不同阶段的目标：</p><ul><li>记录阶段：<ul><li>历史可追溯，踩坑可复现</li><li>时间顺序——对修改、增加开放</li></ul></li><li>发布阶段：<ul><li>逻辑顺序——简洁易读</li></ul></li></ul><a id="more"></a><h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><blockquote><p>问题产生场景和激发隐藏任务事件/链接/…</p></blockquote><p>来自微信群中和大妈的对话。</p><blockquote><p>「 ofey404: 在笔记形成的过程中自然就会整理到可发布的状态了 」</p><hr><p>是也乎,(￣▽￣)<br>恭喜深夜叕触发一个 SM:</p><ul><li>24 小时以内</li><li>创建 Issue 用 Handbook 模板</li><li>分享自己理解的: 笔记从记录到可发布, 最核心的变化是哪几点?</li><li>简单的说, 文档的可发布状态应该吻合哪几个指标?</li></ul></blockquote><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><blockquote><p>解决办法适用的环境/版本</p></blockquote><p>常用笔记软件一只。eg：Quiver （自用）、Evernote、记事本……</p><p>发布平台一个。eg：blog、知乎、gitlab issues</p><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote><p>详细描述问题的范畴/条件/上下文/…</p></blockquote><p>知识管理的「记录」与「发布」阶段有一些目标是矛盾的。</p><ul><li>「记录」需要详尽、可增补、不管对错。所以有如下特点：<ul><li>时间顺序，至少主体是时间顺序</li><li>应该有完成的所有操作的信息，走过的所有「弯路」</li></ul></li><li>「发布」需要简洁易读。<ul><li>逻辑顺序</li><li>只留下「直路」和「有意义的坑」</li></ul></li></ul><p>为了减少从记录到发布的修改，记录的 template 应该和发布的相近；同时又具有可延展性。</p><h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><blockquote><p>逐步说明用什么工具, 在哪儿, 进行什么操作, 如何检验, 应该获得什么输出 …</p></blockquote><p>工作流程：</p><p><code>记录的template - 记录 - 归档记录 - 在记录的基础上尽可能小调节 - 形成发布版</code></p><p>我现在的流程是，直接使用 [LOG] 的 template 作为「记录」的 template，就是本文使用的 template。</p><p>在记录时，「操作」二级标题下用于记录具体操作，并在每一天第一次记录的时候打上日期时间戳（灵感来自实验记录软件 findings，该软件因为无法导出 markdown 被我雪藏了）</p><p>任务完成，记录关闭后，我选择复制一份作为发布的底版，保存到特定的 release 目录下/打上 release 的 tag，保留并归档包含完整信息的记录。</p><p>将 release 副本的「操作」标题下的内容精简成「直路」，把最主要的坑单独列出来放到「总结」中。</p><p>一份可发布的文档完成。</p><h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote><p>再次说明经验应用要注意的, 容易出问题的点, 以及有助记忆的作弊条…</p></blockquote><p>笔记从记录到可发布, 最核心的变化：</p><ol><li>时间顺序 - 逻辑顺序</li><li>信息完全 - 信息简明</li></ol><p>记录的 template 设计时就需要考虑到发布的情况。</p><p>「发布」不仅是公开发布，在自己的知识管理中增加这一道工序也是有益的——不仅可以降低大量 raw material 带来的认知负荷，而且合理的整理可以花少量时间达到复习的效果。</p><h2 id="refer"><a href="#refer" class="headerlink" title="refer"></a>refer</h2><blockquote><p>过程中参考过的重要文章/图书/模块/代码/…</p></blockquote><p>永远的: <a href="https://gitlab.com/101camp/2py/tasks/wikis/HandBooks/Hb4Ask" target="_blank" rel="noopener">如何提问</a></p><h2 id="logging"><a href="#logging" class="headerlink" title="logging:"></a>logging:</h2><blockquote><p>用倒序日期排列来从旧到新记要关键变化</p></blockquote><ul><li>190801 ofey init</li></ul>]]></content>
     
     <summary type="html">
     
-      
-      
-        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-
-      
+      &lt;blockquote&gt;
+&lt;p&gt;日常手册/指北 分享&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;综述&quot;&gt;&lt;a href=&quot;#综述&quot; class=&quot;headerlink&quot; title=&quot;综述&quot;&gt;&lt;/a&gt;综述&lt;/h2&gt;&lt;p&gt;总结从笔记记录到「可发布」笔记产生的工作流程，以统合知识管理不同阶段的目标：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;记录阶段：&lt;ul&gt;
+&lt;li&gt;历史可追溯，踩坑可复现&lt;/li&gt;
+&lt;li&gt;时间顺序——对修改、增加开放&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;发布阶段：&lt;ul&gt;
+&lt;li&gt;逻辑顺序——简洁易读&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
     
     </summary>
     
+      <category term="Digital Life" scheme="http://ofey404.github.io/categories/Digital-Life/"/>
+    
+    
+      <category term="writing" scheme="http://ofey404.github.io/tags/writing/"/>
+    
+      <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
     
   </entry>
   
@@ -95,13 +111,13 @@
     
       <category term="lan-chinese" scheme="http://ofey404.github.io/tags/lan-chinese/"/>
     
+      <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
+    
       <category term="reading" scheme="http://ofey404.github.io/tags/reading/"/>
     
       <category term="rss" scheme="http://ofey404.github.io/tags/rss/"/>
     
       <category term="productivity" scheme="http://ofey404.github.io/tags/productivity/"/>
-    
-      <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
     
   </entry>
   
@@ -129,13 +145,13 @@
     
       <category term="lan-chinese" scheme="http://ofey404.github.io/tags/lan-chinese/"/>
     
+      <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
+    
       <category term="reading" scheme="http://ofey404.github.io/tags/reading/"/>
     
       <category term="rss" scheme="http://ofey404.github.io/tags/rss/"/>
     
       <category term="productivity" scheme="http://ofey404.github.io/tags/productivity/"/>
-    
-      <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
     
   </entry>
   
@@ -159,9 +175,9 @@
       <category term="anime review" scheme="http://ofey404.github.io/categories/ACG/anime-review/"/>
     
     
-      <category term="lan-chinese" scheme="http://ofey404.github.io/tags/lan-chinese/"/>
-    
       <category term="cop craft" scheme="http://ofey404.github.io/tags/cop-craft/"/>
+    
+      <category term="lan-chinese" scheme="http://ofey404.github.io/tags/lan-chinese/"/>
     
   </entry>
   
