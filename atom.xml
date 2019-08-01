@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ofey404.github.io/"/>
-  <updated>2019-07-28T05:07:34.630Z</updated>
+  <updated>2019-08-01T08:56:24.587Z</updated>
   <id>http://ofey404.github.io/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>relese-a-note</title>
+    <link href="http://ofey404.github.io/2019/08/01/relese-a-note/"/>
+    <id>http://ofey404.github.io/2019/08/01/relese-a-note/</id>
+    <published>2019-08-01T08:56:24.000Z</published>
+    <updated>2019-08-01T08:56:24.587Z</updated>
+    
+    <content type="html"><![CDATA[<a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>[LOG] 用 docker 建立 julia 环境的手册</title>
@@ -44,11 +66,11 @@
     
       <category term="lan-chinese" scheme="http://ofey404.github.io/tags/lan-chinese/"/>
     
+      <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
+    
       <category term="julia" scheme="http://ofey404.github.io/tags/julia/"/>
     
       <category term="docker" scheme="http://ofey404.github.io/tags/docker/"/>
-    
-      <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
     
   </entry>
   
@@ -73,13 +95,13 @@
     
       <category term="lan-chinese" scheme="http://ofey404.github.io/tags/lan-chinese/"/>
     
-      <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
-    
       <category term="reading" scheme="http://ofey404.github.io/tags/reading/"/>
     
       <category term="rss" scheme="http://ofey404.github.io/tags/rss/"/>
     
       <category term="productivity" scheme="http://ofey404.github.io/tags/productivity/"/>
+    
+      <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
     
   </entry>
   
@@ -107,13 +129,13 @@
     
       <category term="lan-chinese" scheme="http://ofey404.github.io/tags/lan-chinese/"/>
     
-      <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
-    
       <category term="reading" scheme="http://ofey404.github.io/tags/reading/"/>
     
       <category term="rss" scheme="http://ofey404.github.io/tags/rss/"/>
     
       <category term="productivity" scheme="http://ofey404.github.io/tags/productivity/"/>
+    
+      <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
     
   </entry>
   
@@ -238,26 +260,6 @@
       <category term="lan-english" scheme="http://ofey404.github.io/tags/lan-english/"/>
     
       <category term="web-scraping" scheme="http://ofey404.github.io/tags/web-scraping/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://ofey404.github.io/2019/07/12/hello-world/"/>
-    <id>http://ofey404.github.io/2019/07/12/hello-world/</id>
-    <published>2019-07-12T14:45:42.001Z</published>
-    <updated>2019-07-12T16:08:19.229Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><a id="more"></a><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="life" scheme="http://ofey404.github.io/categories/life/"/>
-    
     
   </entry>
   
