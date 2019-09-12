@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Chinglish Small Talk">
 <meta property="og:description" content="日常手册/指北 分享  综述 简洁描述可以以及如何解决当前问题  「计算物理基础」课程的开发环境搭建。 有问题可以咨询我，或者想要补充。联系方式：  email：ofey206@gmail.com wechat：ofey404 南区一期二号楼3013">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-11T08:46:22.134Z">
+<meta property="og:updated_time" content="2019-09-12T03:05:47.096Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[LOG] 「计算物理基础」课程环境搭建手册">
 <meta name="twitter:description" content="日常手册/指北 分享  综述 简洁描述可以以及如何解决当前问题  「计算物理基础」课程的开发环境搭建。 有问题可以咨询我，或者想要补充。联系方式：  email：ofey206@gmail.com wechat：ofey404 南区一期二号楼3013">
@@ -439,8 +439,9 @@
 
 <p><strong>如果下载和update非常慢</strong><br>因为墙的缘故。换国内源。<a href="https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/" target="_blank" rel="noopener">参考清华源说明。</a></p>
 <p>在上面链接的页面上选择 <code>ubuntu 16.04 LTS</code>.在wsl命令行执行以下代码：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup <span class="comment"># 备份原来的源</span></span><br><span class="line">sudo nano /etc/apt/sources.list</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup <span class="comment"># 备份原来的源</span></span><br><span class="line">sudo nano /etc/apt/sources.list  <span class="comment"># 这条命令会打开一个编辑器。创建新的 sources.list</span></span><br></pre></td></tr></table></figure>
 
+<p><strong>坑：有的同学并不知道上面的第二条命令是打开编辑器，结果把 sources.list 备份之后没有创建新的 sources.list</strong></p>
 <p>在打开的编辑器界面中复制以下，然后ctrl-x，再按 Y 保存退出。</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse</span></span><br></pre></td></tr></table></figure>
 
