@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Chinglish Small Talk">
 <meta property="og:description" content="日常手册/指北 分享  综述 简洁描述可以以及如何解决当前问题  「计算物理基础」课程的开发环境搭建。 有问题可以咨询我，或者想要补充。联系方式：  email：ofey206@gmail.com wechat：ofey404 南区一期二号楼3013">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-13T03:28:43.335Z">
+<meta property="og:updated_time" content="2019-09-13T03:40:05.051Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[LOG] 「计算物理基础」课程环境搭建手册">
 <meta name="twitter:description" content="日常手册/指北 分享  综述 简洁描述可以以及如何解决当前问题  「计算物理基础」课程的开发环境搭建。 有问题可以咨询我，或者想要补充。联系方式：  email：ofey206@gmail.com wechat：ofey404 南区一期二号楼3013">
@@ -423,6 +423,7 @@
 </ol>
 <p>打开 M$ Store （windows 应用商店）搜索 wsl 或者 windows subsystem of linux. 安装。</p>
 <p>ubuntu 16.04就行。</p>
+<p>反馈：M$ store 中不显示版本号，据我查看，默认是 18.04。<strong>所以下面要换源的话，请换 18.04 的源。</strong></p>
 <p>安装完成之后，在开始菜单，所有程序里会多一个 ubuntu。点击，打开一个命令行界面。</p>
 <p>会让你输入 unix 用户名和密码。设置就好，记住它们。</p>
 <h3 id="应用商店上不了？"><a href="#应用商店上不了？" class="headerlink" title="应用商店上不了？"></a>应用商店上不了？</h3><p>因为垃圾 GFW 或者 M$ 本身菜鸡的原因，有的人应用商店上不了。</p>
@@ -433,17 +434,17 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd C:\...(你放程序的目录)\</span><br><span class="line">Add-AppxPackage .\Ubuntu_1604.2019.523.0_x64.appx</span><br></pre></td></tr></table></figure>
 
 <p>就会安装好了。</p>
-<h3 id="安装-fortran"><a href="#安装-fortran" class="headerlink" title="安装 fortran"></a>安装 fortran</h3><p>打开 ubuntu 16.04 （wsl）的命令行。</p>
-<p>如果你的是 ubuntu 16.04 的话，执行如下语句。</p>
+<h3 id="安装-fortran"><a href="#安装-fortran" class="headerlink" title="安装 fortran"></a>安装 fortran</h3><p>打开 ubuntu（wsl）的命令行。执行如下语句，以下的语句对 16.04 和 18.04 都是通用的。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update (如果很慢就不执行算了)</span><br><span class="line">sudo apt-get install gfortran</span><br></pre></td></tr></table></figure>
 
 <p><strong>如果下载和update非常慢</strong><br>因为墙的缘故。换国内源。<a href="https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/" target="_blank" rel="noopener">参考清华源说明。</a></p>
-<p>在上面链接的页面上选择 <code>ubuntu 16.04 LTS</code>.在wsl命令行执行以下代码：</p>
+<p>如果是16.04 在上面链接的页面上选择 <code>ubuntu 16.04 LTS</code>，如果是 m$ store 版本请选择 18.04</p>
+<p>在wsl命令行执行以下代码：</p>
 <figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup <span class="comment"># 备份原来的源</span></span><br><span class="line">sudo nano /etc/apt/sources.list  <span class="comment"># 这条命令会打开一个编辑器。创建新的 sources.list</span></span><br></pre></td></tr></table></figure>
 
 <p><strong>坑：有的同学并不知道上面的第二条命令是打开编辑器，结果把 sources.list 备份之后没有创建新的 sources.list</strong></p>
-<p>在打开的编辑器界面中复制以下，然后ctrl-x，再按 Y 保存退出。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse</span></span><br></pre></td></tr></table></figure>
+<p>在打开的编辑器界面中复制<strong>在<a href="https://mirror.tuna.tsinghua.edu.cn/help/ubuntu/" target="_blank" rel="noopener">清华源</a>上看到的，类似以下</strong>的所有代码，然后ctrl-x，再按 Y 保存退出。</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">################### 不理解的话，请不要直接复制这些配置！ #########</span></span><br><span class="line"><span class="comment"># 默认注释了源码镜像以提高 apt update 速度，如有需要可自行取消注释</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-updates main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-backports main restricted universe multiverse</span></span><br><span class="line">deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse</span><br><span class="line"><span class="comment"># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ xenial-security main restricted universe multiverse</span></span><br></pre></td></tr></table></figure>
 
 <p>然后再<code>apt-get update</code>，<code>apt-get install gfortran</code></p>
 <p>install 跑完之后，在命令行里输入<code>gfortran</code>，会有如下反应，证明 fortran 安装完毕。</p>
