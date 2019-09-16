@@ -89,7 +89,7 @@
 <meta property="og:site_name" content="Chinglish Small Talk">
 <meta property="og:description" content="日常手册/指北 分享  综述 简洁描述可以以及如何解决当前问题  「计算物理基础」课程的开发环境搭建。 有问题可以咨询我，或者想要补充。联系方式：  email：ofey206@gmail.com wechat：ofey404 南区一期二号楼3013">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-09-13T03:40:05.051Z">
+<meta property="og:updated_time" content="2019-09-14T04:56:46.250Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="[LOG] 「计算物理基础」课程环境搭建手册">
 <meta name="twitter:description" content="日常手册/指北 分享  综述 简洁描述可以以及如何解决当前问题  「计算物理基础」课程的开发环境搭建。 有问题可以咨询我，或者想要补充。联系方式：  email：ofey206@gmail.com wechat：ofey404 南区一期二号楼3013">
@@ -563,6 +563,9 @@
           
 
   
+  <div id="gitalk-container"></div>
+
+  
 
 
 
@@ -872,6 +875,21 @@
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'db31fe113bf9c692437d',
+          clientSecret: '761d34846e2e0e132deae0ccfaf2257ceff4888c',
+          repo: 'ofey404.github.io',
+          owner: 'ofey404',
+          admin: ['ofey404'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
   
 

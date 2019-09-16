@@ -499,6 +499,9 @@
           
 
   
+  <div id="gitalk-container"></div>
+
+  
 
 
 
@@ -808,6 +811,21 @@
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'db31fe113bf9c692437d',
+          clientSecret: '761d34846e2e0e132deae0ccfaf2257ceff4888c',
+          repo: 'ofey404.github.io',
+          owner: 'ofey404',
+          admin: ['ofey404'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
   
 
