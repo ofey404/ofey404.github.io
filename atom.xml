@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ofey404.github.io/"/>
-  <updated>2019-09-14T04:56:46.250Z</updated>
+  <updated>2019-09-16T07:24:19.502Z</updated>
   <id>http://ofey404.github.io/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>本博客喜提 gitalk 评论区</title>
+    <link href="http://ofey404.github.io/2019/09/16/gitalk-comment/"/>
+    <id>http://ofey404.github.io/2019/09/16/gitalk-comment/</id>
+    <published>2019-09-16T07:21:11.000Z</published>
+    <updated>2019-09-16T07:24:19.502Z</updated>
+    
+    <content type="html"><![CDATA[<p>只要有 github 账号就可以留言了。</p><a id="more"></a><p>参照以下这位大哥的操作指南。写得非常详细。</p><p>Post author: asdfv1929</p><p>Post link: <a href="https://asdfv1929.github.io/2018/01/20/gitalk/" target="_blank" rel="noopener">https://asdfv1929.github.io/2018/01/20/gitalk/</a></p><p>Copyright Notice: All articles in this blog are licensed under CC BY-NC-SA 3.0 unless stating additionally.</p>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;只要有 github 账号就可以留言了。&lt;/p&gt;
+    
+    </summary>
+    
+      <category term="Digital Life" scheme="http://ofey404.github.io/categories/Digital-Life/"/>
+    
+    
+      <category term="blog" scheme="http://ofey404.github.io/tags/blog/"/>
+    
+      <category term="gitalk" scheme="http://ofey404.github.io/tags/gitalk/"/>
+    
+  </entry>
   
   <entry>
     <title>[LOG] 「计算物理基础」课程环境搭建手册</title>
@@ -252,9 +276,9 @@
       <category term="anime review" scheme="http://ofey404.github.io/categories/ACG/anime-review/"/>
     
     
-      <category term="cop craft" scheme="http://ofey404.github.io/tags/cop-craft/"/>
-    
       <category term="lan-chinese" scheme="http://ofey404.github.io/tags/lan-chinese/"/>
+    
+      <category term="cop craft" scheme="http://ofey404.github.io/tags/cop-craft/"/>
     
   </entry>
   
