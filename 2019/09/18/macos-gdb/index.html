@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Chinglish Small Talk" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="用 brew 直接 install 的 gdb 在 macOS Mojave 上有大问题，大概是因为 macOS 的安全政策收紧。 解法分三步：  从源码编译可靠版本的gdb 用 mac 钥匙串给 gdb 签名。 配置 ~/.gdbinit 文件  搞死我了……">
+<meta name="keywords" content="Programming, Computer Science">
+<meta property="og:type" content="article">
+<meta property="og:title" content="[LOG] 在 macOS Mojave 上使用 gdb 的手册……">
+<meta property="og:url" content="http://ofey404.github.io/2019/09/18/macos-gdb/index.html">
+<meta property="og:site_name" content="Chinglish Small Talk">
+<meta property="og:description" content="用 brew 直接 install 的 gdb 在 macOS Mojave 上有大问题，大概是因为 macOS 的安全政策收紧。 解法分三步：  从源码编译可靠版本的gdb 用 mac 钥匙串给 gdb 签名。 配置 ~/.gdbinit 文件  搞死我了……">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-09-18T03:21:26.403Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="[LOG] 在 macOS Mojave 上使用 gdb 的手册……">
+<meta name="twitter:description" content="用 brew 直接 install 的 gdb 在 macOS Mojave 上有大问题，大概是因为 macOS 的安全政策收紧。 解法分三步：  从源码编译可靠版本的gdb 用 mac 钥匙串给 gdb 签名。 配置 ~/.gdbinit 文件  搞死我了……">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://ofey404.github.io/2019/09/18/macos-gdb/">
+
+
+
+
+
+  <title>[LOG] 在 macOS Mojave 上使用 gdb 的手册…… | Chinglish Small Talk</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Chinglish Small Talk</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Tech and Personal Blog of Ofey Chan. Personal articles are in *Archives*.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ofey404.github.io/2019/09/18/macos-gdb/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ofey Chan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chinglish Small Talk">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">[LOG] 在 macOS Mojave 上使用 gdb 的手册……</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-18T11:20:00+08:00">
+                2019-09-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>用 brew 直接 install 的 gdb 在 macOS Mojave 上有大问题，大概是因为 macOS 的安全政策收紧。</p>
+<p>解法分三步：</p>
+<ul>
+<li>从源码编译可靠版本的gdb</li>
+<li>用 mac 钥匙串给 gdb 签名。</li>
+<li>配置 <code>~/.gdbinit</code> 文件</li>
+</ul>
+<p>搞死我了……</p>
+<a id="more"></a>
+
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><blockquote>
+<p>问题产生场景和激发隐藏任务事件/链接/…</p>
+</blockquote>
+<p>想用 gdb 调试 fortran。好像也只有 gdb 可以调试 fortran，osx 的 lldb 不支持。</p>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><blockquote>
+<p>解决办法适用的环境/版本</p>
+</blockquote>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">&gt; screenfetch ; gcc -v ; gdb -v</span><br><span class="line">readlink: illegal option -- f</span><br><span class="line">usage: readlink [-n] [file ...]</span><br><span class="line"></span><br><span class="line">                 -/+:.          ofey@OfeydeMacBook-Pro</span><br><span class="line">                :++++.          OS: 64bit Mac OS X 10.14.6 18G95</span><br><span class="line">               /+++/.           Kernel: x86_64 Darwin 18.7.0</span><br><span class="line">       .:-::- .+/:-``.::-       Uptime: 11h 49m</span><br><span class="line">    .:/++++++/::::/++++++/:`    Packages: 111</span><br><span class="line">  .:///////////////////////:`   Shell: zsh 5.3</span><br><span class="line">  ////////////////////////`     Resolution: 2880x1800</span><br><span class="line"> -+++++++++++++++++++++++`      DE: Aqua</span><br><span class="line"> /++++++++++++++++++++++/       WM: Quartz Compositor</span><br><span class="line"> /sssssssssssssssssssssss.      WM Theme: Blue</span><br><span class="line"> :ssssssssssssssssssssssss-     Font: RobotoMonoForPowerline-Regular 12</span><br><span class="line">  osssssssssssssssssssssssso/`  CPU: Intel Core i7-8850H @ 2.60GHz</span><br><span class="line">  `syyyyyyyyyyyyyyyyyyyyyyyy+`  GPU: Intel UHD Graphics 630 / Radeon Pro 560X</span><br><span class="line">   `ossssssssssssssssssssss/    RAM: 9312MiB / 16384MiB</span><br><span class="line">     :ooooooooooooooooooo+.</span><br><span class="line">      `:+oo+/:-..-:/+o+/-</span><br><span class="line"></span><br><span class="line">Configured with: --prefix=/Library/Developer/CommandLineTools/usr --with-gxx-include-dir=/Library/Developer/CommandLineTools/SDKs/MacOSX10.14.sdk/usr/include/c++/4.2.1</span><br><span class="line">Apple LLVM version 10.0.1 (clang-1001.0.46.4)</span><br><span class="line">Target: x86_64-apple-darwin18.7.0</span><br><span class="line">Thread model: posix</span><br><span class="line">InstalledDir: /Library/Developer/CommandLineTools/usr/bin</span><br><span class="line">GNU gdb (GDB) 8.2.50.20190226-git</span><br><span class="line">Copyright (C) 2019 Free Software Foundation, Inc.</span><br><span class="line">License GPLv3+: GNU GPL version 3 or later &lt;http://gnu.org/licenses/gpl.html&gt;</span><br><span class="line">This is free software: you are free to change and redistribute it.</span><br><span class="line">There is NO WARRANTY, to the extent permitted by law.</span><br></pre></td></tr></table></figure>
+
+<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote>
+<p>详细描述问题的范畴/条件/上下文/…</p>
+</blockquote>
+<p>原本是用 homebrew 安装的 gdb，出现如下问题：</p>
+<p>gdb 出现 Unable to find Mach Port。类似这个Issue下出现的：<a href="https://github.com/cs01/gdbgui/issues/55" target="_blank" rel="noopener">Unable to find Mach task port #55</a></p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Unable to find Mach task port <span class="keyword">for</span> process-id 19311: (os/kern) failure (0x5).\n (please check gdb is codesigned - see taskgated(8))</span><br></pre></td></tr></table></figure>
+
+<p>gdb 签名之后直接跑死，输出为：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(gdb) run</span><br><span class="line">Starting program: /Users/tnash/AppProjects/password/target/debug/password</span><br><span class="line">Note: this version of macOS has System Integrity Protection.</span><br><span class="line">Because `startup-with-shell<span class="string">' is enabled, gdb has worked around this by</span></span><br><span class="line"><span class="string">caching a copy of your shell.  The shell used by "run" is now:</span></span><br><span class="line"><span class="string">    /Users/tnash/Library/Caches/gdb/bin/zsh</span></span><br><span class="line"><span class="string">[New Thread 0xc03 of process 27325]</span></span><br><span class="line"><span class="string">[New Thread 0xe03 of process 27325]</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><blockquote>
+<p>逐步说明用什么工具, 在哪儿, 进行什么操作, 如何检验, 应该获得什么输出 …</p>
+</blockquote>
+<p>参考了该文章：<a href="https://timnash.co.uk/getting-gdb-to-semi-reliably-work-on-mojave-macos/" target="_blank" rel="noopener">Getting gdb to (semi) reliably work on Mojave MacOS</a></p>
+<p>救命了……</p>
+<p>详细参考上面的英文文章，以下只对我的操作做记录。</p>
+<h2 id="从源码编译可靠版本的gdb"><a href="#从源码编译可靠版本的gdb" class="headerlink" title="从源码编译可靠版本的gdb"></a>从源码编译可靠版本的gdb</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">wget ftp://sourceware.org/pub/gdb/snapshots/current/gdb-weekly-8.2.50.20190226.tar.xz</span><br><span class="line"><span class="comment"># 在桌面上</span></span><br><span class="line">untar gdb-weekly-8.2.50.20190226.tar.xz</span><br><span class="line">gdb-8.2.50.20190226</span><br><span class="line">./configure</span><br><span class="line">make</span><br><span class="line">make install</span><br><span class="line"><span class="comment"># 最后把 gdb 的 source 放到 ~/Packages 目录底下去了</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="用-mac-钥匙串给-gdb-签名。"><a href="#用-mac-钥匙串给-gdb-签名。" class="headerlink" title="用 mac 钥匙串给 gdb 签名。"></a>用 mac 钥匙串给 gdb 签名。</h2><p>先生成license，参考英文文章。</p>
+<p>之后进行如下操作</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">cat gdb.xml</span><br><span class="line">&lt;?xml version=<span class="string">"1.0"</span> encoding=<span class="string">"UTF-8"</span>?&gt;</span><br><span class="line">&lt;!DOCTYPE plist PUBLIC <span class="string">"-//Apple//DTD PLIST 1.0//EN"</span></span><br><span class="line"><span class="string">"http://www.apple.com/DTDs/PropertyList-1.0.dtd"</span>&gt;</span><br><span class="line">&lt;plist version=<span class="string">"1.0"</span>&gt;</span><br><span class="line">&lt;dict&gt;</span><br><span class="line">    &lt;key&gt;com.apple.security.cs.allow-jit&lt;/key&gt;</span><br><span class="line">    &lt;<span class="literal">true</span>/&gt;</span><br><span class="line">    &lt;key&gt;com.apple.security.cs.allow-unsigned-executable-memory&lt;/key&gt;</span><br><span class="line">    &lt;<span class="literal">true</span>/&gt;</span><br><span class="line">    &lt;key&gt;com.apple.security.cs.allow-dyld-environment-variables&lt;/key&gt;</span><br><span class="line">    &lt;<span class="literal">true</span>/&gt;</span><br><span class="line">    &lt;key&gt;com.apple.security.cs.disable-library-validation&lt;/key&gt;</span><br><span class="line">    &lt;<span class="literal">true</span>/&gt;</span><br><span class="line">    &lt;key&gt;com.apple.security.cs.disable-executable-page-protection&lt;/key&gt;</span><br><span class="line">    &lt;<span class="literal">true</span>/&gt;</span><br><span class="line">    &lt;key&gt;com.apple.security.cs.debugger&lt;/key&gt;</span><br><span class="line">    &lt;<span class="literal">true</span>/&gt;</span><br><span class="line">    &lt;key&gt;com.apple.security.get-task-allow&lt;/key&gt;</span><br><span class="line">    &lt;<span class="literal">true</span>/&gt;</span><br><span class="line">&lt;/dict&gt;</span><br><span class="line">&lt;/plist&gt;</span><br><span class="line"></span><br><span class="line">codesign --entitlements gdb.xml -fs gdb-cert /usr/<span class="built_in">local</span>/bin/gdb</span><br></pre></td></tr></table></figure>
+
+<h2 id="配置-gdbinit-文件"><a href="#配置-gdbinit-文件" class="headerlink" title="配置 ~/.gdbinit 文件"></a>配置 <code>~/.gdbinit</code> 文件</h2><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="string">"set startup-with-shell off"</span> &gt;&gt; ~/.gdbinit</span><br></pre></td></tr></table></figure>
+
+<p>参考了：<a href="https://github.com/cyrus-and/gdb-dashboard/issues/81" target="_blank" rel="noopener"><code>set startup-with-shell off</code> required by macOS Sierra+ #81</a></p>
+<p>和<a href="https://stackoverflow.com/questions/9573683/where-is-gdbinit-is-located-and-how-can-i-edit-it" target="_blank" rel="noopener">Where is .gdbinit is located and how can I edit it?</a></p>
+<h2 id="验证安装完成"><a href="#验证安装完成" class="headerlink" title="验证安装完成"></a>验证安装完成</h2><p>按照<a href="https://undo.io/resources/debugging-fortran-code-gdb/" target="_blank" rel="noopener">How to Debug Fortran Code with GDB</a>操作。能得到合理的输出。</p>
+<h2 id="uninstall"><a href="#uninstall" class="headerlink" title="uninstall"></a>uninstall</h2><p>备查：<a href="https://stackoverflow.com/questions/1439950/whats-the-opposite-of-make-install-i-e-how-do-you-uninstall-a-library-in-li" target="_blank" rel="noopener">What’s the opposite of ‘make install’, i.e. how do you uninstall a library in Linux?</a></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<p>再次说明经验应用要注意的, 容易出问题的点, 以及有助记忆的作弊条…</p>
+</blockquote>
+<ul>
+<li>从源码编译可靠版本的gdb</li>
+<li>用 mac 钥匙串给 gdb 签名。</li>
+<li>配置 <code>~/.gdbinit</code> 文件</li>
+</ul>
+<p>遇到编程问题还是要直接搜洋文……</p>
+<p>要熟悉「从源码编译」了……不能老是有<code>make</code>恐惧症。</p>
+<p>macOS 确实也有一些兼容性问题。但是……我升级到了 Catalina 之后怎么办？？？</p>
+<h2 id="refer"><a href="#refer" class="headerlink" title="refer"></a>refer</h2><blockquote>
+<p>过程中参考过的重要文章/图书/模块/代码/…</p>
+</blockquote>
+<p>永远的: <a href="https://gitlab.com/101camp/2py/tasks/wikis/HandBooks/Hb4Ask" target="_blank" rel="noopener">如何提问</a></p>
+<p>超级重要的参考……<a href="https://timnash.co.uk/getting-gdb-to-semi-reliably-work-on-mojave-macos/" target="_blank" rel="noopener">Getting gdb to (semi) reliably work on Mojave MacOS</a></p>
+<h2 id="logging"><a href="#logging" class="headerlink" title="logging:"></a>logging:</h2><blockquote>
+<p>用倒序日期排列来从旧到新记要关键变化</p>
+</blockquote>
+<ul>
+<li>190918 ofey404 init</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/09/16/gitalk-comment/" rel="next" title="本博客喜提 gitalk 评论区">
+                <i class="fa fa-chevron-left"></i> 本博客喜提 gitalk 评论区
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+  <div id="gitalk-container"></div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Ofey Chan</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ofey404" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">3.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作"><span class="nav-number">4.</span> <span class="nav-text">操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从源码编译可靠版本的gdb"><span class="nav-number">5.</span> <span class="nav-text">从源码编译可靠版本的gdb</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#用-mac-钥匙串给-gdb-签名。"><span class="nav-number">6.</span> <span class="nav-text">用 mac 钥匙串给 gdb 签名。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#配置-gdbinit-文件"><span class="nav-number">7.</span> <span class="nav-text">配置 ~/.gdbinit 文件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#验证安装完成"><span class="nav-number">8.</span> <span class="nav-text">验证安装完成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#uninstall"><span class="nav-number">9.</span> <span class="nav-text">uninstall</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">10.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#refer"><span class="nav-number">11.</span> <span class="nav-text">refer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logging"><span class="nav-number">12.</span> <span class="nav-text">logging:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ofey Chan</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'db31fe113bf9c692437d',
+          clientSecret: '761d34846e2e0e132deae0ccfaf2257ceff4888c',
+          repo: 'ofey404.github.io',
+          owner: 'ofey404',
+          admin: ['ofey404'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
