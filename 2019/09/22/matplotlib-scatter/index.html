@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="lan-chinese,productivity,handbook,writing,">
+  <meta name="keywords" content="lan-chinese,handbook,matplotlib,scatter plot,">
 
 
 
@@ -81,18 +81,20 @@
 
 
 
-<meta name="description" content="日常手册/指北 分享  综述总结从笔记记录到「可发布」笔记产生的工作流程，以统合知识管理不同阶段的目标：  记录阶段： 历史可追溯，踩坑可复现 时间顺序——对修改、增加开放   发布阶段： 逻辑顺序——简洁易读">
-<meta name="keywords" content="lan-chinese,productivity,handbook,writing">
+<meta name="description" content="简单的任务：画一张带权重的散点图。权重用散点的大小来表示。">
+<meta name="keywords" content="lan-chinese,handbook,matplotlib,scatter plot">
 <meta property="og:type" content="article">
-<meta property="og:title" content="[LOG] 笔记从记录到可发布，最核心的变化是哪几点？">
-<meta property="og:url" content="http://ofey404.github.io/2019/08/01/relese-a-note/index.html">
+<meta property="og:title" content="[LOG] 用 python 画带权重的散点图的手册">
+<meta property="og:url" content="http://ofey404.github.io/2019/09/22/matplotlib-scatter/index.html">
 <meta property="og:site_name" content="Chinglish Small Talk">
-<meta property="og:description" content="日常手册/指北 分享  综述总结从笔记记录到「可发布」笔记产生的工作流程，以统合知识管理不同阶段的目标：  记录阶段： 历史可追溯，踩坑可复现 时间顺序——对修改、增加开放   发布阶段： 逻辑顺序——简洁易读">
+<meta property="og:description" content="简单的任务：画一张带权重的散点图。权重用散点的大小来表示。">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-05T02:42:53.420Z">
+<meta property="og:image" content="https://matplotlib.org/_images/scatter_demo.png">
+<meta property="og:updated_time" content="2019-09-22T01:43:07.967Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="[LOG] 笔记从记录到可发布，最核心的变化是哪几点？">
-<meta name="twitter:description" content="日常手册/指北 分享  综述总结从笔记记录到「可发布」笔记产生的工作流程，以统合知识管理不同阶段的目标：  记录阶段： 历史可追溯，踩坑可复现 时间顺序——对修改、增加开放   发布阶段： 逻辑顺序——简洁易读">
+<meta name="twitter:title" content="[LOG] 用 python 画带权重的散点图的手册">
+<meta name="twitter:description" content="简单的任务：画一张带权重的散点图。权重用散点的大小来表示。">
+<meta name="twitter:image" content="https://matplotlib.org/_images/scatter_demo.png">
 
 
 
@@ -122,13 +124,13 @@
 
 
 
-  <link rel="canonical" href="http://ofey404.github.io/2019/08/01/relese-a-note/">
+  <link rel="canonical" href="http://ofey404.github.io/2019/09/22/matplotlib-scatter/">
 
 
 
 
 
-  <title>[LOG] 笔记从记录到可发布，最核心的变化是哪几点？ | Chinglish Small Talk</title>
+  <title>[LOG] 用 python 画带权重的散点图的手册 | Chinglish Small Talk</title>
   
 
 
@@ -265,7 +267,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ofey404.github.io/2019/08/01/relese-a-note/">
+    <link itemprop="mainEntityOfPage" href="http://ofey404.github.io/2019/09/22/matplotlib-scatter/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ofey Chan">
@@ -282,7 +284,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">[LOG] 笔记从记录到可发布，最核心的变化是哪几点？</h1>
+          <h1 class="post-title" itemprop="name headline">[LOG] 用 python 画带权重的散点图的手册</h1>
         
 
         <div class="post-meta">
@@ -294,8 +296,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-08-01T16:56:24+08:00">
-                2019-08-01
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-22T09:38:44+08:00">
+                2019-09-22
               </time>
             
 
@@ -317,8 +319,19 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Digital-Life/" itemprop="url" rel="index">
-                    <span itemprop="name">Digital Life</span>
+                  <a href="/categories/Programming/" itemprop="url" rel="index">
+                    <span itemprop="name">Programming</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Programming/data-science/" itemprop="url" rel="index">
+                    <span itemprop="name">data science</span>
                   </a>
                 </span>
 
@@ -354,89 +367,75 @@
       
 
       
-        <blockquote>
-<p>日常手册/指北 分享</p>
-</blockquote>
-<h2 id="综述"><a href="#综述" class="headerlink" title="综述"></a>综述</h2><p>总结从笔记记录到「可发布」笔记产生的工作流程，以统合知识管理不同阶段的目标：</p>
-<ul>
-<li>记录阶段：<ul>
-<li>历史可追溯，踩坑可复现</li>
-<li>时间顺序——对修改、增加开放</li>
-</ul>
-</li>
-<li>发布阶段：<ul>
-<li>逻辑顺序——简洁易读</li>
-</ul>
-</li>
-</ul>
+        <p>简单的任务：画一张带权重的散点图。权重用散点的大小来表示。</p>
 <a id="more"></a>
 
 <h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><blockquote>
 <p>问题产生场景和激发隐藏任务事件/链接/…</p>
 </blockquote>
-<p>来自微信群中和大妈的对话。</p>
-<blockquote>
-<p>「 ofey404: 在笔记形成的过程中自然就会整理到可发布的状态了 」</p>
-<hr>
-<p>是也乎,(￣▽￣)<br>恭喜深夜叕触发一个 SM:</p>
-<ul>
-<li>24 小时以内</li>
-<li>创建 Issue 用 Handbook 模板</li>
-<li>分享自己理解的: 笔记从记录到可发布, 最核心的变化是哪几点?</li>
-<li>简单的说, 文档的可发布状态应该吻合哪几个指标?</li>
-</ul>
-</blockquote>
+<p>画带权重的散点图</p>
+<p><img src="https://matplotlib.org/_images/scatter_demo.png" alt="效果图"></p>
 <h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><blockquote>
 <p>解决办法适用的环境/版本</p>
 </blockquote>
-<p>常用笔记软件一只。eg：Quiver （自用）、Evernote、记事本……</p>
-<p>发布平台一个。eg：blog、知乎、gitlab issues</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&gt; &#123;screenfetch; conda list numpy; conda list matplotlib&#125;</span><br><span class="line">readlink: illegal option -- f</span><br><span class="line">usage: readlink [-n] [file ...]</span><br><span class="line">                               </span><br><span class="line">                 -/+:.          ofey@OfeydeMacBook-Pro</span><br><span class="line">                :++++.          OS: 64bit Mac OS X 10.14.6 18G95</span><br><span class="line">               /+++/.           Kernel: x86_64 Darwin 18.7.0</span><br><span class="line">       .:-::- .+/:-``.::-       Uptime: 1d 17h 8m</span><br><span class="line">    .:/++++++/::::/++++++/:`    Packages: 115</span><br><span class="line">  .:///////////////////////:`   Shell: zsh 5.3</span><br><span class="line">  ////////////////////////`     Resolution: 2880x1800</span><br><span class="line"> -+++++++++++++++++++++++`      DE: Aqua</span><br><span class="line"> /++++++++++++++++++++++/       WM: Quartz Compositor</span><br><span class="line"> /sssssssssssssssssssssss.      WM Theme: Blue</span><br><span class="line"> :ssssssssssssssssssssssss-     Font: SFMono-Regular</span><br><span class="line">  osssssssssssssssssssssssso/`  CPU: Intel Core i7-8850H @ 2.60GHz</span><br><span class="line">  `syyyyyyyyyyyyyyyyyyyyyyyy+`  GPU: Intel UHD Graphics 630 / Radeon Pro 560X </span><br><span class="line">   `ossssssssssssssssssssss/    RAM: 9051MiB / 16384MiB</span><br><span class="line">     :ooooooooooooooooooo+.    </span><br><span class="line">      `:+oo+/:-..-:/+o+/-      </span><br><span class="line">                               </span><br><span class="line"><span class="comment"># packages in environment at /Users/ofey/miniconda3:</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Name                    Version                   Build  Channel</span></span><br><span class="line">numpy                     1.16.4           py37hacdab7b_0  </span><br><span class="line">numpy-base                1.16.4           py37h6575580_0  </span><br><span class="line"><span class="comment"># packages in environment at /Users/ofey/miniconda3:</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Name                    Version                   Build  Channel</span></span><br><span class="line">matplotlib                3.1.0            py37h54f8f79_0</span><br></pre></td></tr></table></figure>
+
 <h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><blockquote>
 <p>详细描述问题的范畴/条件/上下文/…</p>
 </blockquote>
-<p>知识管理的「记录」与「发布」阶段有一些目标是矛盾的。</p>
 <ul>
-<li>「记录」需要详尽、可增补、不管对错。所以有如下特点：<ul>
-<li>时间顺序，至少主体是时间顺序</li>
-<li>应该有完成的所有操作的信息，走过的所有「弯路」</li>
-</ul>
+<li><p>数据的前期处理。</p>
 </li>
-<li>「发布」需要简洁易读。<ul>
-<li>逻辑顺序</li>
-<li>只留下「直路」和「有意义的坑」</li>
-</ul>
+<li><p>散点图的绘制</p>
+</li>
+<li><input disabled type="checkbox"> <p>细粒度的控制：有些有权重，有些没有。（需要么？存疑）</p>
 </li>
 </ul>
-<p>为了减少从记录到发布的修改，记录的 template 应该和发布的相近；同时又具有可延展性。</p>
 <h2 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h2><blockquote>
 <p>逐步说明用什么工具, 在哪儿, 进行什么操作, 如何检验, 应该获得什么输出 …</p>
 </blockquote>
-<p>工作流程：</p>
-<p><code>记录的template - 记录 - 归档记录 - 在记录的基础上尽可能小调节 - 形成发布版</code></p>
-<p>我现在的流程是，直接使用 [LOG] 的 template 作为「记录」的 template，就是本文使用的 template。</p>
-<p>在记录时，「操作」二级标题下用于记录具体操作，并在每一天第一次记录的时候打上日期时间戳（灵感来自实验记录软件 findings，该软件因为无法导出 markdown 被我雪藏了）</p>
-<p>任务完成，记录关闭后，我选择复制一份作为发布的底版，保存到特定的 release 目录下/打上 release 的 tag，保留并归档包含完整信息的记录。</p>
-<p>将 release 副本的「操作」标题下的内容精简成「直路」，把最主要的坑单独列出来放到「总结」中。</p>
-<p>一份可发布的文档完成。</p>
+<p>参考了 <a href="https://matplotlib.org/gallery.html" target="_blank" rel="noopener">matplotlib gallery</a>。</p>
+<p>这是一个很棒的网站，上面有大多数普通绘图要求的例子。</p>
+<p>以下代码来自 <a href="https://matplotlib.org/examples/shapes_and_collections/scatter_demo.html" target="_blank" rel="noopener">scatter demo</a></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">Simple demo of a scatter plot.</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"><span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">N = <span class="number">50</span></span><br><span class="line">x = np.random.rand(N)</span><br><span class="line">y = np.random.rand(N)</span><br><span class="line">colors = np.random.rand(N)</span><br><span class="line">area = np.pi * (<span class="number">15</span> * np.random.rand(N))**<span class="number">2</span>  <span class="comment"># 0 to 15 point radii</span></span><br><span class="line"></span><br><span class="line">plt.scatter(x, y, s=area, c=colors, alpha=<span class="number">0.5</span>)</span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>scatter 的手册：<a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.scatter.html?highlight=scatter#matplotlib.pyplot.scatter" target="_blank" rel="noopener">matplotlib.pyplot.scatter</a></p>
+<p>重要参数：</p>
+<ul>
+<li>s: marker size. 散点图点的大小。和前面的 x/y array 长度一致。</li>
+<li>c: colors. 散点的颜色。可以传递一个 color string（eg: ‘#bcbd22’，也可以传递长度和 x/y 相同的一个 array）</li>
+</ul>
+<h3 id="如何在实际情况中使用"><a href="#如何在实际情况中使用" class="headerlink" title="如何在实际情况中使用"></a>如何在实际情况中使用</h3><p>将数据读入 python 脚本，并转换成 np.array 格式。</p>
+<p>然后进行必要的处理，colormap 的决定。</p>
+<p>然后绘图。</p>
+<h3 id="标题和坐标轴"><a href="#标题和坐标轴" class="headerlink" title="标题和坐标轴"></a>标题和坐标轴</h3><p>参考绘图<a href="https://matplotlib.org/gallery/lines_bars_and_markers/bar_stacked.html#sphx-glr-gallery-lines-bars-and-markers-bar-stacked-py" target="_blank" rel="noopener">Stacked Bar Graph</a></p>
+<p>参考绘图中的代码：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">plt.ylabel(<span class="string">'Scores'</span>)</span><br><span class="line">plt.title(<span class="string">'Scores by group and gender'</span>)</span><br><span class="line">plt.xticks(ind, (<span class="string">'G1'</span>, <span class="string">'G2'</span>, <span class="string">'G3'</span>, <span class="string">'G4'</span>, <span class="string">'G5'</span>))</span><br><span class="line">plt.yticks(np.arange(<span class="number">0</span>, <span class="number">81</span>, <span class="number">10</span>))</span><br><span class="line">plt.legend((p1[<span class="number">0</span>], p2[<span class="number">0</span>]), (<span class="string">'Men'</span>, <span class="string">'Women'</span>))</span><br></pre></td></tr></table></figure>
+
+<p>手册：</p>
+<ul>
+<li><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.title.html?highlight=title" target="_blank" rel="noopener">matplotlib.pyplot.title</a></li>
+<li><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.ylabel.html#matplotlib.pyplot.ylabel" target="_blank" rel="noopener">matplotlib.pyplot.ylabel</a></li>
+<li><a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.xticks.html#matplotlib.pyplot.xticks" target="_blank" rel="noopener">matplotlib.pyplot.xticks</a></li>
+</ul>
+<p>title 通过参数可以控制字体，位置和对齐（左中右）。但是一般情况下（参考 gallery 的<a href="https://matplotlib.org/gallery/lines_bars_and_markers/bar_stacked.html#sphx-glr-gallery-lines-bars-and-markers-bar-stacked-py" target="_blank" rel="noopener">例子</a>）直接<code>plt.title(&#39;My Title&#39;)</code>就完事了。</p>
+<h3 id="中文问题"><a href="#中文问题" class="headerlink" title="中文问题"></a>中文问题</h3><p>Mac 的 matplotlib 在图片中插中文字会变成方块。</p>
+<p>目前没什么解法……主要字体问题很麻烦，懒得去弄。</p>
+<p>尽量避免吧……</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
 <p>再次说明经验应用要注意的, 容易出问题的点, 以及有助记忆的作弊条…</p>
 </blockquote>
-<p>笔记从记录到可发布, 最核心的变化：</p>
-<ol>
-<li>时间顺序 - 逻辑顺序</li>
-<li>信息完全 - 信息简明</li>
-</ol>
-<p>记录的 template 设计时就需要考虑到发布的情况。</p>
-<p>「发布」不仅是公开发布，在自己的知识管理中增加这一道工序也是有益的——不仅可以降低大量 raw material 带来的认知负荷，而且合理的整理可以花少量时间达到复习的效果。</p>
+<p>用 scatter 绘图。内置了需要的所有功能。</p>
 <h2 id="refer"><a href="#refer" class="headerlink" title="refer"></a>refer</h2><blockquote>
 <p>过程中参考过的重要文章/图书/模块/代码/…</p>
 </blockquote>
 <p>永远的: <a href="https://gitlab.com/101camp/2py/tasks/wikis/HandBooks/Hb4Ask" target="_blank" rel="noopener">如何提问</a></p>
+<p><a href="https://matplotlib.org/gallery.html" target="_blank" rel="noopener">matplotlib gallery</a></p>
 <h2 id="logging"><a href="#logging" class="headerlink" title="logging:"></a>logging:</h2><blockquote>
 <p>用倒序日期排列来从旧到新记要关键变化</p>
 </blockquote>
 <ul>
-<li>190801 ofey init</li>
+<li>190922 ofey404 init</li>
 </ul>
 
       
@@ -457,11 +456,11 @@
           
             <a href="/tags/lan-chinese/" rel="tag"># lan-chinese</a>
           
-            <a href="/tags/productivity/" rel="tag"># productivity</a>
-          
             <a href="/tags/handbook/" rel="tag"># handbook</a>
           
-            <a href="/tags/writing/" rel="tag"># writing</a>
+            <a href="/tags/matplotlib/" rel="tag"># matplotlib</a>
+          
+            <a href="/tags/scatter-plot/" rel="tag"># scatter plot</a>
           
         </div>
       
@@ -474,8 +473,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/28/log-julia-environment-with-docker/" rel="next" title="[LOG] 用 docker 建立 julia 环境的手册">
-                <i class="fa fa-chevron-left"></i> [LOG] 用 docker 建立 julia 环境的手册
+              <a href="/2019/09/18/macos-gdb/" rel="next" title="[LOG] 在 macOS Mojave 上使用 gdb 的手册……">
+                <i class="fa fa-chevron-left"></i> [LOG] 在 macOS Mojave 上使用 gdb 的手册……
               </a>
             
           </div>
@@ -483,10 +482,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/08/05/tech-note-editor/" rel="prev" title="[LOG] 我的技术笔记编辑器选择之路">
-                [LOG] 我的技术笔记编辑器选择之路 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -638,7 +633,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#综述"><span class="nav-number">1.</span> <span class="nav-text">综述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">2.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">3.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">4.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作"><span class="nav-number">5.</span> <span class="nav-text">操作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">6.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#refer"><span class="nav-number">7.</span> <span class="nav-text">refer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logging"><span class="nav-number">8.</span> <span class="nav-text">logging:</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题"><span class="nav-number">3.</span> <span class="nav-text">问题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#操作"><span class="nav-number">4.</span> <span class="nav-text">操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#如何在实际情况中使用"><span class="nav-number">4.1.</span> <span class="nav-text">如何在实际情况中使用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#标题和坐标轴"><span class="nav-number">4.2.</span> <span class="nav-text">标题和坐标轴</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#中文问题"><span class="nav-number">4.3.</span> <span class="nav-text">中文问题</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#refer"><span class="nav-number">6.</span> <span class="nav-text">refer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logging"><span class="nav-number">7.</span> <span class="nav-text">logging:</span></a></li></ol></div>
             
 
           </div>
