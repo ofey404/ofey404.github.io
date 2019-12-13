@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="handbook,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Chinglish Small Talk" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="Consistent use of an issue or bug tracking system is considered one of the “hallmarks of a good software team”. – wikipedia  作为社会化软件开发的必备技能，本文分享一些 Issue 管理的常识。">
+<meta name="keywords" content="handbook">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Issue 管理入门指北">
+<meta property="og:url" content="http://ofey404.github.io/2019/07/16/tech-introduction-to-issue-management/index.html">
+<meta property="og:site_name" content="Chinglish Small Talk">
+<meta property="og:description" content="Consistent use of an issue or bug tracking system is considered one of the “hallmarks of a good software team”. – wikipedia  作为社会化软件开发的必备技能，本文分享一些 Issue 管理的常识。">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-12-04T07:23:32.779Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Issue 管理入门指北">
+<meta name="twitter:description" content="Consistent use of an issue or bug tracking system is considered one of the “hallmarks of a good software team”. – wikipedia  作为社会化软件开发的必备技能，本文分享一些 Issue 管理的常识。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://ofey404.github.io/2019/07/16/tech-introduction-to-issue-management/">
+
+
+
+
+
+  <title>Issue 管理入门指北 | Chinglish Small Talk</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Chinglish Small Talk</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Tech and Personal Blog of Ofey Chan. Personal articles are in *Archives*.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ofey404.github.io/2019/07/16/tech-introduction-to-issue-management/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ofey Chan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chinglish Small Talk">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Issue 管理入门指北</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-07-16T15:34:36+08:00">
+                2019-07-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>Consistent use of an issue or bug tracking system is considered one of the “hallmarks of a good software team”. – wikipedia</p>
+</blockquote>
+<p>作为社会化软件开发的必备技能，本文分享一些 Issue 管理的常识。</p>
+<a id="more"></a>
+
+<p>以下皆为本人阅读积累和逻辑分析，结论是保持开放的。</p>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><blockquote>
+<p>问题产生场景和激发隐藏任务事件/链接/…</p>
+</blockquote>
+<p>本文来自微信群中和大妈的一段对话：</p>
+<blockquote>
+<p>【大妈】：<br>在俺的直觉中:<br>0: Issue 根据性质/内容/目标不同, 有不同生命周期<br>1: 为了提醒大家和自己,在标题中注明是最好的<br>比如: 2d[FAQ] 如何下载git?<br>2: 关闭, 并不代表死亡..只是为了保证 Issue 首页能看到所有活跃提案, 甚至于, 先关闭, 自己完善到一定程度, 再打开公示也可以</p>
+</blockquote>
+<p>camp2py 学员们的信息交流、问题讨论，主要使用 <a href="https://gitlab.com/101camp/2py/tasks/issues" target="_blank" rel="noopener">task 仓库的 Issue 页面</a>。只要参与课程讨论，一定会使用 Issue。可预见将来参与正规的软件开发也会如此，Issue 的管理是合作软件开发中重要的一环，更是开源软件工作流程中不可或缺的一环。</p>
+<p>既然要学习 Issue 的管理，那么就要回答以下问题：</p>
+<ol>
+<li>Issue 有什么用？为什么要进行 Issue 管理？</li>
+<li>有哪些种类的 Issue？各种 Issue 一般又有什么样的模版？</li>
+<li>何时应该创建一个 Issue？关闭一个 Issue 呢？哪些信息又不应该放进 Issue？</li>
+<li>如何才能持续收到 Issue 页面的更新？</li>
+<li>（进阶，本次不准备回答）对开源软件，作为用户/普通贡献者/仓库管理者分别有什么样的 Issue 管理原则和注意事项？</li>
+</ol>
+<h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><blockquote>
+<p>解决办法适用的环境/版本</p>
+</blockquote>
+<p>github、gitlab 都有内建的 Issue 功能。但是 Issue Track System 的范畴比这些例子要广一些，是一类软件系统的统称。</p>
+<p>Issue Track System 在某些方面类似 Bug Tracker，wikipedia 上有个 <a href="https://en.wikipedia.org/wiki/Comparison_of_issue-tracking_systems" target="_blank" rel="noopener">issue tracking system 的比较</a>。</p>
+<h2 id="问题和回答"><a href="#问题和回答" class="headerlink" title="问题和回答"></a>问题和回答</h2><blockquote>
+<p>详细描述问题的范畴/条件/上下文/…<br>【回答的可操作性】逐步说明用什么工具, 在哪儿, 进行什么操作, 如何检验, 应该获得什么输出 …</p>
+</blockquote>
+<h3 id="Issue-有什么用？为什么要进行-Issue-管理？"><a href="#Issue-有什么用？为什么要进行-Issue-管理？" class="headerlink" title="Issue 有什么用？为什么要进行 Issue 管理？"></a>Issue 有什么用？为什么要进行 Issue 管理？</h3><p>Issue 是团队内/团队和外部用户之间交流的一个渠道，直接和某个代码库相关联。同时采取「公告板」形式，和不分主题的「聊天记录」形式相对，一个帖子的讨论历史集中，便于查找。</p>
+<p>因此 Issue 的适用条件：</p>
+<ul>
+<li>以某个代码库为中心的讨论；</li>
+<li>文本量较大，更接近电邮、文章而非聊天的讨论；</li>
+<li>可能需要持续很长时间（数天、数月）的讨论；</li>
+<li>同一主题下回复历史中的信息非常重要的讨论；</li>
+<li>记录需要长期保存以备查找的讨论。</li>
+</ul>
+<p>Issue 是「信息流模式」——和以逻辑联系的「wiki模式」或者说「书籍模式」相对。不断有新的 Issue Open，生命周期结束的 Issue Close，Issue 的页面的经典阅读模式也是从上到下的流模式，外加检索和筛选功能。</p>
+<p>因此：</p>
+<ul>
+<li>每种 Issue 都必须有其生命周期，必须在某个时刻关闭，因为首页的空间资源和团队的注意力资源都是有限的。</li>
+<li>同时 Issue 作为一个「流模式」讨论版，除了记录关闭后的归档之外，不应该承担任何知识库的功能。<ul>
+<li>任何在关闭后有用的信息都应该整理归档到其他地方。例如：</li>
+<li>「常见问题」在关闭后应该归档到项目 wiki 专门的 FAQ 收集页面（虽然现在还不存在）；</li>
+<li>「工具指南」应该归档到团队的知识库，在蟒营也是项目 wiki 的知识库页面。</li>
+</ul>
+</li>
+</ul>
+<p>重申一遍原则：</p>
+<ol>
+<li>Issue 不承担知识库的功能，任何完善到可用的 Issue 都应该及时整理归档，保持 Issue 页面整洁。</li>
+<li>（几乎）任何 Issue 都需要在某个时刻关闭。</li>
+</ol>
+<h3 id="有哪些种类的-Issue？创建-Issue-又有什么样的要求和模版？"><a href="#有哪些种类的-Issue？创建-Issue-又有什么样的要求和模版？" class="headerlink" title="有哪些种类的 Issue？创建 Issue 又有什么样的要求和模版？"></a>有哪些种类的 Issue？创建 Issue 又有什么样的要求和模版？</h3><p>普适的我没精力去整理。本课程的学习中出现了如下几种 Issue，所有模版在 Issue 页面点击 <a href="https://gitlab.com/101camp/2py/tasks/issues/new?issue%5Bassignee_id%5D=&issue%5Bmilestone_id%5D=" target="_blank" rel="noopener">New Issue</a> 按钮可以看到。</p>
+<p>对一个项目，常见的 Issue 最好要有模版，可以复用。</p>
+<ul>
+<li>Ask 模版：日常提问模板。</li>
+<li>Report 模版：学员周任务汇报模版，标题格式——[任务周] &lt;学员ID&gt; (心情断言)</li>
+<li>Handbook 模版，tag [FAQ]：日常手册/指北 分享。</li>
+</ul>
+<p><strong>[FAQ] tag 滥用的问题</strong></p>
+<p>目前大家似乎在滥用 [FAQ] tag，普通的提问并不值得成为所谓的”Frequent Asked Question”。一是不一定 Frequent，二是普通提问的可阅读性、知识密度往往很难有「手册」级别的价值。</p>
+<p>信息爆炸成一团噪音，信息则无价值。[FAQ] 这个 tag 应该是对那些作者努力收集了所有可用信息，改善了文章的可读性、泛用性，同时又真正能帮到许多人的文章的标志。换言之标[FAQ]应该是作者对内容质量的一个承诺。</p>
+<h3 id="何时应该创建一个-Issue？"><a href="#何时应该创建一个-Issue？" class="headerlink" title="何时应该创建一个 Issue？"></a>何时应该创建一个 Issue？</h3><p>模版的类型基本可以回答大部分「何时创建」的问题了。「信息过载」的度请各位自行判断。</p>
+<p>同时对模版覆盖不了的情况，再次重申 Issue 的适用条件：</p>
+<ul>
+<li>以某个代码库为中心的讨论；</li>
+<li>文本量较大，更接近电邮、文章而非聊天的讨论；</li>
+<li>可能需要持续很长时间（数天、数月）的讨论；</li>
+<li>同一主题下回复历史中的信息非常重要的讨论；</li>
+<li>记录需要长期保存以备查找的讨论。</li>
+</ul>
+<p>有时有可能是模版还没 cover 到，所以各位可以适时地自己创造模版，然后发布在社区中。</p>
+<h3 id="何时关闭一个-Issue-？"><a href="#何时关闭一个-Issue-？" class="headerlink" title="何时关闭一个 Issue ？"></a>何时关闭一个 Issue ？</h3><p>Issue 一定需要关闭。「关闭」意味着 Issue 不会出现在 Open 栏，相当于被暂时归档。</p>
+<p>关闭的 Issue 仍然可以被查找，只是相当于不出现在首页上，不占用大家宝贵的注意力资源。同时关闭了的 Issue 也可以重新被打开。</p>
+<p>各种类型 Issue 的推定关闭时机</p>
+<ul>
+<li>提问 Issue——问题解答后关闭。视热度选择是否进一步处理，成为一篇文章。</li>
+<li>FAQ Issue——文章完善后关闭，归档到对应的知识库。</li>
+<li>特殊功能型 Issue——完成功能立刻关闭。例如“Hello World” Issue。</li>
+<li>需要他人确认、合作的Issue——完成功能后关闭。例如周任务报告，可能需要老师确认。</li>
+</ul>
+<h3 id="哪些信息又不应该放进-Issue？"><a href="#哪些信息又不应该放进-Issue？" class="headerlink" title="哪些信息又不应该放进 Issue？"></a>哪些信息又不应该放进 Issue？</h3><p>永远的: <a href="https://gitlab.com/101camp/2py/tasks/wikis/HandBooks/Hb4Ask" target="_blank" rel="noopener">如何提问</a></p>
+<h3 id="如何才能持续收到-Issue-页面的更新？"><a href="#如何才能持续收到-Issue-页面的更新？" class="headerlink" title="如何才能持续收到 Issue 页面的更新？"></a>如何才能持续收到 Issue 页面的更新？</h3><p>gitlab 的 Issue 页面有 <a href="https://gitlab.com/101camp/2py/tasks/issues.atom?feed_token=kHJS1J-xZ5reczvJ89eh&state=opened" target="_blank" rel="noopener">RSS feed</a>。</p>
+<p>用 RSS 接收 Issue 更新似乎是业界的普遍实践。如果大家有不了解 RSS 的，可以参考这一篇 <a href="https://sspai.com/post/54658" target="_blank" rel="noopener">中文文章</a>。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><blockquote>
+<p>再次说明经验应用要注意的, 容易出问题的点, 以及有助记忆的作弊条…</p>
+</blockquote>
+<ol>
+<li>Issue 不承担知识库的功能，任何完善到可用的 Issue 都应该及时整理归档，保持 Issue 页面整洁。</li>
+<li>（几乎）任何 Issue 都需要在某个时刻关闭。</li>
+<li>对 [FAQ] tag 的滥用：<ul>
+<li>[FAQ] 这个 tag 应该是对那些作者努力收集了所有可用信息，改善了文章的可读性、泛用性，同时又真正能帮到许多人的文章的标志。换言之标[FAQ]应该是作者对内容质量的一个承诺。</li>
+</ul>
+</li>
+<li>各种类型 Issue 的推定关闭时机<ul>
+<li>提问 Issue——问题解答后关闭。视热度选择是否进一步处理，成为一篇文章。</li>
+<li>FAQ Issue——文章完善后关闭，归档到对应的知识库。</li>
+<li>特殊功能型 Issue——完成功能立刻关闭。例如“Hello World” Issue。</li>
+<li>需要他人确认、合作的Issue——完成功能后关闭。例如周任务报告，可能需要老师确认。</li>
+</ul>
+</li>
+</ol>
+<h2 id="refer"><a href="#refer" class="headerlink" title="refer"></a>refer</h2><blockquote>
+<p>过程中参考过的重要文章/图书/模块/代码/…</p>
+</blockquote>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Issue_tracking_system#cite_note-2" target="_blank" rel="noopener">Issue tracking system</a></li>
+<li><a href="https://www.projectmanager.com/training/managing-project-issues" target="_blank" rel="noopener">7 Steps for Managing Project Issues</a></li>
+<li>永远的: <a href="https://gitlab.com/101camp/2py/tasks/wikis/HandBooks/Hb4Ask" target="_blank" rel="noopener">如何提问</a></li>
+</ul>
+<h2 id="logging"><a href="#logging" class="headerlink" title="logging:"></a>logging:</h2><blockquote>
+<p>用倒序日期排列来从旧到新记要关键变化</p>
+<ul>
+<li>190716 init</li>
+</ul>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/handbook/" rel="tag"># handbook</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/07/12/tech-web-scraping-intro-with-scrapy/" rel="next" title="Web Scraping Introduction with Scrapy">
+                <i class="fa fa-chevron-left"></i> Web Scraping Introduction with Scrapy
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/07/28/tech-2019-07-28-log-julia-environment-with-docker/" rel="prev" title="[LOG] 用 docker 建立 julia 环境的手册">
+                [LOG] 用 docker 建立 julia 环境的手册 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+  <div id="gitalk-container"></div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Ofey Chan</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ofey404" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#背景"><span class="nav-number">1.</span> <span class="nav-text">背景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境"><span class="nav-number">2.</span> <span class="nav-text">环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#问题和回答"><span class="nav-number">3.</span> <span class="nav-text">问题和回答</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Issue-有什么用？为什么要进行-Issue-管理？"><span class="nav-number">3.1.</span> <span class="nav-text">Issue 有什么用？为什么要进行 Issue 管理？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有哪些种类的-Issue？创建-Issue-又有什么样的要求和模版？"><span class="nav-number">3.2.</span> <span class="nav-text">有哪些种类的 Issue？创建 Issue 又有什么样的要求和模版？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#何时应该创建一个-Issue？"><span class="nav-number">3.3.</span> <span class="nav-text">何时应该创建一个 Issue？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#何时关闭一个-Issue-？"><span class="nav-number">3.4.</span> <span class="nav-text">何时关闭一个 Issue ？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#哪些信息又不应该放进-Issue？"><span class="nav-number">3.5.</span> <span class="nav-text">哪些信息又不应该放进 Issue？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#如何才能持续收到-Issue-页面的更新？"><span class="nav-number">3.6.</span> <span class="nav-text">如何才能持续收到 Issue 页面的更新？</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#refer"><span class="nav-number">5.</span> <span class="nav-text">refer</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logging"><span class="nav-number">6.</span> <span class="nav-text">logging:</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ofey Chan</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'db31fe113bf9c692437d',
+          clientSecret: '761d34846e2e0e132deae0ccfaf2257ceff4888c',
+          repo: 'ofey404.github.io',
+          owner: 'ofey404',
+          admin: ['ofey404'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
