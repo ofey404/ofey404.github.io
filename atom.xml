@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ofey404.github.io/"/>
-  <updated>2019-12-20T09:09:17.101Z</updated>
+  <updated>2019-12-07T04:46:17.409Z</updated>
   <id>http://ofey404.github.io/</id>
   
   <author>
@@ -15,44 +15,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test-img</title>
-    <link href="http://ofey404.github.io/2019/12/20/test-img/"/>
-    <id>http://ofey404.github.io/2019/12/20/test-img/</id>
-    <published>2019-12-20T09:08:27.000Z</published>
-    <updated>2019-12-20T09:09:17.101Z</updated>
-    
-    <content type="html"><![CDATA[<p><img src="./test.png" alt="img"></p><a id="more"></a>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;./test.png&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>在复旦试着做一个背包客</title>
-    <link href="http://ofey404.github.io/2019/12/13/articles-2019-12-Fri-Dec-13-2019-11-30-08-GMT-0800-backpacker-in-fudan/"/>
-    <id>http://ofey404.github.io/2019/12/13/articles-2019-12-Fri-Dec-13-2019-11-30-08-GMT-0800-backpacker-in-fudan/</id>
-    <published>2019-12-13T03:30:08.000Z</published>
-    <updated>2019-12-13T04:13:11.951Z</updated>
-    
-    <content type="html"><![CDATA[<p>我要尝试做一个在复旦的 backpacker。</p><a id="more"></a><h2 id="不做是借口"><a href="#不做是借口" class="headerlink" title="不做是借口"></a>不做是借口</h2><p>「风险太高了，所以不敢尝试」这种想法，如果用正确的方式来看待，只是给自己不去尝试新东西的一个借口而已，因为并不是要你一下就把所有的资源投入到新的事情上面，而把原来的基本盘完全放弃掉。</p><p>总是可以找到一个最小的切入点，去测试新事物的可能性的。如果不好，退回来就是。如果可以，再慢慢深入——这大概有点「最小可用原型」的思想。</p><p>连测试也不做，就直接放弃一个自己分析觉得 ok 但是有些地方很奇怪的想法，这是不符合科学方法的。</p><p>我已经知道，我是个想到什么主意就必须立刻动起来的人—这种性质有点像洪七公练的外家功夫，不动起来是不行的。所以分析完之后，下午我去迪卡侬买个睡袋，周末住张江。</p><h2 id="击中痛点"><a href="#击中痛点" class="headerlink" title="击中痛点"></a>击中痛点</h2><p>我读了这个，一个酷姐的故事。<a href="https://www.douban.com/note/745187957/" target="_blank" rel="noopener"> 6年不租房，从住办公室到四海为家 </a>。</p><p>她并不是嬉皮士——她旅行、同时也努力地工作过，有一门好手艺。她过的并不是一种通过剥削他人的付出（比如父母）来得到的颓废生活方式。</p><p>击中了我的几个思维盲区。目前来看刚好也符合我现在的生活方式和需求。</p><h3 id="context-switch"><a href="#context-switch" class="headerlink" title="context switch"></a>context switch</h3><blockquote><p>在我的职业生涯里，金山是蛮深刻的一段，很开心，公司的环境让人除了工作什么也不用想。食堂自助餐一天三顿都做得特别美味。住在公司的我，日子过得简单而幸福。口袋里揣着300块钱、三个月后还剩50块时，我开始也怀疑自己是不是有问题，毕竟这离正常人的轨道太远了。没有房租、水电、网费、交通费，甚至连卫生纸都不用买一张，又没什么物质欲望，收入几乎只进不出。再到后来，我对发薪日也完全不敏感了，甚至大半年都不查一次工资进账。突然心血来潮地查一下，发现自己有那么多钱了！</p></blockquote><p>我极其讨厌通勤，也住过物理楼和图书馆。就像多任务的计算机的一大开销是不同任务之间的 context switch（上下文切换），我的一大麻烦就是每天进入状态、离开、再进入状态，如此往复。</p><p>为此我已经做了许多努力：</p><ul><li>选择方便的交通工具，自行车、滑板、锻炼走路的速度…</li><li>电子化的阅读让我不用烦恼带什么书出门，</li><li>随时都带着可以工作的 mac 电脑，</li><li>尽量在一个地方待到关门再回寝室……</li></ul><p>这位酷姐的经历让我茅塞顿开——既然已经带上了全套的工作环境，为什么不再带个睡眠的环境？我现在的负重在 4kg 左右，电子化图书之后的盈余完全可以 cover。</p><p>所以我对这种生活方式的「最小可用原型」，就是尝试在复旦做一个背包客——走到哪里，睡到哪里。</p><h2 id="鲁滨逊式-pros-and-cons"><a href="#鲁滨逊式-pros-and-cons" class="headerlink" title="鲁滨逊式 pros and cons"></a>鲁滨逊式 pros and cons</h2><h3 id="pros"><a href="#pros" class="headerlink" title="pros"></a>pros</h3><p>目前推想，最大的好处是解放了活动范围。过夜范围拓宽后，活动范围可以到整个上海。</p><p>现在我已经实践了随处可以工作（效果不错），随处可以休息的话，出行对我来讲就是零时间成本的。</p><p>我可以周末去市中心，去闵行，从任意一个校区出发，去看任意的人，去吃上海市内的随便什么东西。</p><p>有即时通信工具，朋友关系并不需要空间上极其临近才能维护得很好，反而如果我常常有机会去看他们</p><p>减少 context switch，活得更纯粹。而且图书馆等按时熄灯，说不定反而能改善睡眠。</p><p>作为背包客旅行的练习。那种花巨多钱住最好宾馆的旅行和我的美学不符，追求享受的反面也是给自己带来负担。</p><h3 id="cons和可行性分析"><a href="#cons和可行性分析" class="headerlink" title="cons和可行性分析"></a>cons和可行性分析</h3><p>我可能会被认为是怪人。不过这个微不足道。</p><p>另外并不是完全脱离寝室，也没必要。正因为有寝室的存在，所以可以不必像真正的背包客一样把所有的必需品装在包里，而是不定期回到寝室补给（也可以在寝室睡觉）</p><p>可能面临的问题和对策：</p><ul><li>不习惯在外休息，导致体能下降<ul><li>我觉得可以克服，而且我本来就不是很认床</li><li>这种生活方式实验进行一两周之后，对自己的体能做一个再评估</li><li>用多出来的时间吃水果，运动</li></ul></li><li>没有地方住<ul><li>张江：六星战队活动室、图书馆</li><li>邯郸：寝室、各个图书馆、光华楼、物理楼活动室</li></ul></li><li>个人卫生<ul><li>随身带牙刷毛巾防水袋洗护用品（正好有合适的小袋子）。</li><li>洗澡频率仍然保持一天一次，各校区的澡堂我都有权限使用。</li></ul></li><li>失窃的风险管理<ul><li>不在公共场合过夜（上面已经列举了可行的场合，全都是带锁的房间/晚上上锁且有监控的场所）</li><li>自己加强学习和防范，这是做背包客的必修课，逃不掉的。</li></ul></li><li>能带来多少效用<ul><li>有待实验</li><li>下学期选课可以安排一下时间，减少通勤。</li></ul></li></ul>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我要尝试做一个在复旦的 backpacker。&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="lifestyle" scheme="http://ofey404.github.io/tags/lifestyle/"/>
-    
-  </entry>
   
   <entry>
     <title>《火焰纹章·风花雪月》超高难度临时记录</title>
@@ -249,9 +211,9 @@
     </summary>
     
     
-      <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
-    
       <category term="julia" scheme="http://ofey404.github.io/tags/julia/"/>
+    
+      <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
     
   </entry>
   
