@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ofey404.github.io/"/>
-  <updated>2019-12-13T04:13:11.951Z</updated>
+  <updated>2019-12-20T09:09:17.101Z</updated>
   <id>http://ofey404.github.io/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test-img</title>
+    <link href="http://ofey404.github.io/2019/12/20/test-img/"/>
+    <id>http://ofey404.github.io/2019/12/20/test-img/</id>
+    <published>2019-12-20T09:08:27.000Z</published>
+    <updated>2019-12-20T09:09:17.101Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="./test.png" alt="img"></p><a id="more"></a>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;./test.png&quot; alt=&quot;img&quot;&gt;&lt;/p&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>在复旦试着做一个背包客</title>
@@ -231,9 +249,9 @@
     </summary>
     
     
-      <category term="julia" scheme="http://ofey404.github.io/tags/julia/"/>
-    
       <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
+    
+      <category term="julia" scheme="http://ofey404.github.io/tags/julia/"/>
     
   </entry>
   
