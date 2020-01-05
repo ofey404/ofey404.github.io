@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ofey404.github.io/"/>
-  <updated>2019-12-07T04:46:17.409Z</updated>
+  <updated>2020-01-05T00:21:57.274Z</updated>
   <id>http://ofey404.github.io/</id>
   
   <author>
@@ -17,11 +17,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Chapter 1-3 | Note of C++ Primer Plus</title>
+    <link href="http://ofey404.github.io/2020/01/05/c-primer-plus-note-c1-3/"/>
+    <id>http://ofey404.github.io/2020/01/05/c-primer-plus-note-c1-3/</id>
+    <published>2020-01-05T00:19:44.000Z</published>
+    <updated>2020-01-05T00:21:57.274Z</updated>
+    
+    <content type="html"><![CDATA[<ul><li>Chapter 1 Getting start with c++</li><li>Chapter 2 Setting out to c++</li><li>Chapter 3 Dealing with data</li></ul><a id="more"></a><h1 id="Chapter-1-Getting-start-with-c"><a href="#Chapter-1-Getting-start-with-c" class="headerlink" title="Chapter 1 Getting start with c++"></a>Chapter 1 Getting start with c++</h1><p>C Programming philosophy</p><ul><li>procedural programming (emphasize the algorithm than data)</li><li>structured programming (limited branching instructions)</li><li>top-down design(functions as task model)</li></ul><p>The c++ shift to object-oriented programming</p><ul><li>Need: large projects</li><li>fit language to its problem</li><li>bottom-up method (classes -&gt; things program deals)</li><li>reusable code, info hiding, polymorphism, inheritance</li></ul><p>Generic programming: another paradigm</p><ul><li>need: simplify common tasks</li><li>generic means type independent.</li></ul><p>Father of c++: Bjarne Stroustrup.</p><p>Design philosophy of c++ - “winged pig”: real needs is more than theoretical purity.</p><p>A joke of c++ standard:</p><blockquote><p>Fortunately, it was soon realized that 0x could be a hexadeci- mal integer (see Appendix A,“Number Bases”), which meant the committee had until 2015 to finish the work.</p></blockquote><p>Advice of Peter Norvig in <a href="https://norvig.com/21-days.html" target="_blank" rel="noopener">Teach Yourself Programming in Ten Years</a>:</p><blockquote><p>Get involved in a language standardization effort.<br>Have the good sense to get off the language standardization effort as quickly as possible.</p></blockquote><h1 id="Chapter-2-Setting-out-to-c"><a href="#Chapter-2-Setting-out-to-c" class="headerlink" title="Chapter 2 Setting out to c++"></a>Chapter 2 Setting out to c++</h1><p>Skim. Find difference with c, and some special cautions. Put attention on subtitles and appendixs.</p><p><code>using namespace</code> is in chapter 9 memory models and namespace.</p><p><code>endl</code> guarantees the output would be flushed.</p><p>Redefine <code>&lt;&lt;</code> operator can display new data type.</p><p>Anaolgy of class: a data form and how it can be used.</p><p>So there’s a “Chapter Review” part. I should read this first.</p><h1 id="Chapter-3-Dealing-with-data"><a href="#Chapter-3-Dealing-with-data" class="headerlink" title="Chapter 3 Dealing with data"></a>Chapter 3 Dealing with data</h1><p>Read “Chapter Review” part first.</p><ul><li>What is type <code>auto</code>?</li><li>distinction between <code>33L</code> &amp; <code>33</code></li></ul><blockquote><p>Names beginning with two underscore characters or with an underscore character followed by an uppercase letter are reserved for use by the implementation—that is, the compiler and the resources it uses. Names beginning with a single underscore character are reserved for use as global identifiers by the implementation.</p></blockquote><ul><li><code>__variable</code> or <code>_Variable</code>: compiler and resource</li><li><code>_variable</code>: global identifier</li></ul><p>Q: Why data converting order is designed like that?</p><blockquote><ol start="6"><li>Otherwise, one operand is signed and one is unsigned. If the unsigned operand is of higher rank than the signed operand, the latter is converted to the type of the unsigned operand.</li><li>Otherwise, if the signed type can represent all values of the unsigned type, the unsigned operand is converted to the type of the signed type.</li><li>Otherwise, both operands are converted to the unsigned version of the signed type.</li></ol></blockquote><p>I merely take it as ‘scale to the higher rank one’, if all info can be kepted(eg: positive integer and higher ranked unsigned). Else drop to unsigned.(8)</p><p>Other information for further study:</p><ul><li>usage of <code>wchar_t</code> and <code>L&quot;string&quot;</code>.</li><li>universal initialization syntax with parentheses.</li></ul><p>Type casting syntax:</p><ul><li>c type.</li><li><code>typename (value)</code>, this type conversion type is purely c++.</li><li><code>static_cast&lt;typename&gt; (value)</code>, <code>static_cast&lt;&gt;</code> operator.</li></ul><h1 id="logging"><a href="#logging" class="headerlink" title="logging"></a>logging</h1><ul><li>20200105 ofey init</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      &lt;ul&gt;
+&lt;li&gt;Chapter 1 Getting start with c++&lt;/li&gt;
+&lt;li&gt;Chapter 2 Setting out to c++&lt;/li&gt;
+&lt;li&gt;Chapter 3 Dealing with data&lt;/li&gt;
+&lt;/ul&gt;
+    
+    </summary>
+    
+    
+      <category term="c++" scheme="http://ofey404.github.io/tags/c/"/>
+    
+  </entry>
+  
+  <entry>
     <title>《火焰纹章·风花雪月》超高难度临时记录</title>
-    <link href="http://ofey404.github.io/2019/12/07/fire-emblem-3h/"/>
-    <id>http://ofey404.github.io/2019/12/07/fire-emblem-3h/</id>
+    <link href="http://ofey404.github.io/2019/12/07/nonsense-2019-12-Sat-Dec-07-2019-12-27-48-GMT-0800-fire-emblem-3h/"/>
+    <id>http://ofey404.github.io/2019/12/07/nonsense-2019-12-Sat-Dec-07-2019-12-27-48-GMT-0800-fire-emblem-3h/</id>
     <published>2019-12-07T04:27:48.000Z</published>
-    <updated>2019-12-07T04:46:17.409Z</updated>
+    <updated>2020-01-03T10:41:16.759Z</updated>
     
     <content type="html"><![CDATA[<p>DLC 给了个超高难度。就尝试一下，学期中不打算玩。</p><p>5 小时体验：超高难度好点受苦的……学期中我有时间玩这个，还不如去写写课程 PJ，从挑战性和「不知道能否成功」体验上来讲这两者没啥区别。</p><p>这游戏在超高难度下比较需要规划，在这里记一些备忘。</p><a id="more"></a><h2 id="存档方式"><a href="#存档方式" class="headerlink" title="存档方式"></a>存档方式</h2><p>每章开始存档。存档策略如下图。</p><p>eg：</p><p><code>|1 开始|2 开始|2 关键点一|2 关键点二（目前）| 空 | 空 | 空 | 空 |</code></p><p>通过第二关后：</p><p><code>|1 开始|2 开始|3 开始（目前）|2 关键点二（可覆盖）| 空 | 空 | 空 |</code></p><p>需要另开一个分支时：（类似栈）</p><p><code>|1 开始|2 开始|3 开始（从这里分支）|3 关键点一（感觉练坏了的地方）| 空 | 空 | ... || &lt;- 分支存档往这个方向增加 - |3 关键点一|</code></p><h2 id="进度备忘"><a href="#进度备忘" class="headerlink" title="进度备忘"></a>进度备忘</h2><p>倒带到第二章开始。黑鹫线。计算表明贝老师正常成长，枪 C 拿弑骑一击，有方案可以死亡骑士初见杀。</p><p>挖白毛也是可选项，但是先尝试上面的。</p><ul><li>开场拉一个协助学生，使用方案有两个：<ul><li>开加速让他冲过去砍一下死亡骑士然后死掉，补一些伤害。</li><li>让他把死亡骑士从 buff 地板上引下来，同样是送。</li></ul></li><li>计策磨血。保守估计，能造成 2 伤害的人大概有三四个。</li><li>贝老师弑骑一击，18 力量能造成 32 点伤害，所以前面伤害补到 14 就可以击杀。</li></ul><p>这么算不是很保险。考虑拉一个白毛做 plan B。</p><p>白毛在第四章结尾邀请协助，理学 C+，差一点点黑暗冲击，法强 18，感觉挖来比强行练贝老师还要顶。</p><p>就是我不喜欢挖人，得查一下攻略。</p>]]></content>
     
@@ -211,9 +235,9 @@
     </summary>
     
     
-      <category term="julia" scheme="http://ofey404.github.io/tags/julia/"/>
-    
       <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
+    
+      <category term="julia" scheme="http://ofey404.github.io/tags/julia/"/>
     
   </entry>
   
