@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="game,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="DLC 给了个超高难度。就尝试一下，学期中不打算玩。 5 小时体验：超高难度好点受苦的……学期中我有时间玩这个，还不如去写写课程 PJ，从挑战性和「不知道能否成功」体验上来讲这两者没啥区别。 这游戏在超高难度下比较需要规划，在这里记一些备忘。">
-<meta name="keywords" content="game">
+<meta name="description" content="I’ve read this section. Just take down some important points. Also some insights from lab.">
+<meta name="keywords" content="Programming, Computer Science">
 <meta property="og:type" content="article">
-<meta property="og:title" content="《火焰纹章·风花雪月》超高难度临时记录">
-<meta property="og:url" content="http://ofey404.github.io/2019/12/07/nonsense-2019-12-Sat-Dec-07-2019-12-27-48-GMT-0800-fire-emblem-3h/index.html">
+<meta property="og:title" content="Chapter 2 | Note of CSAPP">
+<meta property="og:url" content="http://ofey404.github.io/2020/01/10/csapp-note-c2/index.html">
 <meta property="og:site_name" content="Chinglish Small Talk">
-<meta property="og:description" content="DLC 给了个超高难度。就尝试一下，学期中不打算玩。 5 小时体验：超高难度好点受苦的……学期中我有时间玩这个，还不如去写写课程 PJ，从挑战性和「不知道能否成功」体验上来讲这两者没啥区别。 这游戏在超高难度下比较需要规划，在这里记一些备忘。">
+<meta property="og:description" content="I’ve read this section. Just take down some important points. Also some insights from lab.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-01-03T10:41:16.759Z">
+<meta property="og:updated_time" content="2020-01-10T10:54:55.955Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="《火焰纹章·风花雪月》超高难度临时记录">
-<meta name="twitter:description" content="DLC 给了个超高难度。就尝试一下，学期中不打算玩。 5 小时体验：超高难度好点受苦的……学期中我有时间玩这个，还不如去写写课程 PJ，从挑战性和「不知道能否成功」体验上来讲这两者没啥区别。 这游戏在超高难度下比较需要规划，在这里记一些备忘。">
+<meta name="twitter:title" content="Chapter 2 | Note of CSAPP">
+<meta name="twitter:description" content="I’ve read this section. Just take down some important points. Also some insights from lab.">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://ofey404.github.io/2019/12/07/nonsense-2019-12-Sat-Dec-07-2019-12-27-48-GMT-0800-fire-emblem-3h/">
+  <link rel="canonical" href="http://ofey404.github.io/2020/01/10/csapp-note-c2/">
 
 
 
 
 
-  <title>《火焰纹章·风花雪月》超高难度临时记录 | Chinglish Small Talk</title>
+  <title>Chapter 2 | Note of CSAPP | Chinglish Small Talk</title>
   
 
 
@@ -255,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://ofey404.github.io/2019/12/07/nonsense-2019-12-Sat-Dec-07-2019-12-27-48-GMT-0800-fire-emblem-3h/">
+    <link itemprop="mainEntityOfPage" href="http://ofey404.github.io/2020/01/10/csapp-note-c2/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ofey Chan">
@@ -272,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">《火焰纹章·风花雪月》超高难度临时记录</h1>
+          <h1 class="post-title" itemprop="name headline">Chapter 2 | Note of CSAPP</h1>
         
 
         <div class="post-meta">
@@ -284,8 +284,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-07T12:27:48+08:00">
-                2019-12-07
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-10T17:53:39+08:00">
+                2020-01-10
               </time>
             
 
@@ -322,32 +322,135 @@
       
 
       
-        <p>DLC 给了个超高难度。就尝试一下，学期中不打算玩。</p>
-<p>5 小时体验：超高难度好点受苦的……学期中我有时间玩这个，还不如去写写课程 PJ，从挑战性和「不知道能否成功」体验上来讲这两者没啥区别。</p>
-<p>这游戏在超高难度下比较需要规划，在这里记一些备忘。</p>
+        <blockquote>
+<p>I’ve read this section. Just take down some important points.</p>
+<p>Also some insights from lab.</p>
+</blockquote>
 <a id="more"></a>
 
-<h2 id="存档方式"><a href="#存档方式" class="headerlink" title="存档方式"></a>存档方式</h2><p>每章开始存档。存档策略如下图。</p>
-<p>eg：</p>
-<p><code>|1 开始|2 开始|2 关键点一|2 关键点二（目前）| 空 | 空 | 空 | 空 |</code></p>
-<p>通过第二关后：</p>
-<p><code>|1 开始|2 开始|3 开始（目前）|2 关键点二（可覆盖）| 空 | 空 | 空 |</code></p>
-<p>需要另开一个分支时：（类似栈）</p>
-<p><code>|1 开始|2 开始|3 开始（从这里分支）|3 关键点一（感觉练坏了的地方）| 空 | 空 | ... || &lt;- 分支存档往这个方向增加 - |3 关键点一|</code></p>
-<h2 id="进度备忘"><a href="#进度备忘" class="headerlink" title="进度备忘"></a>进度备忘</h2><p>倒带到第二章开始。黑鹫线。计算表明贝老师正常成长，枪 C 拿弑骑一击，有方案可以死亡骑士初见杀。</p>
-<p>挖白毛也是可选项，但是先尝试上面的。</p>
+<h2 id="Endian"><a href="#Endian" class="headerlink" title="Endian"></a>Endian</h2><p>How to arrange bit representation of object (more than one byte) in memory.</p>
 <ul>
-<li>开场拉一个协助学生，使用方案有两个：<ul>
-<li>开加速让他冲过去砍一下死亡骑士然后死掉，补一些伤害。</li>
-<li>让他把死亡骑士从 buff 地板上引下来，同样是送。</li>
+<li>little endian: <strong>least significant</strong> bit come first (“first” means lower address).<ul>
+<li>Intel-compatible machines.</li>
 </ul>
 </li>
-<li>计策磨血。保守估计，能造成 2 伤害的人大概有三四个。</li>
-<li>贝老师弑骑一击，18 力量能造成 32 点伤害，所以前面伤害补到 14 就可以击杀。</li>
+<li>big ending: <strong>most significant</strong> come first.<ul>
+<li>IBM and Sun.</li>
 </ul>
-<p>这么算不是很保险。考虑拉一个白毛做 plan B。</p>
-<p>白毛在第四章结尾邀请协助，理学 C+，差一点点黑暗冲击，法强 18，感觉挖来比强行练贝老师还要顶。</p>
-<p>就是我不喜欢挖人，得查一下攻略。</p>
+</li>
+</ul>
+<p>eg: How a int(4 bytes) stored in memory.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int 0x01234567</span><br><span class="line">low address -&gt; high address</span><br><span class="line"></span><br><span class="line">little:</span><br><span class="line">low 67 45 23 01 high</span><br><span class="line"></span><br><span class="line">big:</span><br><span class="line">low 01 23 45 67 high</span><br></pre></td></tr></table></figure>
+
+<h2 id="Boolean-Algebra"><a href="#Boolean-Algebra" class="headerlink" title="Boolean Algebra"></a>Boolean Algebra</h2><p>c bitwise operators:</p>
+<ul>
+<li><code>^</code> xor</li>
+<li><code>~</code> not</li>
+<li><code>&amp;</code> and</li>
+<li><code>|</code> or</li>
+</ul>
+<p>Right shift</p>
+<ul>
+<li>logical: fill left end with <strong>0</strong></li>
+<li>arithmetic: fill left with <strong>most significant bit</strong></li>
+</ul>
+<p>Clever <code>inplace_swap</code>: use <code>a^(b^a) == b</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a   b</span><br><span class="line">a   a^b  # a^(a^b) = b</span><br><span class="line">b   a^b</span><br><span class="line">b   a</span><br></pre></td></tr></table></figure>
+
+<p>Cheatsheet for boolean algebra:</p>
+<p>from <a href="https://en.wikipedia.org/wiki/Boolean_algebra" target="_blank" rel="noopener">Boolean algebra - Wikipedia</a></p>
+<p><code>&amp;</code></p>
+<ul>
+<li><code>a &amp; 0b0...0 == 0</code></li>
+<li><code>a &amp; 0b1...1 == a</code></li>
+<li><code>a &amp; a == a</code></li>
+<li>distribution of <code>and</code> over <code>or</code>: <code>x &amp; (y | z) == (x &amp; y) | (x &amp; z)</code></li>
+<li>distribution of <code>or</code> over <code>and</code>: <code>x | (y &amp; z) == (x | y) &amp; (x | z)</code></li>
+</ul>
+<p><code>|</code></p>
+<ul>
+<li><code>a | 0b0...0 == a</code></li>
+<li><code>a | 0b1...1 == 0b1...1</code></li>
+<li><code>a | a == a</code></li>
+<li>Absorption 1 and 2:<ul>
+<li><code>x &amp; (x | y) == x</code></li>
+<li><code>x | (x &amp; y) == x</code></li>
+</ul>
+</li>
+</ul>
+<p><code>^</code></p>
+<ul>
+<li><code>a ^ a == 0</code></li>
+<li><code>a ^ (a ^ b) = b</code></li>
+<li>If a and b are different, <code>a ^ b != 0</code>.</li>
+</ul>
+<p><code>~</code></p>
+<ul>
+<li>De Morgan’s law:<ul>
+<li><code>~(x &amp; y) == ~x &amp; ~y</code></li>
+<li><code>~(x | y) == ~x | ~y</code></li>
+</ul>
+</li>
+</ul>
+<p>Deeper insight to De Morgan’s law: <code>Duality Principle</code> and group theory.</p>
+<p>material implication: x-&gt;y</p>
+<ul>
+<li>if x is true, take the y as value</li>
+<li>else return true.</li>
+</ul>
+<h2 id="Unsigned-and-signed-representation-of-integers"><a href="#Unsigned-and-signed-representation-of-integers" class="headerlink" title="Unsigned and signed representation of integers"></a>Unsigned and signed representation of integers</h2><p>Signed number to its unsigned counterpart: <code>T2U_w(x) == x + 2^w (x &lt; 0)</code>.</p>
+<p>unsigned to signed: <code>U2T_w(x) == x - 2^w (x &gt;= 2^(w-1))</code>.</p>
+<h2 id="Floating-point"><a href="#Floating-point" class="headerlink" title="Floating point"></a>Floating point</h2><p>Actually fractional binary numbers in scientific notation.</p>
+<p>component (in case 1 Normalized Value):</p>
+<ul>
+<li>sign <code>s</code></li>
+<li>significand <code>M</code><ul>
+<li>fraction value <code>f</code>, where 0 &lt;= f &lt;= 1.</li>
+<li>leading 1 representation: the significand M is defined as <code>1 + f</code>.</li>
+</ul>
+</li>
+<li>exponent <code>E</code><ul>
+<li>the exponent value is <code>E(Unsigned number of this bit representation) + Bias</code></li>
+<li>same as the two’s complement number’s highest 1.</li>
+<li><code>Bias</code> is <code>2^k - 1</code>, to single is 127, double is 1023.</li>
+</ul>
+</li>
+</ul>
+<p>single: |s(1)|exp(8)|frac(23)|</p>
+<p>double: |s(1)|exp(11)|frac(52)|</p>
+<h3 id="Case-2-Denormalized-value"><a href="#Case-2-Denormalized-value" class="headerlink" title="Case 2 Denormalized value."></a>Case 2 Denormalized value.</h3><p>Perpose: represent 0 and number close to 0.</p>
+<p>When exponent field are all 0.</p>
+<p>Value of representation:</p>
+<ul>
+<li>Exponent value is <code>E = 1 - Bias</code>.</li>
+<li>significand is M = f.</li>
+</ul>
+<h3 id="Case-3-Special-Values"><a href="#Case-3-Special-Values" class="headerlink" title="Case 3 Special Values"></a>Case 3 Special Values</h3><p>When fraction value are all ones.</p>
+<ul>
+<li>Infinity: fraction field is all zeros.<ul>
+<li><code>+inf</code> when <code>s = 0</code>.</li>
+</ul>
+</li>
+<li>NaN: not all zeros<ul>
+<li>short of “Not a Number”.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Rounding"><a href="#Rounding" class="headerlink" title="Rounding"></a>Rounding</h3><ul>
+<li>Round to even(when no closer could be find).<ul>
+<li>won’t introduce a statistical bias.</li>
+</ul>
+</li>
+<li>Round towards zero</li>
+<li>Round down</li>
+<li>Round up</li>
+</ul>
+<h3 id="Floating-point-operations"><a href="#Floating-point-operations" class="headerlink" title="Floating point operations"></a>Floating point operations</h3><p>Operation is <code>Round(x*y)</code>.</p>
+<p>It’s note associative. eg: <code>(3.14 + 1e10) - 1e10 != 3.14</code> </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">float</span> a = <span class="number">1e10</span>;</span><br><span class="line">    <span class="keyword">float</span> b = <span class="number">3.14</span>;</span><br><span class="line">    <span class="keyword">float</span> c;</span><br><span class="line">    c = a + b;</span><br><span class="line">    c = c - a;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; c &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; ./a.out</span><br><span class="line">0</span><br></pre></td></tr></table></figure>
+
 
       
     </div>
@@ -363,12 +466,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/game/" rel="tag"># game</a>
-          
-        </div>
-      
 
       
       
@@ -378,8 +475,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/12/05/oj-2019-12-Thu-Dec-05-2019-08-51-31-GMT-0800-HDU-1213-How-Many-Tables/" rel="next" title="[SOL] HDU 1213 How Many Tables | DS Week 14 A">
-                <i class="fa fa-chevron-left"></i> [SOL] HDU 1213 How Many Tables | DS Week 14 A
+              <a href="/2020/01/05/c-primer-plus-note-c1-3/" rel="next" title="Chapter 1-3 | Note of C++ Primer Plus">
+                <i class="fa fa-chevron-left"></i> Chapter 1-3 | Note of C++ Primer Plus
               </a>
             
           </div>
@@ -387,10 +484,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/01/05/c-primer-plus-note-c1-3/" rel="prev" title="Chapter 1-3 | Note of C++ Primer Plus">
-                Chapter 1-3 | Note of C++ Primer Plus <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -533,7 +626,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#存档方式"><span class="nav-number">1.</span> <span class="nav-text">存档方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#进度备忘"><span class="nav-number">2.</span> <span class="nav-text">进度备忘</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Endian"><span class="nav-number">1.</span> <span class="nav-text">Endian</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Boolean-Algebra"><span class="nav-number">2.</span> <span class="nav-text">Boolean Algebra</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unsigned-and-signed-representation-of-integers"><span class="nav-number">3.</span> <span class="nav-text">Unsigned and signed representation of integers</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Floating-point"><span class="nav-number">4.</span> <span class="nav-text">Floating point</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Case-2-Denormalized-value"><span class="nav-number">4.1.</span> <span class="nav-text">Case 2 Denormalized value.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Case-3-Special-Values"><span class="nav-number">4.2.</span> <span class="nav-text">Case 3 Special Values</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Rounding"><span class="nav-number">4.3.</span> <span class="nav-text">Rounding</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Floating-point-operations"><span class="nav-number">4.4.</span> <span class="nav-text">Floating point operations</span></a></li></ol></li></ol></div>
             
 
           </div>

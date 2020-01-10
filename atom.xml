@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ofey404.github.io/"/>
-  <updated>2020-01-05T00:21:57.274Z</updated>
+  <updated>2020-01-10T10:54:55.955Z</updated>
   <id>http://ofey404.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Chapter 2 | Note of CSAPP</title>
+    <link href="http://ofey404.github.io/2020/01/10/csapp-note-c2/"/>
+    <id>http://ofey404.github.io/2020/01/10/csapp-note-c2/</id>
+    <published>2020-01-10T09:53:39.000Z</published>
+    <updated>2020-01-10T10:54:55.955Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>I’ve read this section. Just take down some important points.</p><p>Also some insights from lab.</p></blockquote><a id="more"></a><h2 id="Endian"><a href="#Endian" class="headerlink" title="Endian"></a>Endian</h2><p>How to arrange bit representation of object (more than one byte) in memory.</p><ul><li>little endian: <strong>least significant</strong> bit come first (“first” means lower address).<ul><li>Intel-compatible machines.</li></ul></li><li>big ending: <strong>most significant</strong> come first.<ul><li>IBM and Sun.</li></ul></li></ul><p>eg: How a int(4 bytes) stored in memory.</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">int 0x01234567</span><br><span class="line">low address -&gt; high address</span><br><span class="line"></span><br><span class="line">little:</span><br><span class="line">low 67 45 23 01 high</span><br><span class="line"></span><br><span class="line">big:</span><br><span class="line">low 01 23 45 67 high</span><br></pre></td></tr></table></figure><h2 id="Boolean-Algebra"><a href="#Boolean-Algebra" class="headerlink" title="Boolean Algebra"></a>Boolean Algebra</h2><p>c bitwise operators:</p><ul><li><code>^</code> xor</li><li><code>~</code> not</li><li><code>&amp;</code> and</li><li><code>|</code> or</li></ul><p>Right shift</p><ul><li>logical: fill left end with <strong>0</strong></li><li>arithmetic: fill left with <strong>most significant bit</strong></li></ul><p>Clever <code>inplace_swap</code>: use <code>a^(b^a) == b</code></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a   b</span><br><span class="line">a   a^b  # a^(a^b) = b</span><br><span class="line">b   a^b</span><br><span class="line">b   a</span><br></pre></td></tr></table></figure><p>Cheatsheet for boolean algebra:</p><p>from <a href="https://en.wikipedia.org/wiki/Boolean_algebra" target="_blank" rel="noopener">Boolean algebra - Wikipedia</a></p><p><code>&amp;</code></p><ul><li><code>a &amp; 0b0...0 == 0</code></li><li><code>a &amp; 0b1...1 == a</code></li><li><code>a &amp; a == a</code></li><li>distribution of <code>and</code> over <code>or</code>: <code>x &amp; (y | z) == (x &amp; y) | (x &amp; z)</code></li><li>distribution of <code>or</code> over <code>and</code>: <code>x | (y &amp; z) == (x | y) &amp; (x | z)</code></li></ul><p><code>|</code></p><ul><li><code>a | 0b0...0 == a</code></li><li><code>a | 0b1...1 == 0b1...1</code></li><li><code>a | a == a</code></li><li>Absorption 1 and 2:<ul><li><code>x &amp; (x | y) == x</code></li><li><code>x | (x &amp; y) == x</code></li></ul></li></ul><p><code>^</code></p><ul><li><code>a ^ a == 0</code></li><li><code>a ^ (a ^ b) = b</code></li><li>If a and b are different, <code>a ^ b != 0</code>.</li></ul><p><code>~</code></p><ul><li>De Morgan’s law:<ul><li><code>~(x &amp; y) == ~x &amp; ~y</code></li><li><code>~(x | y) == ~x | ~y</code></li></ul></li></ul><p>Deeper insight to De Morgan’s law: <code>Duality Principle</code> and group theory.</p><p>material implication: x-&gt;y</p><ul><li>if x is true, take the y as value</li><li>else return true.</li></ul><h2 id="Unsigned-and-signed-representation-of-integers"><a href="#Unsigned-and-signed-representation-of-integers" class="headerlink" title="Unsigned and signed representation of integers"></a>Unsigned and signed representation of integers</h2><p>Signed number to its unsigned counterpart: <code>T2U_w(x) == x + 2^w (x &lt; 0)</code>.</p><p>unsigned to signed: <code>U2T_w(x) == x - 2^w (x &gt;= 2^(w-1))</code>.</p><h2 id="Floating-point"><a href="#Floating-point" class="headerlink" title="Floating point"></a>Floating point</h2><p>Actually fractional binary numbers in scientific notation.</p><p>component (in case 1 Normalized Value):</p><ul><li>sign <code>s</code></li><li>significand <code>M</code><ul><li>fraction value <code>f</code>, where 0 &lt;= f &lt;= 1.</li><li>leading 1 representation: the significand M is defined as <code>1 + f</code>.</li></ul></li><li>exponent <code>E</code><ul><li>the exponent value is <code>E(Unsigned number of this bit representation) + Bias</code></li><li>same as the two’s complement number’s highest 1.</li><li><code>Bias</code> is <code>2^k - 1</code>, to single is 127, double is 1023.</li></ul></li></ul><p>single: |s(1)|exp(8)|frac(23)|</p><p>double: |s(1)|exp(11)|frac(52)|</p><h3 id="Case-2-Denormalized-value"><a href="#Case-2-Denormalized-value" class="headerlink" title="Case 2 Denormalized value."></a>Case 2 Denormalized value.</h3><p>Perpose: represent 0 and number close to 0.</p><p>When exponent field are all 0.</p><p>Value of representation:</p><ul><li>Exponent value is <code>E = 1 - Bias</code>.</li><li>significand is M = f.</li></ul><h3 id="Case-3-Special-Values"><a href="#Case-3-Special-Values" class="headerlink" title="Case 3 Special Values"></a>Case 3 Special Values</h3><p>When fraction value are all ones.</p><ul><li>Infinity: fraction field is all zeros.<ul><li><code>+inf</code> when <code>s = 0</code>.</li></ul></li><li>NaN: not all zeros<ul><li>short of “Not a Number”.</li></ul></li></ul><h3 id="Rounding"><a href="#Rounding" class="headerlink" title="Rounding"></a>Rounding</h3><ul><li>Round to even(when no closer could be find).<ul><li>won’t introduce a statistical bias.</li></ul></li><li>Round towards zero</li><li>Round down</li><li>Round up</li></ul><h3 id="Floating-point-operations"><a href="#Floating-point-operations" class="headerlink" title="Floating point operations"></a>Floating point operations</h3><p>Operation is <code>Round(x*y)</code>.</p><p>It’s note associative. eg: <code>(3.14 + 1e10) - 1e10 != 3.14</code> </p><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">float</span> a = <span class="number">1e10</span>;</span><br><span class="line">    <span class="keyword">float</span> b = <span class="number">3.14</span>;</span><br><span class="line">    <span class="keyword">float</span> c;</span><br><span class="line">    c = a + b;</span><br><span class="line">    c = c - a;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; c &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&gt; ./a.out</span><br><span class="line">0</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;I’ve read this section. Just take down some important points.&lt;/p&gt;
+&lt;p&gt;Also some insights from lab.&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Chapter 1-3 | Note of C++ Primer Plus</title>
@@ -235,9 +256,9 @@
     </summary>
     
     
-      <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
-    
       <category term="julia" scheme="http://ofey404.github.io/tags/julia/"/>
+    
+      <category term="handbook" scheme="http://ofey404.github.io/tags/handbook/"/>
     
   </entry>
   
