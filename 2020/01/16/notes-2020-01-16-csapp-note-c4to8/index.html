@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="note,c++,">
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Chinglish Small Talk" type="application/atom+xml">
+
+
+
+
+
+
+<meta name="description" content="Chapter 4 Compound Types Chapter 5 Loops and Ralational Expressions Chapter 6 Branching Statements and Logical Operators Chapter 7 Functions: c++’s Programming Modules Chapter 8 Adventures in Functio">
+<meta name="keywords" content="note,c++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chapter 4-8 | Note of C++ Primer Plus">
+<meta property="og:url" content="http://ofey404.github.io/2020/01/16/notes-2020-01-16-csapp-note-c4to8/index.html">
+<meta property="og:site_name" content="Chinglish Small Talk">
+<meta property="og:description" content="Chapter 4 Compound Types Chapter 5 Loops and Ralational Expressions Chapter 6 Branching Statements and Logical Operators Chapter 7 Functions: c++’s Programming Modules Chapter 8 Adventures in Functio">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2020-01-16T08:20:17.955Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 4-8 | Note of C++ Primer Plus">
+<meta name="twitter:description" content="Chapter 4 Compound Types Chapter 5 Loops and Ralational Expressions Chapter 6 Branching Statements and Logical Operators Chapter 7 Functions: c++’s Programming Modules Chapter 8 Adventures in Functio">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://ofey404.github.io/2020/01/16/notes-2020-01-16-csapp-note-c4to8/">
+
+
+
+
+
+  <title>Chapter 4-8 | Note of C++ Primer Plus | Chinglish Small Talk</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Chinglish Small Talk</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Tech and Personal Blog of Ofey Chan. Personal articles are in *Archives*.</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ofey404.github.io/2020/01/16/notes-2020-01-16-csapp-note-c4to8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ofey Chan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chinglish Small Talk">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Chapter 4-8 | Note of C++ Primer Plus</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-16T16:18:38+08:00">
+                2020-01-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ul>
+<li>Chapter 4 Compound Types</li>
+<li>Chapter 5 Loops and Ralational Expressions</li>
+<li>Chapter 6 Branching Statements and Logical Operators</li>
+<li>Chapter 7 Functions: c++’s Programming Modules</li>
+<li>Chapter 8 Adventures in Functions</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="Chapter-4-Compound-Types"><a href="#Chapter-4-Compound-Types" class="headerlink" title="Chapter 4 Compound Types"></a>Chapter 4 Compound Types</h1><p>Just skim. Questions:</p>
+<ul>
+<li>What is <code>Union</code></li>
+<li>How to use <code>enumerate</code></li>
+<li>Manage dynamic memory.</li>
+</ul>
+<p>For <code>cin</code>, whitespace is used by default to locate the end of string.</p>
+<p><code>getline()</code> and <code>get()</code>: line oriented method in <code>&lt;iostream&gt;</code>.</p>
+<p><code>getline()</code> discard the new-line character.</p>
+<p><code>cin.get(name, ArSize).get(); // concatenate member functions</code></p>
+<p><code>cin.get()</code> return the <code>cin</code> object.</p>
+<p>It’s so strange…</p>
+<h2 id="Array-amp-amp-Dereference"><a href="#Array-amp-amp-Dereference" class="headerlink" title="Array &amp;&amp; Dereference"></a>Array &amp;&amp; Dereference</h2><p>Use dereference operators to do array’s bracket operation.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> a[<span class="number">50</span>] = <span class="string">"this is a char array\n"</span>;</span><br><span class="line">    <span class="built_in">string</span> b = <span class="string">"this is a string object\n"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; &amp;(a[<span class="number">0</span>]) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; &amp;(b[<span class="number">0</span>]) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"below is a moved init\n"</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; &amp;(a[<span class="number">8</span>]) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; &amp;(b[<span class="number">8</span>]) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">output:</span></span><br><span class="line"><span class="comment">&gt; ./a.out</span></span><br><span class="line"><span class="comment">this is a char array</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">this is a string object</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">below is a moved init</span></span><br><span class="line"><span class="comment">a char array</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">a string object</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>String literals are constants, which is why the code uses the const keyword in the declaration.</p>
+<p>variables:</p>
+<ul>
+<li>Automatic variable(storage)</li>
+<li>Static storage</li>
+<li>Dynamic storage</li>
+</ul>
+<p><code>Smart pointers</code> can help to automate the task of manage dynamic storage.</p>
+<h1 id="Chapter-5-Loops-and-Ralational-Expressions"><a href="#Chapter-5-Loops-and-Ralational-Expressions" class="headerlink" title="Chapter 5 Loops and Ralational Expressions"></a>Chapter 5 Loops and Ralational Expressions</h1><blockquote>
+<p>seems I know most of the topics that this chapter covers.</p>
+</blockquote>
+<p><strong>TODO</strong></p>
+<ul>
+<li><input checked disabled type="checkbox"> check the <code>&lt;istream&gt;</code> class.</li>
+</ul>
+<p>Test code of Range-based for loop.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">(base)  ofey  ~/Code/playground  ./a.out</span><br><span class="line">price: <span class="number">0</span></span><br><span class="line">price: <span class="number">10</span></span><br><span class="line">price: <span class="number">0</span></span><br><span class="line">price: <span class="number">0</span></span><br><span class="line">price: <span class="number">-374753248</span></span><br><span class="line"></span><br><span class="line">(base)  ofey  ~/Code/playground  cat range_based.cpp</span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> price[<span class="number">5</span>];</span><br><span class="line">    price[<span class="number">1</span>] = <span class="number">10</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> &amp;x: price) &#123;</span><br><span class="line">        <span class="built_in">cout</span> &lt;&lt; <span class="string">"price: "</span> &lt;&lt; x &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Adorn <code>cin</code> class for input: <code>cin.get(ch)</code> reads the next character, including space.</p>
+<p><code>cin.eof()</code> can check whether eof is detected.</p>
+<p>Best practice:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">while</span> (<span class="built_in">cin</span> &gt;&gt; x) &#123;&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">while</span> (<span class="built_in">cin</span>.get(ch)) &#123;&#125;</span><br></pre></td></tr></table></figure>
+
+<p>fo<br>r <code>&gt;&gt;</code> operator return a cin object, like <code>cin.get()</code> and many other cin method do.</p>
+<h1 id="Chapter-6-Branching-Statements-and-Logical-Operators"><a href="#Chapter-6-Branching-Statements-and-Logical-Operators" class="headerlink" title="Chapter 6 Branching Statements and Logical Operators"></a>Chapter 6 Branching Statements and Logical Operators</h1><p><strong>TODO</strong></p>
+<ul>
+<li><input checked disabled type="checkbox"> check <code>cctype</code> library</li>
+<li><input checked disabled type="checkbox"> cintidional operator ?:</li>
+<li><input checked disabled type="checkbox"> <code>ifstream</code> and <code>ofstream</code> objects.</li>
+</ul>
+<p>Simple file input/output: using <code>ofstream</code> object.</p>
+<p>Example - Write to file.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">(base)  ofey  ~/Code/playground  cat test_ofstream.cpp <span class="keyword">new</span>.txt</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">#include &lt;fstream&gt;</span><br><span class="line">#include &lt;<span class="built_in">string</span>&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">string</span> st = <span class="string">"test string write into file\n"</span>;</span><br><span class="line">    ofstream outfile;</span><br><span class="line">    outfile.open(<span class="string">"new.txt"</span>);</span><br><span class="line">    outfile &lt;&lt; st;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; <span class="string">"output complete"</span> &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    outfile.close();</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* output</span></span><br><span class="line"><span class="comment">test string write into file</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>Reading file: Use <code>ifstream</code> object.</p>
+<h1 id="Chapter-7-Functions-c-’s-Programming-Modules"><a href="#Chapter-7-Functions-c-’s-Programming-Modules" class="headerlink" title="Chapter 7 Functions: c++’s Programming Modules"></a>Chapter 7 Functions: c++’s Programming Modules</h1><p><strong>TODO</strong></p>
+<ul>
+<li><input checked disabled type="checkbox"> know the narration about function prototype.</li>
+<li><input checked disabled type="checkbox"> <code>const</code> pointer parameters.</li>
+<li><input checked disabled type="checkbox"> pointers to functions.</li>
+</ul>
+<p>Using of ellipsis(<code>...</code>) to represent undefined argument list of prototype, is only for compatibility to classic C.</p>
+<p><code>void said_bye(...)</code></p>
+<p><a href="https://stackoverflow.com/questions/8808167/c-const-correctness-and-pointer-arguments" target="_blank" rel="noopener">Discussion about using <code>const</code> argument to protect pointer</a></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// make the pointed value const(during the function call)</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">someFunc1</span><span class="params">(<span class="keyword">const</span> <span class="keyword">int</span> * arg)</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">9</span>;</span><br><span class="line">*arg = i; <span class="comment">// &lt;- compiler error as pointed value is const</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// make the pointer const.</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">someFunc1</span><span class="params">(<span class="keyword">int</span> * <span class="keyword">const</span> arg)</span> </span>&#123;</span><br><span class="line"><span class="keyword">int</span> i = <span class="number">9</span>;</span><br><span class="line">arg = &amp;i; <span class="comment">// &lt;- compiler error as pointer is const</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Function-pointers"><a href="#Function-pointers" class="headerlink" title="Function pointers"></a>Function pointers</h2><p>About funciton pointers:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// (base)  ofey  ~/Code/playground  cat function_pointer.cpp ; ./a.out</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">take_fp</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b, <span class="keyword">int</span> (*my_fpointer)(<span class="keyword">int</span>, <span class="keyword">int</span>))</span> </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (*my_fpointer)(a, b);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> (*pf)(<span class="keyword">int</span>, <span class="keyword">int</span>);</span><br><span class="line">    pf = &amp;add;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; (*pf)(<span class="number">1</span>, <span class="number">2</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; take_fp(<span class="number">2</span>, <span class="number">3</span>, pf) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* output</span></span><br><span class="line"><span class="comment">3</span></span><br><span class="line"><span class="comment">5</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p><code>auto</code> type of variable is good…</p>
+<h1 id="Chapter-8-Adventures-in-Functions"><a href="#Chapter-8-Adventures-in-Functions" class="headerlink" title="Chapter 8 Adventures in Functions"></a>Chapter 8 Adventures in Functions</h1><p><strong>TODO</strong></p>
+<ul>
+<li><input checked disabled type="checkbox"> inline functions</li>
+<li><input checked disabled type="checkbox"> prototype and default arguments</li>
+<li><input checked disabled type="checkbox"> function tempeates</li>
+</ul>
+<p>inline vs macro: macro doesn’t pass by value.</p>
+<p>A reference variable should be initialized when declared.</p>
+<p>Expression shouldn’t be passed to a reference variable.</p>
+<p><code>lvaule</code>: a data object that can be referenced by address.</p>
+<ul>
+<li>eg: variable, array element, reference</li>
+<li>non-lvalue: literal constants, expression with multiple terms</li>
+</ul>
+<h2 id="Q-Why-use-constant-reference-argument"><a href="#Q-Why-use-constant-reference-argument" class="headerlink" title="Q: Why use constant reference argument?"></a>Q: Why use constant reference argument?</h2><p>Stack overflow: <a href="https://stackoverflow.com/questions/2627166/difference-between-const-reference-and-normal-parameter" target="_blank" rel="noopener">Difference between const reference and normal parameter</a></p>
+<p>Don’t return a reference to a temporary variable.</p>
+<p>Why use <code>const</code> with a reference return? Regular return types are <code>rvalues</code>(cannot be accessed by address), but a reference type could be assigned a value. Add <code>const</code> could protect from this.</p>
+<blockquote>
+<p>Suppose the actual argument type doesn’t match the reference parameter type but can be converted to the reference type. Then the program creates a temporary variable of the correct type, initializes it to the converted value, and passes a reference to the tempo- rary variable</p>
+</blockquote>
+<p>Check it:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">&gt; cat const_ref.cpp; ./a.out</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">my_print</span><span class="params">(<span class="keyword">const</span> <span class="built_in">string</span> &amp; s)</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; s;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">char</span> test[<span class="number">10</span>] = <span class="string">"hello\n"</span>;</span><br><span class="line">    my_print(test);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* output</span></span><br><span class="line"><span class="comment">hello</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Explicit-specialization-amp-amp-explicit-instantiation-generate-immediately"><a href="#Explicit-specialization-amp-amp-explicit-instantiation-generate-immediately" class="headerlink" title="Explicit specialization &amp;&amp; explicit instantiation(generate immediately)"></a>Explicit specialization &amp;&amp; explicit instantiation(generate immediately)</h2><p>Specialized function definition, for already defined templates. eg:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// template prototype</span></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Swap</span><span class="params">(T &amp;, T &amp;)</span></span>;</span><br><span class="line"><span class="comment">// explicit specialization for the job type</span></span><br><span class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">void</span> Swap&lt;job&gt; (job &amp;, job &amp;);</span><br></pre></td></tr></table></figure>
+
+<p><code>instantiation</code> and <code>specialization</code>.</p>
+<p>Template is not a function definition, but a plan to generate right definition.</p>
+<ul>
+<li><code>implicit instantiation</code>: generate function when notice the program use one with right parameters.</li>
+<li><code>explict instantiation</code>: instruct the compiler to generate a certain instantiation. eg: <code>Swap&lt;int&gt;();</code></li>
+</ul>
+<p>404 note: If use implicit instantiation, all <code>.o</code> files had better to be fed to the compiler at the same time, to let compiler know every possible usage of a certain function? So implicit instantiation is not good for partly compilation?</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span> <span class="keyword">void</span> Swap&lt;<span class="keyword">int</span>&gt;(<span class="keyword">int</span>, <span class="keyword">int</span>);  <span class="comment">// explicit instantiation</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;&gt; <span class="keyword">void</span> Swap&lt;<span class="keyword">int</span>&gt;(<span class="keyword">int</span> &amp;, <span class="keyword">int</span> &amp;);  <span class="comment">// explicit specialization</span></span><br><span class="line"><span class="keyword">template</span> &lt;&gt; <span class="function"><span class="keyword">void</span> <span class="title">Swap</span><span class="params">(<span class="keyword">int</span> &amp;, <span class="keyword">int</span> &amp;)</span></span>;       <span class="comment">// explicit specialization</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>Caution: It is an error to try to use both an explicit instantiation and an explicit specialization for the same type(s) in the same file, or, more generally, the same translation unit.</p>
+</blockquote>
+<h2 id="About-c-partial-ordering-rules"><a href="#About-c-partial-ordering-rules" class="headerlink" title="About c++ partial ordering rules"></a>About c++ <code>partial ordering rules</code></h2><blockquote>
+<p>I hope I would never encounter this.</p>
+</blockquote>
+<p>The <code>decltype</code> keyword: to solve unknown type like <code>x + y</code> in template.</p>
+<p><code>decltype(expression) var;</code> 4 stages.</p>
+<ul>
+<li>if <code>expression</code> is unparenthesized identifier, var is the same type.</li>
+<li>a function call - same type as return value</li>
+<li>a <code>lvalue</code>: a reference to the expression type. (Not very clear about this-parentheses should be added explicitly as an identifier?)</li>
+<li>else: same type as expression.</li>
+</ul>
+<p>Another problem of unsolved type in function templating: about the return value.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T1</span>, <span class="title">class</span> <span class="title">T2</span>&gt;</span></span><br><span class="line"><span class="class">?<span class="title">type</span>? <span class="title">gt</span>(<span class="title">T1</span> <span class="title">x</span>, <span class="title">T2</span> <span class="title">y</span>)</span></span><br></pre></td></tr></table></figure>
+
+<p>Solution: Syntax <code>trailing return type</code>. Move type after the parameter declarations.</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">template</span>&lt;<span class="class"><span class="keyword">class</span> <span class="title">T1</span>, <span class="title">class</span> <span class="title">T2</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">auto</span> <span class="title">gt</span>(<span class="title">T1</span> <span class="title">x</span>, <span class="title">T2</span> <span class="title">y</span>) -&gt; <span class="title">decltype</span>(<span class="title">x</span> + <span class="title">y</span>)</span></span><br></pre></td></tr></table></figure>
+
+<p>A test code:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">&gt; cat trailing_return.cpp; ./a.out</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line">auto trail(int a, int b) -&gt; int &#123;</span><br><span class="line">    <span class="keyword">return</span> a+b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">template</span> &lt;<span class="class"><span class="keyword">class</span> <span class="title">T1</span>, <span class="title">class</span> <span class="title">T2</span>&gt;</span></span><br><span class="line"><span class="class"><span class="title">auto</span> <span class="title">my_add</span>(<span class="title">T1</span> <span class="title">x</span>, <span class="title">T2</span> <span class="title">y</span>) -&gt; <span class="title">decltype</span>(<span class="title">x</span> + <span class="title">y</span>) &#123;</span></span><br><span class="line">    <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; trail(<span class="number">1</span>, <span class="number">2</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; my_add(<span class="string">'a'</span>, <span class="number">1</span>) &lt;&lt; <span class="built_in">endl</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* output</span></span><br><span class="line"><span class="comment">3</span></span><br><span class="line"><span class="comment">98</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="logging"><a href="#logging" class="headerlink" title="logging"></a>logging</h2><ul>
+<li>200111 ofey init</li>
+<li>200116 ofey fin</li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/note/" rel="tag"># note</a>
+          
+            <a href="/tags/c/" rel="tag"># c++</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/01/11/articles-2020-01-11-review-of-junior1/" rel="next" title="回馈分析法 | 2019-2020 学年第一学期（大三上）的复盘">
+                <i class="fa fa-chevron-left"></i> 回馈分析法 | 2019-2020 学年第一学期（大三上）的复盘
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+  <div id="gitalk-container"></div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Ofey Chan</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">11</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/ofey404" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-4-Compound-Types"><span class="nav-number">1.</span> <span class="nav-text">Chapter 4 Compound Types</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Array-amp-amp-Dereference"><span class="nav-number">1.1.</span> <span class="nav-text">Array &amp;&amp; Dereference</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-5-Loops-and-Ralational-Expressions"><span class="nav-number">2.</span> <span class="nav-text">Chapter 5 Loops and Ralational Expressions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-6-Branching-Statements-and-Logical-Operators"><span class="nav-number">3.</span> <span class="nav-text">Chapter 6 Branching Statements and Logical Operators</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-7-Functions-c-’s-Programming-Modules"><span class="nav-number">4.</span> <span class="nav-text">Chapter 7 Functions: c++’s Programming Modules</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Function-pointers"><span class="nav-number">4.1.</span> <span class="nav-text">Function pointers</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-8-Adventures-in-Functions"><span class="nav-number">5.</span> <span class="nav-text">Chapter 8 Adventures in Functions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Q-Why-use-constant-reference-argument"><span class="nav-number">5.1.</span> <span class="nav-text">Q: Why use constant reference argument?</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Explicit-specialization-amp-amp-explicit-instantiation-generate-immediately"><span class="nav-number">5.2.</span> <span class="nav-text">Explicit specialization &amp;&amp; explicit instantiation(generate immediately)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#About-c-partial-ordering-rules"><span class="nav-number">5.3.</span> <span class="nav-text">About c++ partial ordering rules</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#logging"><span class="nav-number">5.4.</span> <span class="nav-text">logging</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Ofey Chan</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'db31fe113bf9c692437d',
+          clientSecret: '761d34846e2e0e132deae0ccfaf2257ceff4888c',
+          repo: 'ofey404.github.io',
+          owner: 'ofey404',
+          admin: ['ofey404'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

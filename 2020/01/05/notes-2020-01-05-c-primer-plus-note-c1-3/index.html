@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="note,c++,">
 
 
 
@@ -81,18 +81,18 @@
 
 
 
-<meta name="description" content="陈巍文。复旦大学17级物理系，爱好编程。 博客首页只放技术文章，生活杂记点进 Archives 可以手动查看。">
-<meta name="keywords" content="Programming, Computer Science">
-<meta property="og:type" content="website">
-<meta property="og:title" content="About This Blog and Me">
-<meta property="og:url" content="http://ofey404.github.io/about/index.html">
+<meta name="description" content="Chapter 1 Getting start with c++ Chapter 2 Setting out to c++ Chapter 3 Dealing with data">
+<meta name="keywords" content="note,c++">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Chapter 1-3 | Note of C++ Primer Plus">
+<meta property="og:url" content="http://ofey404.github.io/2020/01/05/notes-2020-01-05-c-primer-plus-note-c1-3/index.html">
 <meta property="og:site_name" content="Chinglish Small Talk">
-<meta property="og:description" content="陈巍文。复旦大学17级物理系，爱好编程。 博客首页只放技术文章，生活杂记点进 Archives 可以手动查看。">
+<meta property="og:description" content="Chapter 1 Getting start with c++ Chapter 2 Setting out to c++ Chapter 3 Dealing with data">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-07-17T12:39:13.627Z">
+<meta property="og:updated_time" content="2020-01-16T08:20:36.149Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="About This Blog and Me">
-<meta name="twitter:description" content="陈巍文。复旦大学17级物理系，爱好编程。 博客首页只放技术文章，生活杂记点进 Archives 可以手动查看。">
+<meta name="twitter:title" content="Chapter 1-3 | Note of C++ Primer Plus">
+<meta name="twitter:description" content="Chapter 1 Getting start with c++ Chapter 2 Setting out to c++ Chapter 3 Dealing with data">
 
 
 
@@ -122,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://ofey404.github.io/about/">
+  <link rel="canonical" href="http://ofey404.github.io/2020/01/05/notes-2020-01-05-c-primer-plus-note-c1-3/">
 
 
 
 
 
-  <title>About This Blog and Me | Chinglish Small Talk</title>
+  <title>Chapter 1-3 | Note of C++ Primer Plus | Chinglish Small Talk</title>
   
 
 
@@ -243,35 +243,225 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://ofey404.github.io/2020/01/05/notes-2020-01-05-c-primer-plus-note-c1-3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ofey Chan">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Chinglish Small Talk">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">About This Blog and Me</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <p>陈巍文。复旦大学17级物理系，爱好编程。</p>
-<p>博客首页只放技术文章，生活杂记点进 Archives 可以手动查看。</p>
-
+          <h1 class="post-title" itemprop="name headline">Chapter 1-3 | Note of C++ Primer Plus</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-05T08:19:44+08:00">
+                2020-01-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <ul>
+<li>Chapter 1 Getting start with c++</li>
+<li>Chapter 2 Setting out to c++</li>
+<li>Chapter 3 Dealing with data</li>
+</ul>
+<a id="more"></a>
+
+<h1 id="Chapter-1-Getting-start-with-c"><a href="#Chapter-1-Getting-start-with-c" class="headerlink" title="Chapter 1 Getting start with c++"></a>Chapter 1 Getting start with c++</h1><p>C Programming philosophy</p>
+<ul>
+<li>procedural programming (emphasize the algorithm than data)</li>
+<li>structured programming (limited branching instructions)</li>
+<li>top-down design(functions as task model)</li>
+</ul>
+<p>The c++ shift to object-oriented programming</p>
+<ul>
+<li>Need: large projects</li>
+<li>fit language to its problem</li>
+<li>bottom-up method (classes -&gt; things program deals)</li>
+<li>reusable code, info hiding, polymorphism, inheritance</li>
+</ul>
+<p>Generic programming: another paradigm</p>
+<ul>
+<li>need: simplify common tasks</li>
+<li>generic means type independent.</li>
+</ul>
+<p>Father of c++: Bjarne Stroustrup.</p>
+<p>Design philosophy of c++ - “winged pig”: real needs is more than theoretical purity.</p>
+<p>A joke of c++ standard:</p>
+<blockquote>
+<p>Fortunately, it was soon realized that 0x could be a hexadeci- mal integer (see Appendix A,“Number Bases”), which meant the committee had until 2015 to finish the work.</p>
+</blockquote>
+<p>Advice of Peter Norvig in <a href="https://norvig.com/21-days.html" target="_blank" rel="noopener">Teach Yourself Programming in Ten Years</a>:</p>
+<blockquote>
+<p>Get involved in a language standardization effort.<br>Have the good sense to get off the language standardization effort as quickly as possible.</p>
+</blockquote>
+<h1 id="Chapter-2-Setting-out-to-c"><a href="#Chapter-2-Setting-out-to-c" class="headerlink" title="Chapter 2 Setting out to c++"></a>Chapter 2 Setting out to c++</h1><p>Skim. Find difference with c, and some special cautions. Put attention on subtitles and appendixs.</p>
+<p><code>using namespace</code> is in chapter 9 memory models and namespace.</p>
+<p><code>endl</code> guarantees the output would be flushed.</p>
+<p>Redefine <code>&lt;&lt;</code> operator can display new data type.</p>
+<p>Anaolgy of class: a data form and how it can be used.</p>
+<p>So there’s a “Chapter Review” part. I should read this first.</p>
+<h1 id="Chapter-3-Dealing-with-data"><a href="#Chapter-3-Dealing-with-data" class="headerlink" title="Chapter 3 Dealing with data"></a>Chapter 3 Dealing with data</h1><p>Read “Chapter Review” part first.</p>
+<ul>
+<li>What is type <code>auto</code>?</li>
+<li>distinction between <code>33L</code> &amp; <code>33</code></li>
+</ul>
+<blockquote>
+<p>Names beginning with two underscore characters or with an underscore character followed by an uppercase letter are reserved for use by the implementation—that is, the compiler and the resources it uses. Names beginning with a single underscore character are reserved for use as global identifiers by the implementation.</p>
+</blockquote>
+<ul>
+<li><code>__variable</code> or <code>_Variable</code>: compiler and resource</li>
+<li><code>_variable</code>: global identifier</li>
+</ul>
+<p>Q: Why data converting order is designed like that?</p>
+<blockquote>
+<ol start="6">
+<li>Otherwise, one operand is signed and one is unsigned. If the unsigned operand is of higher rank than the signed operand, the latter is converted to the type of the unsigned operand.</li>
+<li>Otherwise, if the signed type can represent all values of the unsigned type, the unsigned operand is converted to the type of the signed type.</li>
+<li>Otherwise, both operands are converted to the unsigned version of the signed type.</li>
+</ol>
+</blockquote>
+<p>I merely take it as ‘scale to the higher rank one’, if all info can be kepted(eg: positive integer and higher ranked unsigned). Else drop to unsigned.(8)</p>
+<p>Other information for further study:</p>
+<ul>
+<li>usage of <code>wchar_t</code> and <code>L&quot;string&quot;</code>.</li>
+<li>universal initialization syntax with parentheses.</li>
+</ul>
+<p>Type casting syntax:</p>
+<ul>
+<li>c type.</li>
+<li><code>typename (value)</code>, this type conversion type is purely c++.</li>
+<li><code>static_cast&lt;typename&gt; (value)</code>, <code>static_cast&lt;&gt;</code> operator.</li>
+</ul>
+<h1 id="logging"><a href="#logging" class="headerlink" title="logging"></a>logging</h1><ul>
+<li>20200105 ofey init</li>
+</ul>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/note/" rel="tag"># note</a>
+          
+            <a href="/tags/c/" rel="tag"># c++</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/07/nonsense-2019-12-Sat-Dec-07-2019-12-27-48-GMT-0800-fire-emblem-3h/" rel="next" title="《火焰纹章·风花雪月》超高难度临时记录">
+                <i class="fa fa-chevron-left"></i> 《火焰纹章·风花雪月》超高难度临时记录
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/01/10/notes-2020-01-10-csapp-note-c2/" rel="prev" title="Chapter 2 | Note of CSAPP">
+                Chapter 2 | Note of CSAPP <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -307,8 +497,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -376,6 +575,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-1-Getting-start-with-c"><span class="nav-number">1.</span> <span class="nav-text">Chapter 1 Getting start with c++</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-2-Setting-out-to-c"><span class="nav-number">2.</span> <span class="nav-text">Chapter 2 Setting out to c++</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Chapter-3-Dealing-with-data"><span class="nav-number">3.</span> <span class="nav-text">Chapter 3 Dealing with data</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#logging"><span class="nav-number">4.</span> <span class="nav-text">logging</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
