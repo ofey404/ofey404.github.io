@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ofey404.github.io/"/>
-  <updated>2020-01-19T11:46:13.497Z</updated>
+  <updated>2020-01-20T02:38:59.712Z</updated>
   <id>http://ofey404.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>macOS X 设置长按连续输入</title>
+    <link href="http://ofey404.github.io/2020/01/20/apple-press-and-hold-enable/"/>
+    <id>http://ofey404.github.io/2020/01/20/apple-press-and-hold-enable/</id>
+    <published>2020-01-20T02:35:36.000Z</published>
+    <updated>2020-01-20T02:38:59.712Z</updated>
+    
+    <content type="html"><![CDATA[<p>关闭 macOS X 10.14 长按元音字母键输入音标的功能，在命令行下使用 vim 的时候经常碰到。</p><p>做个备忘。参考了<a href="https://zihengcat.github.io/2018/08/02/simple-ways-to-set-macos-consecutive-input/" target="_blank" rel="noopener">macOS 长按连续输入的简单设置方法 ziheng’s Blog</a>，感谢！</p><a id="more"></a><blockquote><p>实际上，苹果「Apple」已经在用户系统配置项「Mac OS X User Defaults System」里预留出了长按连续输入的设置选项。我们可以方便地使用defaluts命令行工具关闭ApplePressAndHoldEnabled功能，设置完成后，注销或重启使其生效即可。</p></blockquote><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ defaults write -g ApplePressAndHoldEnabled -bool false</span><br><span class="line"># or</span><br><span class="line">$ defaults write NSGlobalDomain ApplePressAndHoldEnabled -boolean false</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;关闭 macOS X 10.14 长按元音字母键输入音标的功能，在命令行下使用 vim 的时候经常碰到。&lt;/p&gt;
+&lt;p&gt;做个备忘。参考了&lt;a href=&quot;https://zihengcat.github.io/2018/08/02/simple-ways-to-set-macos-consecutive-input/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;macOS 长按连续输入的简单设置方法 ziheng’s Blog&lt;/a&gt;，感谢！&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="apple" scheme="http://ofey404.github.io/tags/apple/"/>
+    
+  </entry>
   
   <entry>
     <title>Chapter 9-11 | Note of C++ Primer Plus</title>
