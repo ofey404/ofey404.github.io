@@ -3,7 +3,7 @@
  # @Author: Ofey Chan
  # @Date: 2020-02-29 17:27:12
  # @LastEditors: Ofey Chan
- # @LastEditTime: 2020-02-29 17:40:54
+ # @LastEditTime: 2020-02-29 20:19:51
  # @Description: 
  # @Reference: 
  ###
@@ -13,15 +13,18 @@ t=`date '+%T'`
 echo "input post file name"
 
 read fn
+fn=${fn// /-}
 
 fp=_posts/$d-$fn.md
 
 if test -f "$fp"; then
-    echo "file name exists, $fp"
+    echo "++ file name exists, $fp ++"
     exit 0
 fi
 
 touch $fp
+echo "++ Create file: $fp ++"
+
 
 echo "---" > $fp
 echo "layout: post" >> $fp
@@ -30,3 +33,5 @@ echo "description: {}" >> $fp
 echo "date: $d $t +0800" >> $fp
 echo "categories: {}" >> $fp
 echo "---" >> $fp
+
+nano $fp
