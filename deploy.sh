@@ -8,7 +8,6 @@ read cm
 
 if [ "$cm" = "" ]; then
     cm=`date`
-    exit 0
 fi
 
 cd ../ofey404.github.io 
