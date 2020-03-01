@@ -2,7 +2,7 @@ rsync -avu --delete --exclude ".git" "_site/" "../ofey404.github.io"
 
 current=`pwd`
 
-echo "Enter commit message"
+echo "Enter commit message(press enter to use date as default)"
 
 read cm
 
