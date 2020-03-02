@@ -8,6 +8,9 @@ read cm
 
 if [ "$cm" = "" ]; then
     cm=`date`
+    echo "++ Commit Message ++"
+    echo $cm
+    echo "++++"
 fi
 
 cd ../ofey404.github.io 

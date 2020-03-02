@@ -9,6 +9,11 @@
 
 name="JekyllBlog"
 running=false
+randomQuote=true
+if [[ "$randomQuote"=true ]]; then
+    echo "Random quote set to true"
+    ./random_quote.sh
+fi
 
 if [ ! "$(docker ps | grep $name)" ]; then
     echo "++ Container $name is not running. ++"
