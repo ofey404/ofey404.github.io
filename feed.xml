@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2020-03-02T08:01:33-06:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">ofey404’s Blog</title><subtitle>Ofey Chan's personal blog. A programmer, rock music lover.</subtitle><author><name>ofey404</name></author><entry><title type="html">My ‘Only One OS X shortcut’: ⌘-⇧-/</title><link href="http://0.0.0.0:4000/posts/my-only-one-OS-X-shortcut/" rel="alternate" type="text/html" title="My ‘Only One OS X shortcut’: ⌘-⇧-/" /><published>2020-03-02T07:52:36-06:00</published><updated>2020-03-02T07:52:36-06:00</updated><id>http://0.0.0.0:4000/posts/my-only-one-OS-X-shortcut</id><content type="html" xml:base="http://0.0.0.0:4000/posts/my-only-one-OS-X-shortcut/">&lt;p&gt;The great Richard Feynman &lt;a href=&quot;https://www.brainpickings.org/2012/09/11/richard-feynman-lectures-on-physics/&quot;&gt;said &lt;/a&gt;in his lectures of physics:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2020-03-02T08:15:36-06:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">ofey404’s Blog</title><subtitle>Ofey Chan's personal blog. A programmer, rock music lover.</subtitle><author><name>ofey404</name></author><entry><title type="html">My ‘Only One OS X shortcut’: ⌘-⇧-/</title><link href="http://0.0.0.0:4000/posts/my-only-one-OS-X-shortcut/" rel="alternate" type="text/html" title="My ‘Only One OS X shortcut’: ⌘-⇧-/" /><published>2020-03-02T07:52:36-06:00</published><updated>2020-03-02T07:52:36-06:00</updated><id>http://0.0.0.0:4000/posts/my-only-one-OS-X-shortcut</id><content type="html" xml:base="http://0.0.0.0:4000/posts/my-only-one-OS-X-shortcut/">&lt;p&gt;The great Richard Feynman &lt;a href=&quot;https://www.brainpickings.org/2012/09/11/richard-feynman-lectures-on-physics/&quot;&gt;said &lt;/a&gt;in his lectures of physics:&lt;/p&gt;
 &lt;blockquote&gt;
   &lt;p&gt;If, in some cataclysm, all of scientific knowledge were to be destroyed, and only one sentence passed on to the next generation of creatures, what statement would contain the most information in the fewest words?&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -20,9 +20,10 @@
 
 &lt;h2 id=&quot;why-bother-typing&quot;&gt;Why bother typing?&lt;/h2&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;Less Keystroke, all in one, determinism, and a visual learning experience to keyboard shortcuts.
-Keystroke sequence of ⌘-⇧-/ are short enough at most situation. ⌘-⇧-/ is just like an arsenal of all menu features within a few keystrokes, not only those operations bound with keyboard shortcuts, but also all other operations.&lt;/p&gt;
+  &lt;p&gt;Less Keystroke, all in one, determinism, and a visual learning experience to keyboard shortcuts.&lt;/p&gt;
 &lt;/blockquote&gt;
+
+&lt;p&gt;Keystroke sequence of ⌘-⇧-/ are short enough at most situation. ⌘-⇧-/ is just like an arsenal of all menu features within a few keystrokes, not only those operations bound with keyboard shortcuts, but also all other operations.&lt;/p&gt;
 
 &lt;p&gt;To Click a menu bar button with your mouse, you must find the button on screen before click it, so that it’s almost impossible to form a muscle memory(probably the No.1 criticism of Mouse &amp;amp; buttons from keyboard lovers).&lt;/p&gt;
 
