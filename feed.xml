@@ -1,4 +1,36 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2020-03-02T06:01:25-06:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">ofey404’s Blog</title><subtitle>Ofey Chan's personal blog. A programmer, rock music lover.</subtitle><author><name>ofey404</name></author><entry><title type="html">表述作为一种创造</title><link href="http://0.0.0.0:4000/posts/description-as-creation/" rel="alternate" type="text/html" title="表述作为一种创造" /><published>2020-02-29T23:46:25-06:00</published><updated>2020-02-29T23:46:25-06:00</updated><id>http://0.0.0.0:4000/posts/description-as-creation</id><content type="html" xml:base="http://0.0.0.0:4000/posts/description-as-creation/">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2020-03-02T08:01:33-06:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">ofey404’s Blog</title><subtitle>Ofey Chan's personal blog. A programmer, rock music lover.</subtitle><author><name>ofey404</name></author><entry><title type="html">My ‘Only One OS X shortcut’: ⌘-⇧-/</title><link href="http://0.0.0.0:4000/posts/my-only-one-OS-X-shortcut/" rel="alternate" type="text/html" title="My ‘Only One OS X shortcut’: ⌘-⇧-/" /><published>2020-03-02T07:52:36-06:00</published><updated>2020-03-02T07:52:36-06:00</updated><id>http://0.0.0.0:4000/posts/my-only-one-OS-X-shortcut</id><content type="html" xml:base="http://0.0.0.0:4000/posts/my-only-one-OS-X-shortcut/">&lt;p&gt;The great Richard Feynman &lt;a href=&quot;https://www.brainpickings.org/2012/09/11/richard-feynman-lectures-on-physics/&quot;&gt;said &lt;/a&gt;in his lectures of physics:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;If, in some cataclysm, all of scientific knowledge were to be destroyed, and only one sentence passed on to the next generation of creatures, what statement would contain the most information in the fewest words?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;OS X applications often have consistent, well-arranged shortcut sets leaded by the system-wide ⌘(command) key. The consistency distinguishes the OS X shortcut design from Windows and Linux designs. There is even a &lt;a href=&quot;https://mouseless.app&quot;&gt;specific application&lt;/a&gt; to help you to master the shortcuts.&lt;/p&gt;
+
+&lt;p&gt;If all my mastering of OS X shortcuts have been gone in some cataclysm, just like Feynman described, except one shortcut, which should I keep? I meditated in silence, between ⌘-SPACE (spotlight) and ⌘-⇧-/ (Search for help), finally I choose the ⌘-⇧-/ as my best bet.&lt;/p&gt;
+
+&lt;h2 id=&quot;---instant-help-search&quot;&gt;⌘-⇧-/: instant help search&lt;/h2&gt;
+&lt;p&gt;While hitting &lt;a href=&quot;https://osxdaily.com/2012/09/28/help-menu-keyboard-shortcut-mac-os-x/&quot;&gt;⌘-⇧-/ in any mac app&lt;/a&gt;, help menu would popup from the menu bar, and the input focus to the search box instantly. Then you can use arrow keys to navigate through search results.&lt;/p&gt;
+
+&lt;p&gt;By typing the name of operation you want,  anything that you can do by shortcuts or menubar buttons is within your reach.&lt;/p&gt;
+
+&lt;p&gt;For example, when you open &lt;code class=&quot;highlighter-rouge&quot;&gt;Finder&lt;/code&gt; App, and want to go to &lt;code class=&quot;highlighter-rouge&quot;&gt;Applications Folder&lt;/code&gt;, you can directly hit ⌘-⇧-/, type in “application” in the popup (actually just type ”ap” the result has been shown), then hit the down button and enter.&lt;/p&gt;
+
+&lt;p&gt;Fuzzy search is also supported, eg: hit ⌘-⇧-/ and input “t w l”, you can &lt;code class=&quot;highlighter-rouge&quot;&gt;Tile Window to Left of Screen&lt;/code&gt; without reaching your mouse.&lt;/p&gt;
+
+&lt;p&gt;The workflow is just like VSCode’s “Show All Commands” (&lt;code class=&quot;highlighter-rouge&quot;&gt;F1&lt;/code&gt; or ⌘-⇧-/ in OS X), you just type in what you want to do. It works like a tiny command palette. If you are used to VSCode’s &lt;code class=&quot;highlighter-rouge&quot;&gt;F1&lt;/code&gt; or any application launcher, I bet you’ll like it.&lt;/p&gt;
+
+&lt;h2 id=&quot;why-bother-typing&quot;&gt;Why bother typing?&lt;/h2&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Less Keystroke, all in one, determinism, and a visual learning experience to keyboard shortcuts.
+Keystroke sequence of ⌘-⇧-/ are short enough at most situation. ⌘-⇧-/ is just like an arsenal of all menu features within a few keystrokes, not only those operations bound with keyboard shortcuts, but also all other operations.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;To Click a menu bar button with your mouse, you must find the button on screen before click it, so that it’s almost impossible to form a muscle memory(probably the No.1 criticism of Mouse &amp;amp; buttons from keyboard lovers).&lt;/p&gt;
+
+&lt;p&gt;With ⌘-⇧-/, muscle memory can be built. Searching in instant help popup don’t need to leave your keyboard, and the keystroke sequence of a certain function is determined.&lt;/p&gt;
+
+&lt;p&gt;If you use some function really often, it won’t be a bother to memorize its unique keyboard shortcut.&lt;/p&gt;
+
+&lt;p&gt;Last but not least, ⌘-⇧-/ provide an interactive learning experience of learning shortcuts. While moving cursor on an operation in search results, there will be pretty interaction effect. The effect would indicate you where the function is, and the keyboard shortcut of it(if shortcut exists).&lt;/p&gt;</content><author><name>ofey404</name></author><summary type="html">The great Richard Feynman said in his lectures of physics: If, in some cataclysm, all of scientific knowledge were to be destroyed, and only one sentence passed on to the next generation of creatures, what statement would contain the most information in the fewest words?</summary></entry><entry><title type="html">表述作为一种创造</title><link href="http://0.0.0.0:4000/posts/description-as-creation/" rel="alternate" type="text/html" title="表述作为一种创造" /><published>2020-02-29T23:46:25-06:00</published><updated>2020-02-29T23:46:25-06:00</updated><id>http://0.0.0.0:4000/posts/description-as-creation</id><content type="html" xml:base="http://0.0.0.0:4000/posts/description-as-creation/">&lt;blockquote&gt;
   &lt;p&gt;品酒、调香、乐评、文学这些职业通过探索表达的方式和边界，扩展这些体验本身。&lt;/p&gt;
 &lt;/blockquote&gt;
 
