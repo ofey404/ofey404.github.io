@@ -9,6 +9,7 @@ quotes=(
 "How many roads must a man walk down, before you call him a man?"
 "O that this too too solid flesh would melt, thaw, and resolve itself into a dew!"
 "There must be someway out of here, said the joker to the thief."
+"I'm a joker, I'm a smoker, I'm a midnight toker, I sure don't want to hurt no one."
 )
 
 selectedQuote=${quotes[$RANDOM % ${#quotes[@]}]}
