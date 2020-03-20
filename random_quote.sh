@@ -10,6 +10,7 @@ quotes=(
 "O that this too too solid flesh would melt, thaw, and resolve itself into a dew!"
 "There must be someway out of here, said the joker to the thief."
 "I'm a joker, I'm a smoker, I'm a midnight toker, I sure don't want to hurt no one."
+"Tell me and I forget. Show me and I remember. Involve me and I understand."
 )
 
 selectedQuote=${quotes[$RANDOM % ${#quotes[@]}]}
