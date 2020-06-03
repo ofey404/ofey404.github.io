@@ -1,4 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2020-05-08T10:34:21-05:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">ofey404’s Blog</title><subtitle>Ofey Chan's personal blog. A programmer, rock music lover.</subtitle><author><name>ofey404</name></author><entry><title type="html">Implementing a Regular Expression Engine</title><link href="http://0.0.0.0:4000/posts/Implementing-a-Regular-Expression-Engine/" rel="alternate" type="text/html" title="Implementing a Regular Expression Engine" /><published>2020-05-08T10:25:41-05:00</published><updated>2020-05-08T10:25:41-05:00</updated><id>http://0.0.0.0:4000/posts/Implementing-a-Regular-Expression-Engine</id><content type="html" xml:base="http://0.0.0.0:4000/posts/Implementing-a-Regular-Expression-Engine/">&lt;p&gt;For a small training after reading &lt;a href=&quot;https://www.amazon.com/Introduction-Theory-Computation-Michael-Sipser/dp/113318779X&quot;&gt;Introduction to the Theory of Computation&lt;/a&gt;, PART ONE Automata and languages. And Thanks to Denis Kyashif’s wonderful Blog &lt;a href=&quot;https://deniskyashif.com/2019/02/17/implementing-a-regular-expression-engine/&quot;&gt;Implementing a Regular Expression Engine&lt;/a&gt;, I adapt his javascript implementation to python.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2020-06-02T21:06:20-05:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">ofey404’s Blog</title><subtitle>Ofey Chan's personal blog. A programmer, rock music lover.</subtitle><author><name>ofey404</name></author><entry><title type="html">复旦校歌自扒和弦谱</title><link href="http://0.0.0.0:4000/posts/school-song-of-fudan-university/" rel="alternate" type="text/html" title="复旦校歌自扒和弦谱" /><published>2020-06-02T20:59:14-05:00</published><updated>2020-06-02T20:59:14-05:00</updated><id>http://0.0.0.0:4000/posts/school-song-of-fudan-university</id><content type="html" xml:base="http://0.0.0.0:4000/posts/school-song-of-fudan-university/">&lt;p&gt;复旦大学校歌（复旦复旦旦复旦）&lt;/p&gt;
+
+&lt;p&gt;刘大白词，丰子恺曲&lt;/p&gt;
+
+&lt;p&gt;1=G&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;G     Em   , C     D
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;复旦复旦旦复旦，巍巍学府文章焕，&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;G     Em    , C  D  G
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;学术独立思想自由，政罗教网无羁绊，&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Em    G    , C   Em   D
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;无羁绊前程远，向前，向前，向前进展。&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;G  Am  Bm   ,  G  C  D  G
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;复旦复旦旦复旦，日月光华同灿烂。&lt;/p&gt;</content><author><name>ofey404</name></author><summary type="html">复旦大学校歌（复旦复旦旦复旦）</summary></entry><entry><title type="html">Implementing a Regular Expression Engine</title><link href="http://0.0.0.0:4000/posts/Implementing-a-Regular-Expression-Engine/" rel="alternate" type="text/html" title="Implementing a Regular Expression Engine" /><published>2020-05-08T10:25:41-05:00</published><updated>2020-05-08T10:25:41-05:00</updated><id>http://0.0.0.0:4000/posts/Implementing-a-Regular-Expression-Engine</id><content type="html" xml:base="http://0.0.0.0:4000/posts/Implementing-a-Regular-Expression-Engine/">&lt;p&gt;For a small training after reading &lt;a href=&quot;https://www.amazon.com/Introduction-Theory-Computation-Michael-Sipser/dp/113318779X&quot;&gt;Introduction to the Theory of Computation&lt;/a&gt;, PART ONE Automata and languages. And Thanks to Denis Kyashif’s wonderful Blog &lt;a href=&quot;https://deniskyashif.com/2019/02/17/implementing-a-regular-expression-engine/&quot;&gt;Implementing a Regular Expression Engine&lt;/a&gt;, I adapt his javascript implementation to python.&lt;/p&gt;
 
 &lt;h2 id=&quot;kickstart-guide&quot;&gt;Kickstart guide&lt;/h2&gt;
 &lt;p&gt;Code is &lt;a href=&quot;https://github.com/ofey404/blogCode/tree/master/2020/regularExpressionEngine&quot;&gt;on github&lt;/a&gt;. This project implemented a regular engine in python.&lt;/p&gt;
