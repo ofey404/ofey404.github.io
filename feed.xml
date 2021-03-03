@@ -1,468 +1,133 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2020-06-02T21:06:20-05:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">ofey404’s Blog</title><subtitle>Ofey Chan's personal blog. A programmer, rock music lover.</subtitle><author><name>ofey404</name></author><entry><title type="html">复旦校歌自扒和弦谱</title><link href="http://0.0.0.0:4000/posts/school-song-of-fudan-university/" rel="alternate" type="text/html" title="复旦校歌自扒和弦谱" /><published>2020-06-02T20:59:14-05:00</published><updated>2020-06-02T20:59:14-05:00</updated><id>http://0.0.0.0:4000/posts/school-song-of-fudan-university</id><content type="html" xml:base="http://0.0.0.0:4000/posts/school-song-of-fudan-university/">&lt;p&gt;复旦大学校歌（复旦复旦旦复旦）&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-03-03T11:00:04+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">2021-08：</title><link href="http://localhost:4000/2021/02/25/weekly-summary.html" rel="alternate" type="text/html" title="2021-08：" /><published>2021-02-25T21:34:00+08:00</published><updated>2021-02-25T21:34:00+08:00</updated><id>http://localhost:4000/2021/02/25/weekly-summary</id><content type="html" xml:base="http://localhost:4000/2021/02/25/weekly-summary.html">&lt;h1 id=&quot;2020-年-08-周周报士气管理&quot;&gt;2020 年 08 周周报：士气管理&lt;/h1&gt;
+&lt;p&gt;很久以来，我做事的原则都是做『自己愿意做的事情』。对计算机有爱，所以走上程序员的道路；某个晚上愿意看漫画，所以就看。&lt;/p&gt;
 
-&lt;p&gt;刘大白词，丰子恺曲&lt;/p&gt;
+&lt;p&gt;从寄宿学校时代『自己需要做/被迫做的事情』到『愿意做』，这个转变让我更放松，愿意为自己的决定负责。学会听自己的意愿，顺应之，让我更快乐。&lt;/p&gt;
 
-&lt;p&gt;1=G&lt;/p&gt;
+&lt;p&gt;这之后我又遇到了新的问题。有时我在晚上看视频/玩电子游戏到凌晨，那么第二天就会昏昏沉沉，如果恰好要上班的话，无疑是很糟糕的一天。而前一天晚上的熬夜，可能又是一些不良心境下的反应。有时我生活压力陡增，这让我变得暴躁，很难照顾别人的意愿、关心别人、爱别人，也因此留下了很多遗憾。有时候我仅仅是觉得没有活力，无法做一些日常维护的工作——完成和别人的约定，或者完成作业……然后又在焦虑的驱使下进行一些逃避性行为，例如大量游玩电子游戏。有时我会变得很难有余力去思考，去读书，关怀别人，而很难做这些又会让我的心情变得更糟。&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;G     Em   , C     D
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;新年以来这几周，总体还不错。看了很多有意思的书，也在计算机学习上面花去了一定的时间（还不够！），还尝试认识了一些新的朋友。&lt;/p&gt;
 
-&lt;p&gt;复旦复旦旦复旦，巍巍学府文章焕，&lt;/p&gt;
+&lt;p&gt;现在我需要的，我把它称为『士气管理』。读完《抑郁自我护理计划》，我写了一小段感想：&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;G     Em    , C  D  G
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;学术独立思想自由，政罗教网无羁绊，&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Em    G    , C   Em   D
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;无羁绊前程远，向前，向前，向前进展。&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;G  Am  Bm   ,  G  C  D  G
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;复旦复旦旦复旦，日月光华同灿烂。&lt;/p&gt;</content><author><name>ofey404</name></author><summary type="html">复旦大学校歌（复旦复旦旦复旦）</summary></entry><entry><title type="html">Implementing a Regular Expression Engine</title><link href="http://0.0.0.0:4000/posts/Implementing-a-Regular-Expression-Engine/" rel="alternate" type="text/html" title="Implementing a Regular Expression Engine" /><published>2020-05-08T10:25:41-05:00</published><updated>2020-05-08T10:25:41-05:00</updated><id>http://0.0.0.0:4000/posts/Implementing-a-Regular-Expression-Engine</id><content type="html" xml:base="http://0.0.0.0:4000/posts/Implementing-a-Regular-Expression-Engine/">&lt;p&gt;For a small training after reading &lt;a href=&quot;https://www.amazon.com/Introduction-Theory-Computation-Michael-Sipser/dp/113318779X&quot;&gt;Introduction to the Theory of Computation&lt;/a&gt;, PART ONE Automata and languages. And Thanks to Denis Kyashif’s wonderful Blog &lt;a href=&quot;https://deniskyashif.com/2019/02/17/implementing-a-regular-expression-engine/&quot;&gt;Implementing a Regular Expression Engine&lt;/a&gt;, I adapt his javascript implementation to python.&lt;/p&gt;
-
-&lt;h2 id=&quot;kickstart-guide&quot;&gt;Kickstart guide&lt;/h2&gt;
-&lt;p&gt;Code is &lt;a href=&quot;https://github.com/ofey404/blogCode/tree/master/2020/regularExpressionEngine&quot;&gt;on github&lt;/a&gt;. This project implemented a regular engine in python.&lt;/p&gt;
-
-&lt;p&gt;Check three test file to know the usage. &lt;a href=&quot;https://github.com/ofey404/blogCode/blob/master/2020/regularExpressionEngine/test_NFA.py&quot;&gt;test_NFA.py&lt;/a&gt;, &lt;a href=&quot;https://github.com/ofey404/blogCode/blob/master/2020/regularExpressionEngine/test_matcher.py&quot;&gt;test_matcher.py&lt;/a&gt; and &lt;a href=&quot;https://github.com/ofey404/blogCode/blob/master/2020/regularExpressionEngine/test_parser.py&quot;&gt;test_parser.py&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;The main workhorse function is &lt;code class=&quot;highlighter-rouge&quot;&gt;matcher.create_matcher&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;language-python highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kn&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;matcher&lt;/span&gt; &lt;span class=&quot;kn&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;create_matcher&lt;/span&gt;
-
-&lt;span class=&quot;c1&quot;&gt;# Return a matcher function.
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;union_and_concate&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;create_matcher&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;(a|b).c&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;union_and_concate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# False
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;union_and_concate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;ac&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# True
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;union_and_concate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bc&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# True
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;union_and_concate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;abc&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# False
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;union_and_concate&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;bac&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;# False
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;overview-of-implementation&quot;&gt;Overview of implementation&lt;/h2&gt;
 &lt;blockquote&gt;
-  &lt;p&gt;What this project do?&lt;/p&gt;
+  &lt;p&gt;抑郁是海浪。&lt;/p&gt;
+
+  &lt;p&gt;读完《抑郁自我护理计划》之后，印象最深的反而是开篇的那一张图 —— 生活遭遇、思维方式、情绪感受、生理状况及行为方式的相互作用。&lt;/p&gt;
+
+  &lt;p&gt;抑郁是一系列链式反应，情绪低落是这个失速螺旋中的一环。就像海浪，就像波，每一个元素推进着下一个元素的发展，最后再回绕。单独用手按住一块波动中的水面，并不会使波浪停止。&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Mainly can refer to the Denis Kyashif’s Blog &lt;a href=&quot;https://deniskyashif.com/2019/02/17/implementing-a-regular-expression-engine/&quot;&gt;Implementing a Regular Expression Engine&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;幸福的生活也是一系列链式反应，一个系统工程。单独着眼在提升『幸福感』，并不能有效的使我更幸福。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/ofey404/blogCode/blob/master/2020/regularExpressionEngine/matcher.py&quot;&gt;parser.py&lt;/a&gt; -&amp;gt; &lt;a href=&quot;https://github.com/ofey404/blogCode/blob/master/2020/regularExpressionEngine/NFA.py&quot;&gt;NFA.py&lt;/a&gt; -&amp;gt; &lt;a href=&quot;https://github.com/ofey404/blogCode/blob/master/2020/regularExpressionEngine/matcher.py&quot;&gt;matcher.py&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;我需要较为规律的生活。这让我的时间表变得可控，而我一直以来都不擅长安排时间，所以更加需要。我做不到早六点晚十点那种程度的规律，但也没有必要因此而责怪自己。我喜欢浮游在自己的兴致和情绪中，一定程度的混乱有助于我保持活力。做到基本的就可以了。&lt;/p&gt;
 
-&lt;p&gt;Begin with a input of regex string&lt;/p&gt;
+&lt;p&gt;我需要较为健康的身体。伏案工作或者躺在床上听手机会给我的脊椎带来压力，代谢率低让我手脚冰凉。在假期我学习了太极拳，这是不错的轻度运动。感谢妈带我去学这个，虽然有时我很不情愿。&lt;/p&gt;
+
+&lt;p&gt;我需要从上面的两点开始，长期以来我都忽略了它们。&lt;/p&gt;
+
+&lt;p&gt;这之后，我需要信息输入和思考。读严肃书籍，思考真正的问题，讨论。我需要在娱乐作品和非娱乐作品中取得平衡。《极乐迪斯科》几乎改变了我对娱乐作品的看法，以他们&lt;a href=&quot;https://www.vgbaike.com/disco_elysium/baike5618?wid=775&quot;&gt;开发日志&lt;/a&gt;中写的『奇幻现实主义』：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;我想要有一些虚构的宇宙来讲述我们自己的真实生活经历。关于我们所面临的一些政治问题，还有我们周围的地缘政治结构，现代世界的问题，等等。这些虚构的宇宙在我们完成探索之后，不会让我们感到麻木、孤独或者被遗弃。这些宇宙能为我们提供生活工具，也为我们正在发生的事情提供背景。我想要让这些宇宙给我们继续自己的生活的勇气，而不是让我们感到空虚，以至于说出：“哦，我的上帝，我想回到那精灵的土地，我已经看到了一切，但我不能。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;我需要做自己爱的事情（或者爱自己做的事情？），为自己的手艺而感到骄傲。&lt;/p&gt;
+
+&lt;p&gt;我需要我的朋友们。和他们通电话、发消息，和我被关心的需要同样重要的是，我也有关心他人的需要。&lt;/p&gt;
+
+&lt;p&gt;Linus 讲述他认为的『驱使人类的动机』—— 生存、社交、获得乐趣：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;娱乐不一定非得是指某些老掉牙的东西。它可以是一场国际象棋比赛，也可以是一次对『世界如何运转』这个问题的思考，还可以是对新世界的好奇和探索。娱乐能驱使人们为了从外太空看清地球的面貌，而自愿坐在一支装着数亿磅烈性炸药的狭窄火箭里，所以娱乐当然可以称之为『动机』。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;我的『士气管理』也包括当我有了健康的身体，可以支配的时间之后，尽量把它们花在能让我感到满足的乐趣上。&lt;/p&gt;
+
+&lt;p&gt;（我只把 Linus 的看法看作『一个三十多岁的成年人和你聊天的时候会谈到的事情』。我并不觉得他的看法就能称为金科玉律、真知灼见，免得被他嘲讽（参见《生活的意义之二》）。）&lt;/p&gt;
+
+&lt;h2 id=&quot;专业学习&quot;&gt;专业学习&lt;/h2&gt;
+&lt;p&gt;本周在继续编译原理。进度不太满意。&lt;/p&gt;
+
+&lt;h2 id=&quot;书单&quot;&gt;书单&lt;/h2&gt;
+&lt;h3 id=&quot;厌女日本的女性嫌恶&quot;&gt;《厌女：日本的女性嫌恶》&lt;/h3&gt;
+&lt;p&gt;人们说出『我是男人』，『我是女人』，在这个基础上或多或少地扮演『男人』和『女人』的角色，按照一套游戏规则的约定参与游戏。&lt;/p&gt;
+
+&lt;p&gt;『厌女』，或称『女性蔑视』，是这套游戏规则中的一部分。这个游戏规则称之为『异性恋秩序』，或者『父权制』。&lt;/p&gt;
+
+&lt;p&gt;这种游戏规则不是先验的，而是对现实的一种观察和归纳。&lt;/p&gt;
+
+&lt;p&gt;这些游戏规则规范『男人』『女人』这些角色之间的关系。进一步影响到『父亲』『母亲』『儿子』『女儿』之间的关系。&lt;/p&gt;
+
+&lt;p&gt;有约定这些角色如何互相看待的规则：『兄弟如手足、女人如衣服』&lt;/p&gt;
+
+&lt;p&gt;有约定各个角色的价值如何实现的：&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;Parser do(&lt;code class=&quot;highlighter-rouge&quot;&gt;parse_regex_to_postfix()&lt;/code&gt;):
-    &lt;ul&gt;
-      &lt;li&gt;Insert explicit concate operator(&lt;code class=&quot;highlighter-rouge&quot;&gt;.&lt;/code&gt;).&lt;/li&gt;
-      &lt;li&gt;Turn regex to postfix notation, with &lt;a href=&quot;https://en.wikipedia.org/wiki/Shunting-yard_algorithm#Graphical_illustration&quot;&gt;Shunting-yard Algorithm&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Turn postfix regex to NFA(&lt;code class=&quot;highlighter-rouge&quot;&gt;to_NFA()&lt;/code&gt;):
-    &lt;ul&gt;
-      &lt;li&gt;Use Thompson’s Construction to construct NFA, refer to Denis’s wonderful blog.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Build a matcher(&lt;code class=&quot;highlighter-rouge&quot;&gt;create_matcher&lt;/code&gt;):
-    &lt;ul&gt;
-      &lt;li&gt;Follow the automata non-deterministically, step by step.&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ofey404</name></author><summary type="html">For a small training after reading Introduction to the Theory of Computation, PART ONE Automata and languages. And Thanks to Denis Kyashif’s wonderful Blog Implementing a Regular Expression Engine, I adapt his javascript implementation to python.</summary></entry><entry><title type="html">《铳梦》安利—坚韧少女的废土物语</title><link href="http://0.0.0.0:4000/posts/gunnm/" rel="alternate" type="text/html" title="《铳梦》安利—坚韧少女的废土物语" /><published>2020-03-19T20:44:00-05:00</published><updated>2020-03-19T20:44:00-05:00</updated><id>http://0.0.0.0:4000/posts/gunnm</id><content type="html" xml:base="http://0.0.0.0:4000/posts/gunnm/">&lt;blockquote&gt;
-  &lt;p&gt;《铳梦》（日语：銃夢、GUNNM），在北美地区也译为《战斗天使艾莉塔》（英语：Battle Angel Alita），是由日本漫画家木城幸人所创作的赛博朋克科幻漫画作品，从1990年至1995年在集英社《Business Jump》连载，总共发行了9集单行本。&lt;/p&gt;
-
-  &lt;p&gt;作品以大量机械和肉身结合的与类似的科幻设定，探讨人类之所以为人类的意义。除故事本身外，其未来世界与格斗方面的设定，以及漫画呈现的作画技巧，亦相当杰出。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;—&lt;a href=&quot;https://zh.m.wikipedia.org/zh-sg/%E9%8A%83%E5%A4%A2&quot;&gt;Wikipedia&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;两座城市&quot;&gt;两座城市&lt;/h2&gt;
-&lt;p&gt;天空中，漂浮着纯白的空中都市。从都市中心的管道中落下垃圾，经年累月，在地面上堆积成了巨大的垃圾山。围绕着这座垃圾山，地面上的人建起了一望无际的、破败的低矮建筑。再往外是漫漫黄沙，一片盗匪横行的废土。&lt;/p&gt;
-
-&lt;p&gt;漂浮在人们头顶，高高在上的神秘都市「扎雷姆」，和地面上人们挣扎其中的街道「废铁镇」，是《铳梦》世界中的两大中心元素。两座截然相反而又相互依存的都市，好像在暗示着什么一般，从故事的一开始就能看出无数伏笔。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/6EA6D527-9448-4911-A5BD-6DD7CBAEFB11.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;废铁镇是一座野蛮生长的后现代都市。肮脏破败的贫民窟，人体改造与人机融合在这里只是日常生活的一部分。无法无天的街道上充斥着暴力和性，维持治安的是拿钱办事的赏金猎人。入夜，街道就变得危机四伏，人们若不是呆在家里，就是去观看角斗或者机动球赛—废铁镇的两大公共娱乐。&lt;/p&gt;
-
-&lt;p&gt;这是典型的「赛博朋克」口味—管线纵横的工业化城市里夹杂着东洋元素，甚至主角都是一个日本女性。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/0EC90143-B621-4F4A-880B-3B05D3EF4293.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;而扎雷姆就要神秘得多。城中的居民从不与地面直接往来，也没有听说地面上的居民曾经上到城中或者回返。重兵押送的列车将食物从废土各处的农场运到废铁镇，再和净水一起顺着管道送至扎雷姆。&lt;/p&gt;
-
-&lt;p&gt;在地面上流传着扎雷姆的富庶和高超技术的传说。他们奢侈地使用高压水墙保护着管道下端的工厂，支付赏金猎人的酬劳维持废铁镇的治安，据传还有「被逐出扎雷姆的居民」在废铁镇隐姓埋名地游荡…光环之下，扎雷姆究竟是理想都市，还是压迫者的集合体，或者阶层的具象化，或者世外桃源，亦或是？故事开始之时，一切都笼罩在谜团之中。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/DA2AFF56-F820-4FCB-A4F8-855DAE1C1ECE.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/69060A0A-536E-4AE2-897A-97F8466C5C53.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;废土之花&quot;&gt;废土之花&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;“她一定是处女星座……血型吗……B型……不！是O型吧？像猫一样的强烈独立心！顽固！有自信！高傲自尊心！强烈显示自己的欲望！毛病是羞怯！没有协调性！富有行动力！反抗性（虽然难以取悦，其实心性却跟小孩相似）！”—Row，加里的闺蜜（？）&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;额头上有一个印记的改造人医生「依德」，在废铁镇中的垃圾堆捡到了一个女孩的头颅，她已经沉睡在那里有数百年之久了。依德给她起名「加里」，努力工作为她再造了身体，将她当自己的女儿一样对待。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/8130AA80-3B1F-4BD2-AEE4-0E2BC7F1DB0F.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;被弃置了百年，加里失去了对往事的记忆，她带着白纸般纯洁的心灵来到了这个残酷的世界。依德是个受人敬重的好医生，他希望加里能在废铁镇快乐平安地生活，将来或许继承他的诊所。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/F295EC31-A325-4CC2-A608-23430A9AAD7B.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;加里的过去给她留下的唯一线索，是她小脑中对于某种格斗术的肌肉记忆。加里并不是依德期望中那种温顺的女孩，她的性格中有着战士的刚强。这也使她不顾依德的反对，决定遵从自己的内心，做一名赏金猎人。依德也干赏金猎人贴补家用—加里的格斗术记忆正是在保护依德时觉醒的—但他却不愿意加里进入这个刀口舔血的行当，他希望加里不要接触到社会的黑暗面，在他人的保护下做一个幸福的女孩。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/88B6A23B-CD1D-40C2-B0DE-9DFEDD3AEBF0.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;父女争执，又和解，加里如愿以偿成为了赏金猎人。一段时间跨度长达数十年的废土物语，就从这里拉开了序幕。她冒险、游荡、恋爱、失恋、沦为囚徒又重获自由，在废土上找寻自己的过去和生命的意义，从懵懂的女孩成长为独立、自由、强大而美丽的女性。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/3D26066F-8C39-444D-93B3-A4793CAD9BE1.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;顺便一提，木城雪户的画功在连载的过程中也有着飞跃性的提升，正好呼应了加里的成长—木城的画面青涩时，加里也正值青春，温柔脆弱；五、六卷之后，木城的技艺渐趋纯熟，此时的加里坚强而美丽，洋溢着成熟的性感。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/DD6A8838-5F40-4714-8CF5-7F61BF4B921B.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/DEBBFC9F-05BD-404D-98A9-CB1B7A80A523.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;木城雪户宝贵的克制&quot;&gt;木城雪户宝贵的克制&lt;/h2&gt;
-&lt;p&gt;《铳梦》的故事结构基本是章节式的，读者往往是通过加里的眼睛在看，见证废土上的大小事件。故事有些是加里个人的恩怨情仇，有的则是对废土风貌、历史事件的整体描述—这部分我觉得相当像《钢之炼金术师》的伊修瓦尔篇，废土的风貌也有 Mad Max 系列的影子。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/8E63B820-5781-4D64-B87E-309272314F04.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;作为商业漫画，《铳梦》难得可贵的一点是在设定和剧情安排上保持了足够的克制，没有让一个写实基调的故事失去必要的严肃感。&lt;/p&gt;
-
-&lt;p&gt;加里并不总能成为改变事件走向的关键先生，身上也没有让世界都围着她转动的大秘密—比如封印着毁灭世界的怪物、是某个重要人士的后代、或者有着一颗反物质心脏等等…武术就只是武术，而过去也只是她自己的过去。加里并不是什么天选之子，因此她的战斗、反抗、思索、困惑、成功和失败，欢乐和悲恸都有一层真正英雄主义的色彩。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/7280B999-B50D-4872-A43C-C0D844AFE97E.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;木城雪户在剧情安排上也有足够的耐心—至少在《铳梦》本篇如此。他没有盲目地试图描绘接二连三的架空历史大事件（等闲不写状元才啊），而是把架空历史控制在了篇幅和自己力所能及的范围内。他用了九卷的篇幅，耐心得近乎奢侈，把目光聚焦在数个人物的悲喜剧上，因此《铳梦》的剧情有着非常高的完成度。&lt;/p&gt;
-
-&lt;h2 id=&quot;疯狂的一千种面孔剧透警告&quot;&gt;疯狂的一千种面孔—剧透警告&lt;/h2&gt;
-&lt;p&gt;《铳梦》应该被分在青年漫画一级，和《剑风传奇》、《BLAME！》、《浪客行》分在同一级。画面有时相当血腥，剧情往往阴暗压抑，探讨的话题有时是相当成熟的科幻母题。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/C171B3EF-2116-43FC-82CE-D125066E94DE.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;许多故事确实可以用剧中 Desty Nova 教授的一句台词来概括—&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;“没有所谓的正常与疯狂，只有疯狂的一千种面孔”。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;出生在厕所，在下水道长大，被整个世界遗弃，与人示好却被伤害的将死之人，给他夺取别人身体的力量，会发生什么事情？&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/9650E5B4-418C-4D27-86E6-D3E916284926.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;出身废铁镇，从小仰望扎雷姆长大的少年，崇拜的哥哥为了追寻前往扎雷姆的方法而失去性命。扎雷姆在他眼中被符号化为理想的天国、生命的最重要目标。&lt;/p&gt;
-
-&lt;p&gt;在他追寻梦想途中，会献上什么做祭品？自己的清白无罪？器官和身体？心爱的姑娘？当梦想破灭时又会如何？赏金猎人加里在城市的法律和初恋情人的性命之间又会作何抉择，将事态导向何种结局？&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/5E1D8BAC-80A4-4FFC-AA14-7E7B1A37784B.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;同时拥有一个极端理性与强大精神力量，和一个极端感性与强大肉体力量的双重人格，将他的两个极端人格分开装到两个身体里，又会如何？废铁镇-扎雷姆的二元权力格局是否会被这个人打破？（这篇让我想到阿西莫夫《银河帝国》中的异能者“骡”）&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/180B14A4-5CC2-4446-9D76-762DC9D08C41.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;再在上面的所有之后，一直将地上废铁镇的 cyborg 不当成人类，以基于优生学的完美肉体与极度秩序化社会自豪的天之骄子扎雷姆人，突然得知了一个关于自己种族的秘密，而这个秘密足以颠覆他们最深处的自我认同，这个云上社会会如何演变？因为全机械身体而对「人类」认同已经相当宽泛的加里，会怎么对待自己的复制人，同时她的复制人又会如何自处？如何定义「人」？持不同的定义的人群之间又会有怎样的纷争？&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/335657B1-98E9-49E8-B806-F3D42F4F5C82.jpeg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;结语&quot;&gt;结语&lt;/h2&gt;
-&lt;p&gt;横向对比，在日本九十年代较为严肃的近未来科幻漫画中，《铳梦》算是充满少年心气，相对中正平和的一部作品。《BLAME！》的世界中，人被自己的科技造物所排斥，在巨型建筑的夹缝中艰难求生，社会结构和人性都因此解体；《攻壳机动队》试图讲述的则是和现代类似的社会结构中，新技术产生的种种社会问题。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/IMG_0275.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;《铳梦》比以上两者都要轻松得多。它并不是「问题剧」，而是用非常棒的画工描绘了许多格斗场面，努力讲述一个少女在废土上成长，遇到各种各样的人的故事，去塑造几个有趣的角色。&lt;/p&gt;
-
-&lt;p&gt;《铳梦》的哲学思辨和科幻的思考，更多的是向内指向自身——何为「人类」？人如何看待「分离/拷贝的意识」？当然，「故事」的意义就在于，它并不提供标准答案，而是每个角色有着自己的答案。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/WtDTObjHTY+pXzz18WxRug_thumb_433.jpg&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/UNADJUSTEDNONRAW_thumb_438.jpg&quot; alt=&quot;&quot; /&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/UNADJUSTEDNONRAW_thumb_439.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;《铳梦》有：&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;流畅的打戏、紧凑的剧情&lt;/li&gt;
-  &lt;li&gt;木城雪户殿堂级的画工加持&lt;/li&gt;
-  &lt;li&gt;各种意义上都非常棒，坚强独立的女性主角&lt;/li&gt;
-  &lt;li&gt;一些好吃的 cp&lt;/li&gt;
+  &lt;li&gt;『这你还算个男人吗？』&lt;/li&gt;
+  &lt;li&gt;『丑女不算女人』&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;安利结束。喵。&lt;/p&gt;
+&lt;p&gt;有对性的约定。&lt;/p&gt;
 
-&lt;h2 id=&quot;一些带感的细节&quot;&gt;一些带感的细节&lt;/h2&gt;
-&lt;p&gt;「机动球」比赛的设定借鉴了橄榄球和 F1 赛车的场景。&lt;/p&gt;
+&lt;p&gt;这种游戏规则经常会带来不幸。但是我们暂时无法想象，完全没有这种游戏规则的世界。这种规则刻进我们的身体，潜进欲望的中心，否定它就像否定我们的欲望一般。&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/TSurrG7eQrCjalFOVkyrqA_thumb_417.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;外一则：&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;加里的爱刀——机动球选手时代得到的「大马士革钢刀」，是用在球赛中身亡的选手的身体铸造的。刀匠把刀赠送给加里，唯一的条件就是，她如果在比赛中丧命，那么请她把身体送给刀匠用作锻刀的材料。后期被加里做成了一人高的蝴蝶刀。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/n6fIWBQoQGuJKydCmm9fxg_thumb_422.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Barjack 之战中的电灯泡士兵。平时只保留头颅，战斗时注射肾上腺素、多巴胺和内啡肽，拧上机械身体。&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/IMG_0272.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;DNA 风琴。某个城市里的所有居民都是通过这个风琴编码而诞生的，每个人对应一首乐曲——很浪漫，不是么？&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/REwUdAaaRzKiN5sT7VOOyg_thumb_40c.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;加里和她的复制人战斗时的数个连续画面。画面、分镜和动态可以说放在格斗漫画里都是相当顶级的水准。场景也有细心安排（剧院、椅子……），有动作电影的即视感。
-&lt;img src=&quot;/img/2020-03-20-gunnm/43fZeosrQuiQ21ntl3mgMA_thumb_42d.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/rMAKaktXTaOttaAxbkI5lA_thumb_435.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/Il2yS8uaR5uEJOTFEoNf4w_thumb_418.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/2020-03-20-gunnm/dMcOL0SyR6mO9EW74aMCTg_thumb_427.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;p&gt;我觉得宣传效果上面『厌女』一词不如『女性蔑视』。『厌女』有一种直指某个人品德低劣的口气。例如：&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;《铳梦》 木城雪户&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://zh.m.wikipedia.org/zh-sg/%E9%8A%83%E5%A4%A2&quot;&gt;《铳梦》Wikipedia&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;知乎&lt;a href=&quot;https://www.zhihu.com/question/22849907&quot;&gt;「如何评价漫画《铳梦》」&lt;/a&gt;下的若干个回答&lt;/li&gt;
-  &lt;li&gt;写作参照了&lt;a href=&quot;https://www.zhihu.com/question/21962267&quot;&gt;「如何评价《剑风传奇》」&lt;/a&gt;下的若干回答&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ofey404</name></author><summary type="html">《铳梦》（日语：銃夢、GUNNM），在北美地区也译为《战斗天使艾莉塔》（英语：Battle Angel Alita），是由日本漫画家木城幸人所创作的赛博朋克科幻漫画作品，从1990年至1995年在集英社《Business Jump》连载，总共发行了9集单行本。 作品以大量机械和肉身结合的与类似的科幻设定，探讨人类之所以为人类的意义。除故事本身外，其未来世界与格斗方面的设定，以及漫画呈现的作画技巧，亦相当杰出。</summary></entry><entry><title type="html">什么是极权主义 | The little style</title><link href="http://0.0.0.0:4000/posts/dialogue-of-totalitarianism/" rel="alternate" type="text/html" title="什么是极权主义 | The little style" /><published>2020-03-15T20:51:05-05:00</published><updated>2020-03-15T20:51:05-05:00</updated><id>http://0.0.0.0:4000/posts/dialogue-of-totalitarianism</id><content type="html" xml:base="http://0.0.0.0:4000/posts/dialogue-of-totalitarianism/">&lt;p&gt;建立集中营，屠杀犹太人的第三帝国是极权主义么？&lt;/p&gt;
+  &lt;li&gt;『A 君，你厌女』&lt;/li&gt;
+  &lt;li&gt;『A 君，你表现出了一种女性蔑视』&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;是。&lt;/p&gt;
+&lt;p&gt;然而有很多更加『温和』以及感觉不到冒犯性的事情也和『厌女』/『女性蔑视』，以及它所属的游戏规则有关。例如外貌焦虑，或者『女人的嫉妒』。&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;『厌女』容易唤起对抗心，以及由于措辞的严重性而带来『厌女的是别人，我不厌女』的逃脱借口。&lt;/p&gt;
 
-&lt;p&gt;不允许公开质疑主体思想和党的正确性的北朝鲜是极权主义么？&lt;/p&gt;
+&lt;p&gt;个人意见：对『厌女者』，或者说，习惯于这套角色扮演的人而言，唤起羞耻会更有意义。告诉他们这是角色扮演。&lt;/p&gt;
 
-&lt;p&gt;是。&lt;/p&gt;
+&lt;p&gt;『厌女』/『女性蔑视』和所有人都有关。（基本上吧……）承认『男人』『女人』那套游戏规则的都有关。&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;以上所有『男人』『女人』词语，指的是某个游戏规则下的一种角色，和具体的人无关，在分析具体的事例时，它们有关。&lt;/p&gt;
 
-&lt;p&gt;鼓励居民互相监视，实行特务统治的纳粹德国是极权主义么？&lt;/p&gt;
+&lt;h3 id=&quot;只是为了好玩linus-自传&quot;&gt;《只是为了好玩：Linus 自传》&lt;/h3&gt;
+&lt;p&gt;『驱使人类的动机』—— 生存、社交、获得乐趣。&lt;/p&gt;
 
-&lt;p&gt;是。&lt;/p&gt;
+&lt;p&gt;更多参见周报。&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;h3 id=&quot;抑郁自我护理计划&quot;&gt;《抑郁自我护理计划》&lt;/h3&gt;
+&lt;p&gt;抑郁是海浪，生活是系统工程。早点明白这一点或许就不会留下遗憾，但是也可能是因为遗憾才明白如此。&lt;/p&gt;
 
-&lt;p&gt;致力于断绝居民由于东正教信仰形成的联系，以及除了党以外的一切联系的前苏联是极权主义么？&lt;/p&gt;
+&lt;p&gt;更多参见周报。&lt;/p&gt;
 
-&lt;p&gt;是。极权主义致力于使民众原子化，而丧失抵抗能力。&lt;/p&gt;
+&lt;h3 id=&quot;电玩极乐迪斯科&quot;&gt;电玩：《极乐迪斯科》&lt;/h3&gt;
+&lt;p&gt;单纯的扮演自己就会带来快乐，以及很多时候会因为自己在压力下的选择而吓到 —— 游戏的强交互式体验，让我经历了生活中不会经历的许多抉择时刻。&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;在模拟的选择当中发现自我，让我感觉惊喜又害怕。&lt;/p&gt;
 
-&lt;p&gt;甘地以「争取自由」的口号反对的英国殖民当局是极权主义么？&lt;/p&gt;
+&lt;p&gt;更多参见周报。&lt;/p&gt;
 
-&lt;p&gt;不是。&lt;/p&gt;
+&lt;h3 id=&quot;漫画生存游戏&quot;&gt;漫画：《生存游戏》&lt;/h3&gt;
+&lt;p&gt;99 年小说《大逃杀》的漫画版。01 年开始连载，剧画风格。&lt;/p&gt;
 
-&lt;p&gt;极权和威权的区别不在于政治压迫，而在于政治压迫是以什么名义实行的。&lt;/p&gt;
+&lt;p&gt;很小的时候就看过高见广春的原作，在 PUBG 为首的『大逃杀』类游戏爆火很多年前就知道了这个名词。&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;或许有人想问，知识分子为什么必须由党来严密控制，为什么不可以保持自己的独立性？知识分子为什么不能过问公共事务？为什么不能批评官员的腐败、司法的不公、黑社会的猖獗或者贫富悬殊？在民主社会里，当然不存在如此提问题的必要，在威权体制国家里当局一般也不愿意对这样的问题表达否定的态度，然而在极权主义统治下提出这些问题本身就是大逆不道。&lt;/p&gt;
-&lt;/blockquote&gt;
+&lt;p&gt;漫画类似安彦良和的《高达 the origin》，都是对名作的 bug 修正补完版。&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;几乎每一个出场人物都增加了回忆/前传。从原作血浆满地的 B 级电影风格（事实上电影版确实是北野武来演的），接近了一出真正意义上的悲剧。就像作者访谈中说的：『如果没有遇上那种事的话，他们会是一个感情很好的班集体吧。』『大多数人在几十年后，都会获得幸福的』。个人认为效果最好的补完 —— 矢作好美/仓元洋二组。&lt;/p&gt;
 
-&lt;p&gt;在纳粹德国，犹太人不被看作人，被拿来做肥皂，这是极权主义么？&lt;/p&gt;
+&lt;p&gt;在海贼王 Big Mom 篇刚完结的时候，偶然看到有漫评说到最后一幕用了类似音乐剧的手法。我记得《高达 the origin》的敖德萨篇、相逢宇宙篇，《生存游戏》的相马光子 vs 桐山和雄战，都有类似的表现。这一套源远流长了。&lt;/p&gt;</content><author><name></name></author><summary type="html">2020 年 08 周周报：士气管理 很久以来，我做事的原则都是做『自己愿意做的事情』。对计算机有爱，所以走上程序员的道路；某个晚上愿意看漫画，所以就看。</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2021/01/13/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2021-01-13T16:06:20+08:00</published><updated>2021-01-13T16:06:20+08:00</updated><id>http://localhost:4000/jekyll/update/2021/01/13/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2021/01/13/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
-&lt;p&gt;是。极权主义除了杀人，还致力于杀法理上的人——剥夺政治权利和公民权利。&lt;/p&gt;
+&lt;p&gt;Jekyll requires blog post files to be named according to the following format:&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR-MONTH-DAY-title.MARKUP&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;古拉格使正直的人变成出卖家人、害死朋友的，有道德污点的人，使他们成不了甘地式的良心犯，这是极权主义么？&lt;/p&gt;
+&lt;p&gt;Where &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;YEAR&lt;/code&gt; is a four-digit number, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MONTH&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;DAY&lt;/code&gt; are both two-digit numbers, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MARKUP&lt;/code&gt; is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
-&lt;p&gt;是。极权主义除了杀法理上的人，还致力于杀道德上的人性。被害者往往在某种程度上参与过对他人的加害，因此没有一个人的遭遇能具有烈士本应该有的那种道德控诉力量。&lt;/p&gt;
+&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;甘地面对的印度当局将宣传印度独立的报纸文章删除，这是极权主义的标志么？&lt;/p&gt;
-
-&lt;p&gt;不是。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;《1984》中大洋国试图改造语言，让「一切另类思想」不容易被表达，这是极权主义的标志么？&lt;/p&gt;
-
-&lt;p&gt;是。极权主义比反对具体的观点更具野心的，是努力营造一个让观点无法存在的环境。&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;极权主义的“语言”体系掌握了它的被控制者后，被控制者们便对来自过去或其它国家的语言根本无法理解，因而抱有一种自然的、根深蒂固的敌意。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;第三共和国有宪法随意遭到践踏的「宪政」，这种名实不符是极权主义的标志么？&lt;/p&gt;
-
-&lt;p&gt;是。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;苏联有不让人自由说话的「言论自由」，既无权力又得不到法律保护的「人民」，以及不受人民控制、不保护人民利益的「公仆」。这种名实不符是极权主义的标志么？&lt;/p&gt;
-
-&lt;p&gt;是。传统谎言用于欺骗敌人，极权主义宣传用于欺骗每一个人，包括说谎者群体自身。或者说，意识形态这一运作方式，压迫的对象是人的思想+思想的人。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;美国政府将公开反对之的朱利安·阿桑奇视为敌人，这是极权主义组织区分敌人的方式么？&lt;/p&gt;
-
-&lt;p&gt;不是。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;沙特残忍分尸了异见人士记者卡舒吉，这是极权主义组织区分敌人的方式么？&lt;/p&gt;
-
-&lt;p&gt;不是。虽然这很野蛮、残忍且违背人权和法理，但是一般政党和公开社会都只把那些公开表示反对者视为敌人。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;《音乐之声》中不愿表态支持纳粹的冯·特拉普上校，被直接视作纳粹的敌人，这是极权主义组织区分敌人的方式么？&lt;/p&gt;
-
-&lt;p&gt;是。在极权主义政党看来，只要你不死心塌地跟从它，你就是它的威胁或是它的敌人。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;斯大林消灭党内的派别，取消党核心内部的民主，把民族国家的共产党变成莫斯科指挥的党支部。这是极权主义组织区分敌人的方式么？&lt;/p&gt;
-
-&lt;p&gt;是。对于极权主义组织而言，只要它无法吸纳的，就是它的敌人。无论是自由的思想或者是控制不了的党内民主。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;美国政府试图惩治在退出其组织时带走了大量机密文件的爱德华·斯诺登，这是极权主义组织对退出的态度么？&lt;/p&gt;
-
-&lt;p&gt;不是。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;普通党员无法自由退出苏联共产党。这是极权主义组织对退出的态度么？&lt;/p&gt;
-
-&lt;p&gt;是。一般政党的成员都可以自由选择加入和退出。极权主义政党和秘密社会有更多的近似之处，都非常看重组织和效忠的仪式及象征，加入其中都要有内部人员介绍，都要宣誓忠诚，对叛徒的惩处手段甚至比对敌人更严厉。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;《美丽心灵》中学监把脑袋中「德意志人最优秀」的教条灌输给学生，这是极权主义的思想改造手段么？&lt;/p&gt;
-
-&lt;p&gt;是。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;莫斯科大学中，学生检举老师，这是极权主义的思想改造手段么？&lt;/p&gt;
-
-&lt;p&gt;是。老师即使再小心，也可能触犯学生脑子中积存的某些政治禁忌。极权主义希望让所有的人都对异端思想怀有恐惧。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;里根夫人曾经公诉摇滚乐手迪·斯内德演唱黄色歌曲，要求将其取缔。电影业也曾经有过严厉的《海斯法典》。这是极权主义的思想改造手段么？&lt;/p&gt;
-
-&lt;p&gt;不是。另外，迪·斯内德其实是个法律系的高材生，他打赢了那场官司，哪怕对手是总统夫人。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;朝鲜宣称只有主体思想才能带领朝鲜人民走向幸福，这是极权主义的思想改造手段么？&lt;/p&gt;
-
-&lt;p&gt;是。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;苏联解体前，保守派恐吓道，失去苏联，人民必然将陷入贫困和社会混乱。这是极权主义的思想改造手段么？&lt;/p&gt;
-
-&lt;p&gt;是。极权主义仇视人的自由思想。有的直接压抑之，有的将人的自由思想形式（如民主制度）和人的生理需要对立起来（如「稳定」、「繁荣」），将人的自由思想污名化。&lt;/p&gt;</content><author><name>ofey404</name></author><summary type="html">建立集中营，屠杀犹太人的第三帝国是极权主义么？</summary></entry><entry><title type="html">My ‘Only One OS X shortcut’: ⌘-⇧-/</title><link href="http://0.0.0.0:4000/posts/my-only-one-OS-X-shortcut/" rel="alternate" type="text/html" title="My ‘Only One OS X shortcut’: ⌘-⇧-/" /><published>2020-03-02T07:52:36-06:00</published><updated>2020-03-02T07:52:36-06:00</updated><id>http://0.0.0.0:4000/posts/my-only-one-OS-X-shortcut</id><content type="html" xml:base="http://0.0.0.0:4000/posts/my-only-one-OS-X-shortcut/">&lt;p&gt;The great Richard Feynman &lt;a href=&quot;https://www.brainpickings.org/2012/09/11/richard-feynman-lectures-on-physics/&quot;&gt;said &lt;/a&gt;in his lectures of physics:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;If, in some cataclysm, all of scientific knowledge were to be destroyed, and only one sentence passed on to the next generation of creatures, what statement would contain the most information in the fewest words?&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;OS X applications often have consistent, well-arranged shortcut sets leaded by the system-wide ⌘(command) key. The consistency distinguishes the OS X shortcut design from Windows and Linux designs. There is even a &lt;a href=&quot;https://mouseless.app&quot;&gt;specific application&lt;/a&gt; to help you to master the shortcuts.&lt;/p&gt;
-
-&lt;p&gt;If all my mastering of OS X shortcuts have been gone in some cataclysm, just like Feynman described, except one shortcut, which should I keep? I meditated in silence, between ⌘-SPACE (spotlight) and ⌘-⇧-/ (Search for help), finally I choose the ⌘-⇧-/ as my best bet.&lt;/p&gt;
-
-&lt;h2 id=&quot;---instant-help-search&quot;&gt;⌘-⇧-/: instant help search&lt;/h2&gt;
-&lt;p&gt;While hitting &lt;a href=&quot;https://osxdaily.com/2012/09/28/help-menu-keyboard-shortcut-mac-os-x/&quot;&gt;⌘-⇧-/ in any mac app&lt;/a&gt;, help menu would popup from the menu bar, and the input focus to the search box instantly. Then you can use arrow keys to navigate through search results.&lt;/p&gt;
-
-&lt;p&gt;By typing the name of operation you want,  anything that you can do by shortcuts or menubar buttons is within your reach.&lt;/p&gt;
-
-&lt;p&gt;For example, when you open &lt;code class=&quot;highlighter-rouge&quot;&gt;Finder&lt;/code&gt; App, and want to go to &lt;code class=&quot;highlighter-rouge&quot;&gt;Applications Folder&lt;/code&gt;, you can directly hit ⌘-⇧-/, type in “application” in the popup (actually just type ”ap” the result has been shown), then hit the down button and enter.&lt;/p&gt;
-
-&lt;p&gt;Fuzzy search is also supported, eg: hit ⌘-⇧-/ and input “t w l”, you can &lt;code class=&quot;highlighter-rouge&quot;&gt;Tile Window to Left of Screen&lt;/code&gt; without reaching your mouse.&lt;/p&gt;
-
-&lt;p&gt;The workflow is just like VSCode’s “Show All Commands” (&lt;code class=&quot;highlighter-rouge&quot;&gt;F1&lt;/code&gt; or ⌘-⇧-/ in OS X), you just type in what you want to do. It works like a tiny command palette. If you are used to VSCode’s &lt;code class=&quot;highlighter-rouge&quot;&gt;F1&lt;/code&gt; or any application launcher, I bet you’ll like it.&lt;/p&gt;
-
-&lt;h2 id=&quot;why-bother-typing&quot;&gt;Why bother typing?&lt;/h2&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Less Keystroke, all in one, determinism, and a visual learning experience to keyboard shortcuts.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Keystroke sequence of ⌘-⇧-/ are short enough at most situation. ⌘-⇧-/ is just like an arsenal of all menu features within a few keystrokes, not only those operations bound with keyboard shortcuts, but also all other operations.&lt;/p&gt;
-
-&lt;p&gt;To Click a menu bar button with your mouse, you must find the button on screen before click it, so that it’s almost impossible to form a muscle memory(probably the No.1 criticism of Mouse &amp;amp; buttons from keyboard lovers).&lt;/p&gt;
-
-&lt;p&gt;With ⌘-⇧-/, muscle memory can be built. Searching in instant help popup don’t need to leave your keyboard, and the keystroke sequence of a certain function is determined.&lt;/p&gt;
-
-&lt;p&gt;If you use some function really often, it won’t be a bother to memorize its unique keyboard shortcut.&lt;/p&gt;
-
-&lt;p&gt;Last but not least, ⌘-⇧-/ provide an interactive learning experience of learning shortcuts. While moving cursor on an operation in search results, there will be pretty interaction effect. The effect would indicate you where the function is, and the keyboard shortcut of it(if shortcut exists).&lt;/p&gt;</content><author><name>ofey404</name></author><summary type="html">The great Richard Feynman said in his lectures of physics: If, in some cataclysm, all of scientific knowledge were to be destroyed, and only one sentence passed on to the next generation of creatures, what statement would contain the most information in the fewest words?</summary></entry><entry><title type="html">表述作为一种创造</title><link href="http://0.0.0.0:4000/posts/description-as-creation/" rel="alternate" type="text/html" title="表述作为一种创造" /><published>2020-02-29T23:46:25-06:00</published><updated>2020-02-29T23:46:25-06:00</updated><id>http://0.0.0.0:4000/posts/description-as-creation</id><content type="html" xml:base="http://0.0.0.0:4000/posts/description-as-creation/">&lt;blockquote&gt;
-  &lt;p&gt;品酒、调香、乐评、文学这些职业通过探索表达的方式和边界，扩展这些体验本身。&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;周末早晨，和老爹对坐啃着馒头，电脑里放着品酒节目，男品酒师的词汇有些晦涩难懂。&lt;/p&gt;
-
-&lt;p&gt;我想，品酒师拥有对酒液味道超乎常人的用词体系，并不只是「让品酒成为一种职业」而制造叠床架屋的语言门槛这种庸俗的理由。同时，另外一种想法也是可疑的——「由于好的酒液最终还是要饮者的舌头而感受，品酒师的描述只是基于酒液的性质，因此是仰赖于酒液的惠赐，依赖于酒液而存在的职业。是酒液带来了美妙的体验，品酒师充其量是个说明书。」&lt;/p&gt;
-
-&lt;p&gt;这些都不够。因为表述本身应当被看作一种创造。比如世界上&lt;a href=&quot;https://zhuanlan.zhihu.com/p/35619923&quot;&gt;许多语言早先并没有「蓝色」这个词&lt;/a&gt;，荷马就说海洋是「和葡萄酒一样的深色」。他们或许能认出这种色彩，但是他们需要很复杂的方式说出来，直到创造了「蓝色」这个词。人的大脑并不是完全用语言思考的，不如说，将体验转化成语言的过程本身就是一种再创造，它捕捉了转瞬即逝的感官体验，将其固定化为可保存可传递的实体。从「能认知」到「能表述」，体验上浮到可以言说的世界，从而人类进一步地拥有了它。&lt;/p&gt;
-
-&lt;p&gt;在日常生活中，先有了树木，再有了「树木」这个词，是事物与概念司空见惯的一种关系。然而还有另一种关系——数学和编程领域的这种例子尤其多。&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E8%8A%9D%E8%AF%BA%E6%82%96%E8%AE%BA&quot;&gt;阿喀琉斯追乌龟的故事&lt;/a&gt;之所以成为佯谬，就是千年来人们始终无法以一种有效的方式描述「无穷小」，直到牛顿和莱布尼茨创立微积分的年代。「无穷小是任意找出一个数都比它小，但不是0」，创造出了&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E6%9E%81%E9%99%90_(%E6%95%B0%E5%AD%A6)&quot;&gt;对「极限」更好的描述&lt;/a&gt;之后，终于产生了工具，解决了之前悬而未决的问题。有时，直到创造出对某事物的准确描述，这个事物才真正定下形体，开始在人的精神世界中稳定地存在，且变为可用的。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.etw.fm/perfume&quot;&gt;声东击西播客105期&lt;/a&gt;中采访了一位香水设计师 Della，她讲到入行的契机就是有人发现她在描述味道的时候词汇量特别大，用词特别多彩。品酒、调香、乐评、文学这些职业并不单纯是在记录人类的体验，而是通过探索表达的方式和边界，扩展这些体验本身。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;外：看到对 &lt;a href=&quot;https://hardimage.pro&quot;&gt;IPN「硬影像」播客&lt;/a&gt;的一个评论，大意是抛开「他创造的那些大词」，和普通影评也差不多。我没听过「硬影像」，也不懂影评，但我觉得用语确实很重要。&lt;/p&gt;
-
-&lt;p&gt;外2：再次感叹奥威尔在《1984》的「新话」中传达出的洞见。极权垄断故事讲述权还不够，同时它也在努力垄断人们的表达方式。&lt;/p&gt;
-
-&lt;p&gt;外3：标题戏仿了梁启智老师的&lt;a href=&quot;https://matters.news/@leungkaichihk/%E9%A6%99%E6%B8%AF%E7%AC%AC%E4%B8%80%E8%AA%B2-%E5%89%8D%E8%A8%80-%E7%AD%94%E5%95%8F%E4%BD%9C%E7%82%BA%E4%B8%80%E7%A8%AE%E7%95%B0%E8%AD%B0-zdpuAp1AAM6kDtKnwfZ7n6CEM2Qh2CkUqKdn3GACmMffD1noM&quot;&gt;《答問作為一種異議》&lt;/a&gt;。&lt;/p&gt;</content><author><name>ofey404</name></author><summary type="html">品酒、调香、乐评、文学这些职业通过探索表达的方式和边界，扩展这些体验本身。</summary></entry><entry><title type="html">English translation of Cui Jian’s A Piece of Red Cloth</title><link href="http://0.0.0.0:4000/posts/translation-of-a-piece-of-red-cloth/" rel="alternate" type="text/html" title="English translation of Cui Jian's A Piece of Red Cloth" /><published>2020-02-29T05:56:45-06:00</published><updated>2020-02-29T05:56:45-06:00</updated><id>http://0.0.0.0:4000/posts/translation-of-a-piece-of-red-cloth</id><content type="html" xml:base="http://0.0.0.0:4000/posts/translation-of-a-piece-of-red-cloth/">&lt;p&gt;This slower-tempo rock ballad, acts as an ironic social symbol in 1980s.&lt;/p&gt;
-
-&lt;!-- more --&gt;
-
-&lt;h2 id=&quot;a-piece-of-red-cloth&quot;&gt;A Piece of Red Cloth&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;Cui Jian&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Verse A1&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;That day, it was you that provide that red cloth,&lt;/p&gt;
-
-&lt;p&gt;which covered my eyes and my world.&lt;/p&gt;
-
-&lt;p&gt;You asked me what I see, I said I see the happiness.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Verse A2&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;With such a comfortable feeling,&lt;/p&gt;
-
-&lt;p&gt;I forgot that I don’t have a home.&lt;/p&gt;
-
-&lt;p&gt;You asked me where to go, I said I want to follow you.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Verse A3&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Couldn’t see you, couldn’t see the road,&lt;/p&gt;
-
-&lt;p&gt;my hands were grabbed by you.&lt;/p&gt;
-
-&lt;p&gt;You asked me what I’m thinking, I said I would let you decide.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Chorus B1&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I feel that you’re not the ion, but as strong and tough (as it).&lt;/p&gt;
-
-&lt;p&gt;I feel there are blood on you, for your hands are so hot and wet.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Chorus B2&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I feel that here is not a wilderness, but I can’t see this land has become a drought.&lt;/p&gt;
-
-&lt;p&gt;I want to drink some water, but your lips have already covered my mouth.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Post Chorus&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;I couldn’t leave, neither could I wail, as my body has dried out.&lt;/p&gt;
-
-&lt;p&gt;I’m willing to accompany you this way, because I know most about your deepest pain.&lt;/p&gt;
-
-&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://www.musicologynow.org/2018/03/global-perspectivesrock-under-red-flag.html&quot;&gt;Global Perspectives—Rock under the Red Flag: “A Piece of Red Cloth” by Cui Jian&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ofey404</name></author><summary type="html">This slower-tempo rock ballad, acts as an ironic social symbol in 1980s.</summary></entry></feed>
+&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
