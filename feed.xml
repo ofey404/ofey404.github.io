@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-03-14T11:31:15+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">2021-week10: Simple Tools</title><link href="http://localhost:4000/2021/03/14/weekly-summary.html" rel="alternate" type="text/html" title="2021-week10: Simple Tools" /><published>2021-03-14T11:29:00+08:00</published><updated>2021-03-14T11:29:00+08:00</updated><id>http://localhost:4000/2021/03/14/weekly-summary</id><content type="html" xml:base="http://localhost:4000/2021/03/14/weekly-summary.html">&lt;h1 id=&quot;第-10-周周报use-simple-tools-and-use-them-well&quot;&gt;第 10 周周报：Use Simple Tools and Use Them Well&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-03-14T11:48:24+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">2021-week10: Simple Tools</title><link href="http://localhost:4000/2021/03/14/weekly-summary.html" rel="alternate" type="text/html" title="2021-week10: Simple Tools" /><published>2021-03-14T11:29:00+08:00</published><updated>2021-03-14T11:29:00+08:00</updated><id>http://localhost:4000/2021/03/14/weekly-summary</id><content type="html" xml:base="http://localhost:4000/2021/03/14/weekly-summary.html">&lt;h1 id=&quot;第-10-周周报use-simple-tools-and-use-them-well&quot;&gt;第 10 周周报：Use Simple Tools and Use Them Well&lt;/h1&gt;
 &lt;p&gt;尝试过各种各样的任务管理工具，甚至有 omnifocus 这种级别的。但是只要 overhead 稍微大一些，我很快就会忘掉使用。本周用了两个究级简单的方法来让自己对生活的步调有一个认识。感觉相当成功，提升了我的充实感和幸福感。&lt;/p&gt;
 
 &lt;ul&gt;
@@ -25,6 +25,23 @@
 &lt;p&gt;身上常备纸质的本子和水笔，偶尔还会有其他意想不到的用途，比如写留言条、告诉课上认识的同学自己的名字怎么写……&lt;/p&gt;
 
 &lt;hr /&gt;
+
+&lt;h2 id=&quot;手艺&quot;&gt;手艺&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://stackoverflow.blog/2020/11/09/modern-ide-vs-vim-emacs/&quot;&gt;Modern IDEs are magic. Why are so many coders still using Vim and Emacs?&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I say, whatever helps you get your job done, use that.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;我长期使用 vim 的基本款功能（装的插件很少）。常用工具：vim 基本款、vscodeVIM 还有 ideaVIM。后两者的使用方式是，vim 的基本操作、IDE 的额外功能敲命令，所以工具切换的时候没什么成本。&lt;/p&gt;
+
+&lt;p&gt;体验：vim 就好比七种武器里面的折凳。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;好摺凳，摺凳奧妙之處就是可以藏於民居之中，隨手可得！還可以坐著來隱藏殺機，就算被抓到也告不了你，真不愧為七種武器之首。&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;随处可见，有时候就算在一个容器里面，临时起意想改点什么，一般都会有 vi/vim，没有的话装一个也很快。&lt;/p&gt;
 
 &lt;h2 id=&quot;书单&quot;&gt;书单&lt;/h2&gt;
 &lt;h3 id=&quot;the-power-of-bad&quot;&gt;《The Power of Bad》&lt;/h3&gt;
