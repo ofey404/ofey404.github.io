@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-03-14T11:48:24+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">2021-week10: Simple Tools</title><link href="http://localhost:4000/2021/03/14/weekly-summary.html" rel="alternate" type="text/html" title="2021-week10: Simple Tools" /><published>2021-03-14T11:29:00+08:00</published><updated>2021-03-14T11:29:00+08:00</updated><id>http://localhost:4000/2021/03/14/weekly-summary</id><content type="html" xml:base="http://localhost:4000/2021/03/14/weekly-summary.html">&lt;h1 id=&quot;第-10-周周报use-simple-tools-and-use-them-well&quot;&gt;第 10 周周报：Use Simple Tools and Use Them Well&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-03-16T23:11:00+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">How to recover your bashrc</title><link href="http://localhost:4000/2021/03/16/how-to-recover-bashrc.html" rel="alternate" type="text/html" title="How to recover your bashrc" /><published>2021-03-16T22:56:00+08:00</published><updated>2021-03-16T22:56:00+08:00</updated><id>http://localhost:4000/2021/03/16/how-to-recover-bashrc</id><content type="html" xml:base="http://localhost:4000/2021/03/16/how-to-recover-bashrc.html">&lt;h1 id=&quot;如何恢复你的-bashrc&quot;&gt;如何恢复你的 bashrc&lt;/h1&gt;
+
+&lt;p&gt;如果你不慎删除了你的 bashrc，或者遇到了如下的情况：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;在增加环境变量的时候手贱把 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;&lt;/code&gt; 打成了 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;&amp;lt;&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;不慎在备份 bashrc 的时候搞错了操作数的方向&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;请你不要马上关闭现有的 shell。许多有价值的信息可以从其中恢复。&lt;/p&gt;
+
+&lt;h2 id=&quot;环境变量&quot;&gt;环境变量&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;env&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# SHELL=/bin/bash&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2668,unix/unix:/tmp/.ICE-unix/2668&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;函数&quot;&gt;函数&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;declare&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-F&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# declare -f j&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# declare -f jc&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# declare -f unproxy&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;执行得到的命令，就可以打印出函数的声明。&lt;/p&gt;
+
+&lt;h2 id=&quot;别名&quot;&gt;别名&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;alias&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ...&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# alias tr='todo remove'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# alias typora='/opt/typora/Typora'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# alias vim='nvim'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# alias which='(alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# alias xzegrep='xzegrep --color=auto'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# alias xzfgrep='xzfgrep --color=auto'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# alias xzgrep='xzgrep --color=auto'&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# ...&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;系统的-bashrc-模板&quot;&gt;系统的 bashrc 模板&lt;/h2&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;cat&lt;/span&gt; /etc/skel/.bashrc 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;不能恢复的东西&quot;&gt;不能恢复的东西&lt;/h2&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;source ... &lt;/code&gt; 语句，和代码的逻辑。&lt;/p&gt;
+
+&lt;p&gt;祝你好运！&lt;/p&gt;
+
+&lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://askubuntu.com/questions/404424/how-do-i-restore-bashrc-to-its-default&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">如何恢复你的 bashrc</summary></entry><entry><title type="html">2021-week10: Simple Tools</title><link href="http://localhost:4000/2021/03/14/weekly-summary.html" rel="alternate" type="text/html" title="2021-week10: Simple Tools" /><published>2021-03-14T11:29:00+08:00</published><updated>2021-03-14T11:29:00+08:00</updated><id>http://localhost:4000/2021/03/14/weekly-summary</id><content type="html" xml:base="http://localhost:4000/2021/03/14/weekly-summary.html">&lt;h1 id=&quot;第-10-周周报use-simple-tools-and-use-them-well&quot;&gt;第 10 周周报：Use Simple Tools and Use Them Well&lt;/h1&gt;
 &lt;p&gt;尝试过各种各样的任务管理工具，甚至有 omnifocus 这种级别的。但是只要 overhead 稍微大一些，我很快就会忘掉使用。本周用了两个究级简单的方法来让自己对生活的步调有一个认识。感觉相当成功，提升了我的充实感和幸福感。&lt;/p&gt;
 
 &lt;ul&gt;

@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+
+    <title>How to recover your bashrc</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    
+    <a class="nav-link" href="/"  >
+        Home
+    </a>
+    
+    <a class="nav-link" href="/blog.html"  >
+        Blog
+    </a>
+    
+    <a class="nav-link" href="/about.html"  >
+        About
+    </a>
+    
+</nav>
+    <div class="container">
+        <h1>How to recover your bashrc</h1>
+<p>16 Mar 2021</p>
+
+<h1 id="如何恢复你的-bashrc">如何恢复你的 bashrc</h1>
+
+<p>如果你不慎删除了你的 bashrc，或者遇到了如下的情况：</p>
+<ul>
+  <li>在增加环境变量的时候手贱把 <code class="language-plaintext highlighter-rouge">&lt;</code> 打成了 <code class="language-plaintext highlighter-rouge">&lt;&lt;</code></li>
+  <li>不慎在备份 bashrc 的时候搞错了操作数的方向</li>
+</ul>
+
+<p>请你不要马上关闭现有的 shell。许多有价值的信息可以从其中恢复。</p>
+
+<h2 id="环境变量">环境变量</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">env</span>
+<span class="c"># SHELL=/bin/bash</span>
+<span class="c"># SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/2668,unix/unix:/tmp/.ICE-unix/2668</span>
+<span class="c"># ...</span>
+</code></pre></div></div>
+
+<h2 id="函数">函数</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">declare</span> <span class="nt">-F</span>
+<span class="c"># declare -f j</span>
+<span class="c"># declare -f jc</span>
+<span class="c"># declare -f unproxy</span>
+<span class="c"># ...</span>
+</code></pre></div></div>
+
+<p>执行得到的命令，就可以打印出函数的声明。</p>
+
+<h2 id="别名">别名</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">alias</span>
+<span class="c"># ...</span>
+<span class="c"># alias tr='todo remove'</span>
+<span class="c"># alias typora='/opt/typora/Typora'</span>
+<span class="c"># alias vim='nvim'</span>
+<span class="c"># alias which='(alias; declare -f) | /usr/bin/which --tty-only --read-alias --read-functions --show-tilde --show-dot'</span>
+<span class="c"># alias xzegrep='xzegrep --color=auto'</span>
+<span class="c"># alias xzfgrep='xzfgrep --color=auto'</span>
+<span class="c"># alias xzgrep='xzgrep --color=auto'</span>
+<span class="c"># ...</span>
+</code></pre></div></div>
+
+<h2 id="系统的-bashrc-模板">系统的 bashrc 模板</h2>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">cat</span> /etc/skel/.bashrc 
+</code></pre></div></div>
+
+<h2 id="不能恢复的东西">不能恢复的东西</h2>
+<p><code class="language-plaintext highlighter-rouge">source ... </code> 语句，和代码的逻辑。</p>
+
+<p>祝你好运！</p>
+
+<h2 id="reference">Reference</h2>
+<ul>
+  <li>https://askubuntu.com/questions/404424/how-do-i-restore-bashrc-to-its-default</li>
+</ul>
+
+    </div>
+
+  </body>
+</html>
