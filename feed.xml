@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-03-16T23:11:00+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">How to recover your bashrc</title><link href="http://localhost:4000/2021/03/16/how-to-recover-bashrc.html" rel="alternate" type="text/html" title="How to recover your bashrc" /><published>2021-03-16T22:56:00+08:00</published><updated>2021-03-16T22:56:00+08:00</updated><id>http://localhost:4000/2021/03/16/how-to-recover-bashrc</id><content type="html" xml:base="http://localhost:4000/2021/03/16/how-to-recover-bashrc.html">&lt;h1 id=&quot;如何恢复你的-bashrc&quot;&gt;如何恢复你的 bashrc&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-04-07T17:44:29+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your awesome title</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">How to recover your bashrc</title><link href="http://localhost:4000/2021/03/16/how-to-recover-bashrc.html" rel="alternate" type="text/html" title="How to recover your bashrc" /><published>2021-03-16T22:56:00+08:00</published><updated>2021-03-16T22:56:00+08:00</updated><id>http://localhost:4000/2021/03/16/how-to-recover-bashrc</id><content type="html" xml:base="http://localhost:4000/2021/03/16/how-to-recover-bashrc.html">&lt;h1 id=&quot;如何恢复你的-bashrc&quot;&gt;如何恢复你的 bashrc&lt;/h1&gt;
 
 &lt;p&gt;如果你不慎删除了你的 bashrc，或者遇到了如下的情况：&lt;/p&gt;
 &lt;ul&gt;
@@ -54,7 +54,233 @@
 &lt;h2 id=&quot;reference&quot;&gt;Reference&lt;/h2&gt;
 &lt;ul&gt;
   &lt;li&gt;https://askubuntu.com/questions/404424/how-do-i-restore-bashrc-to-its-default&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">如何恢复你的 bashrc</summary></entry><entry><title type="html">2021-week10: Simple Tools</title><link href="http://localhost:4000/2021/03/14/weekly-summary.html" rel="alternate" type="text/html" title="2021-week10: Simple Tools" /><published>2021-03-14T11:29:00+08:00</published><updated>2021-03-14T11:29:00+08:00</updated><id>http://localhost:4000/2021/03/14/weekly-summary</id><content type="html" xml:base="http://localhost:4000/2021/03/14/weekly-summary.html">&lt;h1 id=&quot;第-10-周周报use-simple-tools-and-use-them-well&quot;&gt;第 10 周周报：Use Simple Tools and Use Them Well&lt;/h1&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">如何恢复你的 bashrc</summary></entry><entry><title type="html">ofey404 的快乐终端生活</title><link href="http://localhost:4000/2021/03/14/terminal-thursday.html" rel="alternate" type="text/html" title="ofey404 的快乐终端生活" /><published>2021-03-14T23:47:00+08:00</published><updated>2021-03-14T23:47:00+08:00</updated><id>http://localhost:4000/2021/03/14/terminal-thursday</id><content type="html" xml:base="http://localhost:4000/2021/03/14/terminal-thursday.html">&lt;p&gt;（题图：幸福加奈子的快乐杀手生活）&lt;/p&gt;
+
+&lt;p&gt;一个月前，我突发奇想，把每周四定为 Terminal Thursday ——在这一天只使用终端和浏览器来编程。&lt;/p&gt;
+
+&lt;p&gt;令我意外的是，经过非常克制的一点定制化，在 terminal 中进行我的编程生活，竟然给我带来了莫大的幸福感。&lt;/p&gt;
+
+&lt;p&gt;就算只使用 vscode / jetbrains 等图形化的优秀工具，终端偶尔也还是会被使用到。我发现，其实只需要很少的一点努力，就可以让终端变成一个使用起来相当快乐的环境。&lt;/p&gt;
+
+&lt;p&gt;这道幸福的闪电告诉我的，我现在要把它告诉你们（大雾）。&lt;/p&gt;
+
+&lt;p&gt;P.S. 另外两个被毙掉的标题候选：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;如何和终端达到 400% 同步率&lt;/li&gt;
+  &lt;li&gt;5 个提升终端幸福感的简单小妙招，邻座的程序员都在用&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;我想传达什么&quot;&gt;我想传达什么？&lt;/h2&gt;
+
+&lt;p&gt;『一种不需要很大的心智负担，每个人都可以拥有的快乐 terminal 体验』&lt;/p&gt;
+
+&lt;p&gt;本文记录一些好用但不重型的小工具或者 tweaks。尽量克制地选择，选择标准是『可以增量的配置，像水滴一样一滴一滴加入』。&lt;/p&gt;
+
+&lt;p&gt;顺便阐述一下我对基于 terminal 的编码工作流的看法。&lt;/p&gt;
+
+&lt;h2 id=&quot;我没有想传达什么&quot;&gt;我没有想传达什么？&lt;/h2&gt;
+
+&lt;p&gt;一：传教。使用 terminal 作为完整的开发环境主要是我的私人兴趣。大家有各自的选择。不过各种工具里面都会有 intergrated terminal，可以调用一些基于终端的小玩意，终端是可以作为使用重型工具的 fallback 的（比如我很喜欢在 vscode / goland 的 intergrated terminal 里面运行我的命令速查，或者打开浏览器）。&lt;/p&gt;
+
+&lt;p&gt;二：鼓吹 terminal 对所有工作都是最适合的。实际上，对它最擅长的工作，它的表现可能也只是和其他种类的工具差不多的程度。&lt;/p&gt;
+
+&lt;p&gt;三：对工具本身沾沾自喜。这是一种『注意力漂移』：&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;比如，你本来只不过就想着去 Google 一个编程错误信息的解读，结果不知道怎么就 “注意到” 了另外一个东西，比如，“某编辑器的皮肤”，然后你就 “顺手” 把它下载下来，然后 “很自然地顺手把它装上”，而后又看了看，觉得有点必要于是 “顺手做了点定制”…… 然后欣赏了一会儿，并自我得意一番之后 “突然发现” 自己还没有解决两小时之前要解决的问题！&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Ref: &lt;a href=&quot;https://github.com/selfteaching/the-craft-of-selfteaching/blob/master/Part.3.H.prevent-focus-drifting.ipynb&quot;&gt;避免注意力漂移&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;最重要的事情还是 getting things done。&lt;/p&gt;
+
+&lt;h2 id=&quot;我选择工具的原则&quot;&gt;我选择工具的原则&lt;/h2&gt;
+
+&lt;p&gt;折凳原则：保持工具本来的样子，对通用工具不重度定制。&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;好摺凳，摺凳奧妙之處就是可以藏於民居之中，隨手可得！還可以坐著來隱藏殺機，就算被抓到也告不了你，真不愧為七種武器之首。 ——《食神》周星驰&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;eg：为什么选择 bash 而不是 zsh、fish 等更现代的 shell，因为 bash 随处可见。熟悉 bash 的一个隐性好处就是可以在陌生的机器上立刻开搞/开始写 script。我尽量不在操作层面上对 vim 做太多定制，也是同样的考量。&lt;/p&gt;
+
+&lt;p&gt;海子原则：我顺手摸到的东西越少越好。&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;不记忆，去搜索&lt;/li&gt;
+  &lt;li&gt;了解每一行配置，而不是一站式地导入一个你不了解的东西。（参见『折凳原则』）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;eg：我重度依赖命令行 cheatsheet 工具（pet），目录模糊跳转（autojump），以及命令历史模糊搜索（fzf）。因为我根本记不住东西……（括号内的小工具后文会介绍到）&lt;/p&gt;
+
+&lt;p&gt;工具寿命原则：有类似的两个工具时，选择预期寿命较长的那个（一般是历史更久的那个）&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;我非独异于人，而贵食母。——老子&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;对于不会自然死亡的东西，活过的时间越长，那么它的预期寿命也越长——因为假如我们随机观察生命周期，平均应该是落在正中间。使用 terminal 作为开发环境，已经是上个时代的东西了，学一点这个当然不是为了赶时髦，而是为了得到一些寿命较长、可以一直使用的小技能。&lt;/p&gt;
+
+&lt;h2 id=&quot;switch&quot;&gt;switch&lt;/h2&gt;
+
+&lt;p&gt;接下来的两个二级标题是并行的，先看哪个都可以。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;具体工具索引&lt;/li&gt;
+  &lt;li&gt;我对 terminal 工作流性质的理解&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;case-具体工具索引&quot;&gt;case: 具体工具索引&lt;/h2&gt;
+
+&lt;p&gt;可参见 &lt;a href=&quot;https://github.com/ofey404/dotfiles&quot;&gt;ofey404/dotfiles&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;模糊搜索工具&quot;&gt;模糊搜索工具&lt;/h3&gt;
+
+&lt;p&gt;我使用 &lt;a href=&quot;https://github.com/junegunn/fzf&quot;&gt;fzf&lt;/a&gt;。重度使用功能:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;命令历史搜索&lt;/li&gt;
+  &lt;li&gt;路径模糊搜索&lt;/li&gt;
+  &lt;li&gt;组织到其他的一些 shell script 中，参见 dotfiles&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;命令速查工具&quot;&gt;命令速查工具&lt;/h3&gt;
+
+&lt;p&gt;网上有很多。我使用 &lt;a href=&quot;https://github.com/knqyf263/pet&quot;&gt;pet&lt;/a&gt;。仅仅由 1600 行 go 写成，简单好用，自己 hack 也方便。给他提了两个 PR。&lt;/p&gt;
+
+&lt;p&gt;键位绑定到 ctrl-s。以下的配置在 pet 的主页上有：&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pet-select &lt;span class=&quot;o&quot;&gt;()&lt;/span&gt; 
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt; 
+    &lt;span class=&quot;nv&quot;&gt;BUFFER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;$(&lt;/span&gt;pet search &lt;span class=&quot;nt&quot;&gt;--query&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$READLINE_LINE&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;READLINE_LINE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$BUFFER&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;READLINE_POINT&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;${#&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;BUFFER&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&quot;\C-s&quot;: pet-select'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;terminal-multiplexer&quot;&gt;Terminal Multiplexer&lt;/h3&gt;
+
+&lt;p&gt;有著名的 screen 和 tmux。我使用 terminus 内建的功能，现代一些，也不用操心复制粘贴之类的事情。&lt;/p&gt;
+
+&lt;p&gt;配置文件在 &lt;a href=&quot;https://github.com/ofey404/dotfiles/blob/master/terminus.config.yaml&quot;&gt;dotfiles/terminus.config.yaml&lt;/a&gt;。terminus 有一个 fancy 的界面来调节这些配置，感谢 vscode 带来的好风气。&lt;/p&gt;
+
+&lt;p&gt;keybinding style 偷自数年前在上海 linux 用户组见到的一位老哥，原则：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;ctrl + shift 作为 terminal multiplexer 这个层级的键位的修饰键，因为传统的 X 的工具是不接受这种组合键的，比如说 vim。因此就不会冲突。&lt;/li&gt;
+  &lt;li&gt;enter 和 space 键给最重要的功能。这里是分屏和切 panes。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;terminal 的上下文是很简单的： history，path，env。这就意味着复制出一份工作环境非常容易。&lt;/p&gt;
+
+&lt;p&gt;tmux，terminus…… 都有快捷操作可以分出一个新的终端，工作目录和当前的的工作目录相同。这很全息。&lt;/p&gt;
+
+&lt;p&gt;很常见的用法就是，在同一个工作目录下随手开出一个 shell，做一些事情之后再关掉。或者挂一个需要长期跑的任务/系统监控。&lt;/p&gt;
+
+&lt;h3 id=&quot;和其他-gui-工具联动&quot;&gt;和其他 gui 工具联动&lt;/h3&gt;
+
+&lt;p&gt;是一些提升幸福感的操作。&lt;/p&gt;
+
+&lt;p&gt;剪贴板：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xclip&lt;/code&gt;。能把标准输出 pipe 到剪贴板是一件好事，推荐设置一个 alias，比如说 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;alias c='xclip -selection clipboard'&lt;/code&gt;。&lt;/p&gt;
+
+&lt;p&gt;mac 可以使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pbcopy&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;另外还有一些骚操作，比如把终端默认控制字符 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ctrl-u&lt;/code&gt; 替换成剪切当前行到系统剪贴板：&lt;/p&gt;
+
+&lt;p&gt;（豆知识：bash 4.0 以上可以通过 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;READLINE_LINE&lt;/code&gt; 变量来操控已经输入的内容）&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;SYSTEM_CLIPBOARD_COMMAND&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'xclip -selection clipboard'&lt;/span&gt;
+
+kill-to-system &lt;span class=&quot;o&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$READLINE_LINE&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt; | &lt;span class=&quot;nv&quot;&gt;$SYSTEM_CLIPBOARD_COMMAND&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;READLINE_LINE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;stty kill &lt;/span&gt;undef
+&lt;span class=&quot;nb&quot;&gt;bind&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-x&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&quot;\C-u&quot;: kill-to-system'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;打开浏览器：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;firefox --new-tab&lt;/code&gt; 。这个我做了一个 alias。&lt;/p&gt;
+
+&lt;p&gt;可以基于这个，加上各种引擎的搜索 url pattern，手堆一个从命令行唤起搜索的脚本。比如这是谷歌的：&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# google.sh&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;arrQUERY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;nv&quot;&gt;QUERY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;word &lt;span class=&quot;k&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$@&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;do
+    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;QUERY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$QUERY&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$word&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done
+
+&lt;/span&gt;firefox &lt;span class=&quot;nt&quot;&gt;--new-tab&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;https://www.google.com/search?client=firefox-b-d&amp;amp;q=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$QUERY&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;用系统默认的应用打开：&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;xdg-open&lt;/code&gt; 。&lt;/p&gt;
+
+&lt;p&gt;mac 可以使用 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;open&lt;/code&gt; 。&lt;/p&gt;
+
+&lt;p&gt;因为终端下跳转到目录，以及找文件都很快。如果能够迅速的调用 gui 工具，那么就有一种用搜索引擎一般的舒适感。&lt;/p&gt;
+
+&lt;h3 id=&quot;命令提示符&quot;&gt;命令提示符&lt;/h3&gt;
+
+&lt;p&gt;在提示符上面显示 git 仓库的状态。有许多项目实现了这一功能，我使用 &lt;a href=&quot;https://github.com/magicmonty/bash-git-prompt&quot;&gt;bash-git-prompt&lt;/a&gt;。效果很简单：&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;~/Code/slack-backend [joinChannel L|⚑ 2] 
+17:00 $ 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;另一个更常见的，&lt;a href=&quot;https://github.com/romkatv/gitstatus&quot;&gt;romkatv/gitstatus&lt;/a&gt; 和 &lt;a href=&quot;https://github.com/akinomyoga/ble.sh&quot;&gt;akinomyoga/ble.sh&lt;/a&gt; （给 bash 提供语法高亮和检查，嗜好品）有冲突。&lt;/p&gt;
+
+&lt;h3 id=&quot;嗜好品&quot;&gt;嗜好品&lt;/h3&gt;
+
+&lt;p&gt;大多数 key binding 都是嗜好品，做得太多就会不适应一个裸体的 bash。我的键位绑定操作参见 &lt;a href=&quot;https://github.com/ofey404/dotfiles/blob/master/bashrc&quot;&gt;bashrc&lt;/a&gt;。我略略绑定了几个。&lt;/p&gt;
+
+&lt;p&gt;tui 工具系列：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;git tui 工具。我使用 &lt;a href=&quot;https://github.com/extrawurst/gitui&quot;&gt;gitui&lt;/a&gt;，准备将来研究下源码。&lt;/li&gt;
+  &lt;li&gt;tui 文件管理器。我使用 &lt;a href=&quot;https://github.com/ranger/ranger&quot;&gt;ranger&lt;/a&gt;。加上 bashrc 里面的一些小函数，起到浏览文件和『在自己不知道要找什么的时候找东西』的作用。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/akinomyoga/ble.sh&quot;&gt;akinomyoga/ble.sh&lt;/a&gt;：给 bash 提供语法高亮，静态分析。一个日本人，北大二期高能物理博后写的。&lt;/p&gt;
+
+&lt;h2 id=&quot;游戏理解&quot;&gt;游戏理解&lt;/h2&gt;
+&lt;p&gt;尺有所长，寸有所短。经常用终端编码只是一种无害的嗜好。&lt;/p&gt;
+
+&lt;p&gt;在我看来，它的好处有：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;上下文简单。&lt;/li&gt;
+  &lt;li&gt;使用大工具，比如 vscode 的时候，也可以偶尔 fallback 到终端。&lt;/li&gt;
+  &lt;li&gt;对机器的预设少，偶尔在服务器上做事的时候会感到很安定。&lt;/li&gt;
+  &lt;li&gt;对键盘操作的良好适应性。容易心流，很幸福。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;terminal 可以用不大的代价优化的不足：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;命令很长，参数很多很难记
+    &lt;ul&gt;
+      &lt;li&gt;一个好的命令行备忘工具可以让它变得有趣。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;打路径很烦
+    &lt;ul&gt;
+      &lt;li&gt;确实很烦，但是一个自动跳转工具能把终端下的目录导航变成类似上网的体验。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;总体上来说，就是『因为靠近机器，所以有效操作数低下』——相对于已经进行了一层抽象的、安排良好的图形界面而言。
+    &lt;ul&gt;
+      &lt;li&gt;反过来如果能够自动化，能够相当好地提升有效操作数。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;terminal 的决定性不足：&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;字符界面的表现力有限。&lt;/li&gt;
+  &lt;li&gt;那些需要大量上下文才能（有效率地）完成的工作会很糟糕，比如说开发巨大的工程。终端工作流实际上是把众多小工具以一种代价较小的方式粘合在一起。
+    &lt;ul&gt;
+      &lt;li&gt;参见《UNIX 编程艺术》：五个编辑器的故事。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">（题图：幸福加奈子的快乐杀手生活）</summary></entry><entry><title type="html">2021-week10: Simple Tools</title><link href="http://localhost:4000/2021/03/14/weekly-summary.html" rel="alternate" type="text/html" title="2021-week10: Simple Tools" /><published>2021-03-14T11:29:00+08:00</published><updated>2021-03-14T11:29:00+08:00</updated><id>http://localhost:4000/2021/03/14/weekly-summary</id><content type="html" xml:base="http://localhost:4000/2021/03/14/weekly-summary.html">&lt;h1 id=&quot;第-10-周周报use-simple-tools-and-use-them-well&quot;&gt;第 10 周周报：Use Simple Tools and Use Them Well&lt;/h1&gt;
 &lt;p&gt;尝试过各种各样的任务管理工具，甚至有 omnifocus 这种级别的。但是只要 overhead 稍微大一些，我很快就会忘掉使用。本周用了两个究级简单的方法来让自己对生活的步调有一个认识。感觉相当成功，提升了我的充实感和幸福感。&lt;/p&gt;
 
 &lt;ul&gt;

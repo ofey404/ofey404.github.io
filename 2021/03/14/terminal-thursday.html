@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/assets/main.css">
+    <script src="/assets/js/bootstrap.bundle.min.js"></script>
+
+    <title>ofey404 的快乐终端生活</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    
+    <a class="nav-link" href="/"  >
+        Home
+    </a>
+    
+    <a class="nav-link" href="/blog.html"  >
+        Blog
+    </a>
+    
+    <a class="nav-link" href="/about.html"  >
+        About
+    </a>
+    
+</nav>
+    <div class="container">
+        <h1>ofey404 的快乐终端生活</h1>
+<p>14 Mar 2021</p>
+
+<p>（题图：幸福加奈子的快乐杀手生活）</p>
+
+<p>一个月前，我突发奇想，把每周四定为 Terminal Thursday ——在这一天只使用终端和浏览器来编程。</p>
+
+<p>令我意外的是，经过非常克制的一点定制化，在 terminal 中进行我的编程生活，竟然给我带来了莫大的幸福感。</p>
+
+<p>就算只使用 vscode / jetbrains 等图形化的优秀工具，终端偶尔也还是会被使用到。我发现，其实只需要很少的一点努力，就可以让终端变成一个使用起来相当快乐的环境。</p>
+
+<p>这道幸福的闪电告诉我的，我现在要把它告诉你们（大雾）。</p>
+
+<p>P.S. 另外两个被毙掉的标题候选：</p>
+<ul>
+  <li>如何和终端达到 400% 同步率</li>
+  <li>5 个提升终端幸福感的简单小妙招，邻座的程序员都在用</li>
+</ul>
+
+<h2 id="我想传达什么">我想传达什么？</h2>
+
+<p>『一种不需要很大的心智负担，每个人都可以拥有的快乐 terminal 体验』</p>
+
+<p>本文记录一些好用但不重型的小工具或者 tweaks。尽量克制地选择，选择标准是『可以增量的配置，像水滴一样一滴一滴加入』。</p>
+
+<p>顺便阐述一下我对基于 terminal 的编码工作流的看法。</p>
+
+<h2 id="我没有想传达什么">我没有想传达什么？</h2>
+
+<p>一：传教。使用 terminal 作为完整的开发环境主要是我的私人兴趣。大家有各自的选择。不过各种工具里面都会有 intergrated terminal，可以调用一些基于终端的小玩意，终端是可以作为使用重型工具的 fallback 的（比如我很喜欢在 vscode / goland 的 intergrated terminal 里面运行我的命令速查，或者打开浏览器）。</p>
+
+<p>二：鼓吹 terminal 对所有工作都是最适合的。实际上，对它最擅长的工作，它的表现可能也只是和其他种类的工具差不多的程度。</p>
+
+<p>三：对工具本身沾沾自喜。这是一种『注意力漂移』：</p>
+
+<blockquote>
+  <p>比如，你本来只不过就想着去 Google 一个编程错误信息的解读，结果不知道怎么就 “注意到” 了另外一个东西，比如，“某编辑器的皮肤”，然后你就 “顺手” 把它下载下来，然后 “很自然地顺手把它装上”，而后又看了看，觉得有点必要于是 “顺手做了点定制”…… 然后欣赏了一会儿，并自我得意一番之后 “突然发现” 自己还没有解决两小时之前要解决的问题！</p>
+</blockquote>
+
+<p>Ref: <a href="https://github.com/selfteaching/the-craft-of-selfteaching/blob/master/Part.3.H.prevent-focus-drifting.ipynb">避免注意力漂移</a></p>
+
+<p>最重要的事情还是 getting things done。</p>
+
+<h2 id="我选择工具的原则">我选择工具的原则</h2>
+
+<p>折凳原则：保持工具本来的样子，对通用工具不重度定制。</p>
+<blockquote>
+  <p>好摺凳，摺凳奧妙之處就是可以藏於民居之中，隨手可得！還可以坐著來隱藏殺機，就算被抓到也告不了你，真不愧為七種武器之首。 ——《食神》周星驰</p>
+</blockquote>
+
+<p>eg：为什么选择 bash 而不是 zsh、fish 等更现代的 shell，因为 bash 随处可见。熟悉 bash 的一个隐性好处就是可以在陌生的机器上立刻开搞/开始写 script。我尽量不在操作层面上对 vim 做太多定制，也是同样的考量。</p>
+
+<p>海子原则：我顺手摸到的东西越少越好。</p>
+<ul>
+  <li>不记忆，去搜索</li>
+  <li>了解每一行配置，而不是一站式地导入一个你不了解的东西。（参见『折凳原则』）</li>
+</ul>
+
+<p>eg：我重度依赖命令行 cheatsheet 工具（pet），目录模糊跳转（autojump），以及命令历史模糊搜索（fzf）。因为我根本记不住东西……（括号内的小工具后文会介绍到）</p>
+
+<p>工具寿命原则：有类似的两个工具时，选择预期寿命较长的那个（一般是历史更久的那个）</p>
+<blockquote>
+  <p>我非独异于人，而贵食母。——老子</p>
+</blockquote>
+
+<p>对于不会自然死亡的东西，活过的时间越长，那么它的预期寿命也越长——因为假如我们随机观察生命周期，平均应该是落在正中间。使用 terminal 作为开发环境，已经是上个时代的东西了，学一点这个当然不是为了赶时髦，而是为了得到一些寿命较长、可以一直使用的小技能。</p>
+
+<h2 id="switch">switch</h2>
+
+<p>接下来的两个二级标题是并行的，先看哪个都可以。</p>
+
+<ol>
+  <li>具体工具索引</li>
+  <li>我对 terminal 工作流性质的理解</li>
+</ol>
+
+<h2 id="case-具体工具索引">case: 具体工具索引</h2>
+
+<p>可参见 <a href="https://github.com/ofey404/dotfiles">ofey404/dotfiles</a>。</p>
+
+<h3 id="模糊搜索工具">模糊搜索工具</h3>
+
+<p>我使用 <a href="https://github.com/junegunn/fzf">fzf</a>。重度使用功能:</p>
+<ul>
+  <li>命令历史搜索</li>
+  <li>路径模糊搜索</li>
+  <li>组织到其他的一些 shell script 中，参见 dotfiles</li>
+</ul>
+
+<h3 id="命令速查工具">命令速查工具</h3>
+
+<p>网上有很多。我使用 <a href="https://github.com/knqyf263/pet">pet</a>。仅仅由 1600 行 go 写成，简单好用，自己 hack 也方便。给他提了两个 PR。</p>
+
+<p>键位绑定到 ctrl-s。以下的配置在 pet 的主页上有：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pet-select <span class="o">()</span> 
+<span class="o">{</span> 
+    <span class="nv">BUFFER</span><span class="o">=</span><span class="si">$(</span>pet search <span class="nt">--query</span> <span class="s2">"</span><span class="nv">$READLINE_LINE</span><span class="s2">"</span><span class="si">)</span><span class="p">;</span>
+    <span class="nv">READLINE_LINE</span><span class="o">=</span><span class="nv">$BUFFER</span><span class="p">;</span>
+    <span class="nv">READLINE_POINT</span><span class="o">=</span><span class="k">${#</span><span class="nv">BUFFER</span><span class="k">}</span>
+<span class="o">}</span>
+<span class="nb">bind</span> <span class="nt">-x</span> <span class="s1">'"\C-s": pet-select'</span>
+</code></pre></div></div>
+
+<h3 id="terminal-multiplexer">Terminal Multiplexer</h3>
+
+<p>有著名的 screen 和 tmux。我使用 terminus 内建的功能，现代一些，也不用操心复制粘贴之类的事情。</p>
+
+<p>配置文件在 <a href="https://github.com/ofey404/dotfiles/blob/master/terminus.config.yaml">dotfiles/terminus.config.yaml</a>。terminus 有一个 fancy 的界面来调节这些配置，感谢 vscode 带来的好风气。</p>
+
+<p>keybinding style 偷自数年前在上海 linux 用户组见到的一位老哥，原则：</p>
+<ul>
+  <li>ctrl + shift 作为 terminal multiplexer 这个层级的键位的修饰键，因为传统的 X 的工具是不接受这种组合键的，比如说 vim。因此就不会冲突。</li>
+  <li>enter 和 space 键给最重要的功能。这里是分屏和切 panes。</li>
+</ul>
+
+<p>terminal 的上下文是很简单的： history，path，env。这就意味着复制出一份工作环境非常容易。</p>
+
+<p>tmux，terminus…… 都有快捷操作可以分出一个新的终端，工作目录和当前的的工作目录相同。这很全息。</p>
+
+<p>很常见的用法就是，在同一个工作目录下随手开出一个 shell，做一些事情之后再关掉。或者挂一个需要长期跑的任务/系统监控。</p>
+
+<h3 id="和其他-gui-工具联动">和其他 gui 工具联动</h3>
+
+<p>是一些提升幸福感的操作。</p>
+
+<p>剪贴板：<code class="language-plaintext highlighter-rouge">xclip</code>。能把标准输出 pipe 到剪贴板是一件好事，推荐设置一个 alias，比如说 <code class="language-plaintext highlighter-rouge">alias c='xclip -selection clipboard'</code>。</p>
+
+<p>mac 可以使用 <code class="language-plaintext highlighter-rouge">pbcopy</code></p>
+
+<p>另外还有一些骚操作，比如把终端默认控制字符 <code class="language-plaintext highlighter-rouge">ctrl-u</code> 替换成剪切当前行到系统剪贴板：</p>
+
+<p>（豆知识：bash 4.0 以上可以通过 <code class="language-plaintext highlighter-rouge">READLINE_LINE</code> 变量来操控已经输入的内容）</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">SYSTEM_CLIPBOARD_COMMAND</span><span class="o">=</span><span class="s1">'xclip -selection clipboard'</span>
+
+kill-to-system <span class="o">()</span>
+<span class="o">{</span>
+    <span class="nb">echo</span> <span class="s2">"</span><span class="nv">$READLINE_LINE</span><span class="s2">"</span> | <span class="nv">$SYSTEM_CLIPBOARD_COMMAND</span>
+    <span class="nv">READLINE_LINE</span><span class="o">=</span><span class="s2">""</span>
+<span class="o">}</span>
+
+<span class="nb">stty kill </span>undef
+<span class="nb">bind</span> <span class="nt">-x</span> <span class="s1">'"\C-u": kill-to-system'</span>
+</code></pre></div></div>
+
+<p>打开浏览器：<code class="language-plaintext highlighter-rouge">firefox --new-tab</code> 。这个我做了一个 alias。</p>
+
+<p>可以基于这个，加上各种引擎的搜索 url pattern，手堆一个从命令行唤起搜索的脚本。比如这是谷歌的：</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="c"># google.sh</span>
+
+<span class="nv">arrQUERY</span><span class="o">=</span><span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
+
+<span class="nv">QUERY</span><span class="o">=</span><span class="s2">""</span>
+
+<span class="k">for </span>word <span class="k">in</span> <span class="s2">"</span><span class="nv">$@</span><span class="s2">"</span>
+<span class="k">do
+    </span><span class="nv">QUERY</span><span class="o">=</span><span class="s2">"</span><span class="nv">$QUERY</span><span class="s2">+</span><span class="nv">$word</span><span class="s2">"</span>
+<span class="k">done
+
+</span>firefox <span class="nt">--new-tab</span> <span class="s2">"https://www.google.com/search?client=firefox-b-d&amp;q=</span><span class="nv">$QUERY</span><span class="s2">"</span>
+</code></pre></div></div>
+<p>用系统默认的应用打开：<code class="language-plaintext highlighter-rouge">xdg-open</code> 。</p>
+
+<p>mac 可以使用 <code class="language-plaintext highlighter-rouge">open</code> 。</p>
+
+<p>因为终端下跳转到目录，以及找文件都很快。如果能够迅速的调用 gui 工具，那么就有一种用搜索引擎一般的舒适感。</p>
+
+<h3 id="命令提示符">命令提示符</h3>
+
+<p>在提示符上面显示 git 仓库的状态。有许多项目实现了这一功能，我使用 <a href="https://github.com/magicmonty/bash-git-prompt">bash-git-prompt</a>。效果很简单：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/Code/slack-backend [joinChannel L|⚑ 2] 
+17:00 $ 
+</code></pre></div></div>
+
+<p>另一个更常见的，<a href="https://github.com/romkatv/gitstatus">romkatv/gitstatus</a> 和 <a href="https://github.com/akinomyoga/ble.sh">akinomyoga/ble.sh</a> （给 bash 提供语法高亮和检查，嗜好品）有冲突。</p>
+
+<h3 id="嗜好品">嗜好品</h3>
+
+<p>大多数 key binding 都是嗜好品，做得太多就会不适应一个裸体的 bash。我的键位绑定操作参见 <a href="https://github.com/ofey404/dotfiles/blob/master/bashrc">bashrc</a>。我略略绑定了几个。</p>
+
+<p>tui 工具系列：</p>
+<ul>
+  <li>git tui 工具。我使用 <a href="https://github.com/extrawurst/gitui">gitui</a>，准备将来研究下源码。</li>
+  <li>tui 文件管理器。我使用 <a href="https://github.com/ranger/ranger">ranger</a>。加上 bashrc 里面的一些小函数，起到浏览文件和『在自己不知道要找什么的时候找东西』的作用。</li>
+</ul>
+
+<p><a href="https://github.com/akinomyoga/ble.sh">akinomyoga/ble.sh</a>：给 bash 提供语法高亮，静态分析。一个日本人，北大二期高能物理博后写的。</p>
+
+<h2 id="游戏理解">游戏理解</h2>
+<p>尺有所长，寸有所短。经常用终端编码只是一种无害的嗜好。</p>
+
+<p>在我看来，它的好处有：</p>
+<ul>
+  <li>上下文简单。</li>
+  <li>使用大工具，比如 vscode 的时候，也可以偶尔 fallback 到终端。</li>
+  <li>对机器的预设少，偶尔在服务器上做事的时候会感到很安定。</li>
+  <li>对键盘操作的良好适应性。容易心流，很幸福。</li>
+</ul>
+
+<p>terminal 可以用不大的代价优化的不足：</p>
+<ul>
+  <li>命令很长，参数很多很难记
+    <ul>
+      <li>一个好的命令行备忘工具可以让它变得有趣。</li>
+    </ul>
+  </li>
+  <li>打路径很烦
+    <ul>
+      <li>确实很烦，但是一个自动跳转工具能把终端下的目录导航变成类似上网的体验。</li>
+    </ul>
+  </li>
+  <li>总体上来说，就是『因为靠近机器，所以有效操作数低下』——相对于已经进行了一层抽象的、安排良好的图形界面而言。
+    <ul>
+      <li>反过来如果能够自动化，能够相当好地提升有效操作数。</li>
+    </ul>
+  </li>
+</ul>
+
+<p>terminal 的决定性不足：</p>
+<ul>
+  <li>字符界面的表现力有限。</li>
+  <li>那些需要大量上下文才能（有效率地）完成的工作会很糟糕，比如说开发巨大的工程。终端工作流实际上是把众多小工具以一种代价较小的方式粘合在一起。
+    <ul>
+      <li>参见《UNIX 编程艺术》：五个编辑器的故事。</li>
+    </ul>
+  </li>
+</ul>
+
+
+    </div>
+
+  </body>
+</html>
