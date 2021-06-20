@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+{% assign uniq_posts_group=site.posts | group_by: "lang-ref" | sort: 'lang' %}
+
+<ul>
+  {% for group in uniq_posts_group %}
+    {% assign post=group.items | first %}
+    <li>
+
+      <div id="float-right">
+        {% assign multilang_posts=site.posts | where:"lang-ref", post.lang-ref | sort: 'lang' %}
+        {% if multilang_posts.size > 1 %}
+            {% for p in multilang_posts %}
+                <a href="{{ p.url }}" class="{{ p.lang }}" title="View in {{p.lang}}">{{ p.lang }}</a> 
+            {% endfor %}
+        {% endif %}
+      </div>
+
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      {{ post.excerpt }}
+    </li>
+  {% endfor %}
+</ul>

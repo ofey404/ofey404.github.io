@@ -1,0 +1,111 @@
+* {
+	background: #fbfcff;
+	color: #2d4654;
+	font-family: "Noto Sans", Calibri, sans-serif;
+}        
+
+body {
+	max-width: 650px;
+	margin: auto auto 3em auto;
+	font-size: 100%;
+}
+
+h1 {
+	margin-bottom: 0;
+}
+
+h1 > a {
+	text-decoration: none;
+	font-family: "Noto Sans", sans-serif;
+}
+
+.subtitle {
+	text-align: right;
+	margin: 0;
+	font-style: italic;
+}
+
+h2, h3, h4 {
+	color: #243b4a;
+}
+
+hr {
+	border-color: #805e73;
+}
+
+a, .subtitle {
+	color: #243b4a;
+}
+
+pre {
+	font-family: "Courier New", Courier, monospace;
+	padding: .5em;
+	overflow: auto;
+}
+
+code {
+	font-family: "Courier New", Courier, monospace;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+}
+
+table {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+table, th, td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+td {
+	text-align: center;
+}
+
+nav {
+	text-align: center;
+}
+
+.topbutton {
+	float: right;
+}
+
+#footnotes {
+	font-size: 80%;
+}
+
+#footer {
+	display: block;
+	text-align: right;
+	margin: 0;
+	font-style: italic;
+}
+
+#title {
+	text-align: center;
+}
+
+#float-right {
+	text-align: right;
+	float: right;
+}
+
+.good {
+	background-color: #85c0f9;
+}
+
+.less-good {
+	background-color: #ffcc33;
+}
+
+.least-good {
+	background-color: #f5793a;
+}
+
+.warn {
+	font-style: italic;
+}

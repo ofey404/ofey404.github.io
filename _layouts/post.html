@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+        <title>Blog of ofey404</title>
+    </head>
+    <body>
+        <div id="main">
+            {% include title.html %}
+            <hr>
+            {% include navigation.html %}
+            <hr>
+        </div>
+
+        <div id="float-right">{% include post-lang-options.html %}</div>
+        
+        <h2 id="title">{{ page.title }}</h2>
+        
+        {% assign ppp=page.path | split: "/" | last | split: "." %}
+
+        {{ content }}
+
+        <div style="text-align:right"><i>{{ page.date | date: '%B %d, %Y' }}</i></div>
+
+        <hr>
+        <p><a href="#top">[Back to top]</a></p>
+        <p><i>* Style sheet refers to <a href="https://briancallahan.net/">Dr. Brian Robert Callahan</a></i></p>
+
+    </body>
+</html>
