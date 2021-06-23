@@ -44,20 +44,21 @@ def handle_lang(file: Path):
         for line in f:
             if end:
                 print(line, end="")
+                continue
 
             kv = [s.strip() for s in line.split(":")]
             
             if kv[0] == "lang":
                 print(line.replace(kv[1], lang), end="")
                 met_lang = True
-            elif kv[0] == "lang_ref":
+            elif kv[0] == "lang-ref":
                 print(line.replace(kv[1], lang_ref), end="")
                 met_lang_ref = True
             elif line == "---\n" and met_3_dash:
                 if not met_lang:
-                    print("lang: {}", TAG2LANG[tag])
+                    print("lang: {}".format(TAG2LANG[tag]))
                 if not met_lang_ref:
-                    print("lang_ref: {}", lang_ref)
+                    print("lang_ref: {}".format(lang_ref))
                 print(line, end="")
                 end = True
             elif line == "---\n" and not met_3_dash:
