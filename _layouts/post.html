@@ -19,8 +19,6 @@
         
         <h2 id="title">{{ page.title }}</h2>
         
-        {% assign ppp=page.path | split: "/" | last | split: "." %}
-
         {{ content }}
 
         <div style="text-align:right"><i>{{ page.date | date: '%B %d, %Y' }}</i></div>

@@ -1,6 +1,8 @@
 {% assign posts=site.posts | where:"lang-ref", page.lang-ref | sort: 'lang' %}
 {% if posts.size > 1 %}
     {% for post in posts %}
-        <a href="{{ post.url }}" class="{{ post.lang }}" title="View in {{post.lang}}">{{ post.lang }}</a> 
+        {% if post.lang != page.lang %}
+            <a href="{{ post.url }}" class="{{ post.lang }}" title="View in {{post.lang}}">{{ post.lang }}</a> 
+        {% endif %}
     {% endfor %}
 {% endif %}
