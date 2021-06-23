@@ -36,6 +36,7 @@ def handle_lang(file: Path):
     lang = TAG2LANG[tag]
 
     with fileinput.input(file, inplace=True) as f:
+        # All `print` below has been redirected to original file.
         line = None
         met_3_dash = False
         met_lang = False
