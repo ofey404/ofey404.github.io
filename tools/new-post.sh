@@ -1,53 +1,70 @@
-if [[ "$1" == "" ]]; then
-    echo "Usage:"
-    echo "  ./new-post.sh ./_post"
-    exit 0
-fi
+#!/bin/bash
+# set -x
+set -euo pipefail
 
-post_dir=$1
+check_args() {
+	local args="$@"
 
-# Accept a space seperated string, replace spaces with dash.
-function space2dash() {
-    local ans=""
-    for word in $@; do
-        if [[ "$ans" == "" ]]; then
-            ans="$word"
-        else
-            ans="$ans-$word"
-        fi
-    done
-    echo $ans
+	if [[ "$args" == "" ]]; then
+		echo "Usage:"
+		echo "  ./new-post.sh ./_post"
+		exit 0
+	fi
 }
 
-echo "Enter Title of post:"
+# eg: space seperated line -> space-seperated-line
+space2dash() {
+	local args="$@"
 
-read title
+	local ans=""
+	for word in $args; do
+		if [[ "$ans" == "" ]]; then
+			ans="$word"
+		else
+			ans="$ans-$word"
+		fi
+	done
+	echo $ans
+}
 
-if [[ "$title" == "" ]]; then
-    echo "Error: title could't be empty."
-    exit 1
-fi
+create() {
+	local file="$1"
+	local title="$2"
 
-echo "Enter language postfix, default: en"
+	{
+		echo "---"
+		echo "layout: post"
+		echo "title:  \"$title\""
+		echo "date:   $(date +"%Y-%m-%d %H:%M:%S +0800")"
+		echo "---"
+	} >"$file"
+}
 
-read lan
+main() {
+	check_args "$@"
 
-if [[ "$lan" == "" ]]; then
-    lan="en"
-fi
+	local post_dir="$1"
 
-f="$post_dir/$(date +%Y-%m-%d)-$(space2dash $title).$lan.markdown"
+	echo "Enter Title of post:"
+	read -r title
+	if [[ "$title" == "" ]]; then
+		echo "Error: title could't be empty."
+		exit 1
+	fi
 
-if [[ -f "$f" ]]; then
-    echo "file $f exists."
-    exit 1
-fi
+	echo "Enter language postfix, default: en"
+	read -r lan
+	if [[ "$lan" == "" ]]; then
+		lan="en"
+	fi
 
-touch $f
+	f="$post_dir/$(date +%Y-%m-%d)-$(space2dash $title).$lan.markdown"
+	if [[ -f "$f" ]]; then
+		echo "file $f exists."
+		exit 1
+	fi
 
-echo "---" > $f
-echo "layout: post" >> $f
-echo "title:  \"$title\"" >> $f
-echo "date:   $(date +"%Y-%m-%d %H:%M:%S +0800")" >> $f
-echo "---" >> $f
+	create "$f" "$title"
+}
 
+main "$@"
