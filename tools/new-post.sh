@@ -47,7 +47,7 @@ touch $f
 
 echo "---" > $f
 echo "layout: post" >> $f
-echo "title:  \"$(space2dash $title)\"" >> $f
+echo "title:  \"$title\"" >> $f
 echo "date:   $(date +"%Y-%m-%d %H:%M:%S +0800")" >> $f
 echo "---" >> $f
 
