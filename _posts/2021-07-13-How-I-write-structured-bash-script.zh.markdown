@@ -128,11 +128,11 @@ foo() {
 - 超过 200 行代码。
 - 超过『保存某个东西到文件』程度的数据结构。
 
-shell script 处理太复杂的数据结构会很痛苦。虽然可以通过嵌入 jq 之类的数据操纵语言来完成，但是传参给 jq 又会受到 shell word splitting 的影响。例子详见 [stedolan/jq: runs from command line not in shell script #1124](https://github.com/stedolan/jq/issues/1124)
+shell script 处理太复杂的数据结构会很痛苦。虽然可以通过嵌入 jq 之类的数据操纵语言来完成，但是传参给 jq 又会受到 shell word splitting 的影响。例子详见 [stedolan/jq: runs from command line not in shell script #1124](https://github.com/stedolan/jq/issues/1124)。
 
 ## 静态检查和代码格式化
 
-静态检查可以使用 [koalaman/shellcheck](https://github.com/koalaman/shellcheck)
+静态检查可以使用 [koalaman/shellcheck](https://github.com/koalaman/shellcheck)。
 
 
 有趣的是，它会给出自己的 wiki 中每个错误的参考链接，很值得学习。
