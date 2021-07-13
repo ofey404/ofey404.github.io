@@ -59,7 +59,7 @@ def handle_lang(file: Path):
                 if not met_lang:
                     print("lang: {}".format(TAG2LANG[tag]))
                 if not met_lang_ref:
-                    print("lang_ref: {}".format(lang_ref))
+                    print("lang-ref: {}".format(lang_ref))
                 print(line, end="")
                 end = True
             elif line == "---\n" and not met_3_dash:
