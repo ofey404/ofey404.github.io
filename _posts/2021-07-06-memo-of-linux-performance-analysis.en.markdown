@@ -6,7 +6,7 @@ lang: English
 lang-ref: 2021-07-06-memo-of-linux-performance-analysis
 ---
 
-This is a short memo for linux performance analysis. 
+Linux performance analysis commands: `vmstat`, `sar` and so on.
 
 TL;DR:
 - CPU: `vmstat 1`
