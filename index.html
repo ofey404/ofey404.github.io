@@ -6,7 +6,7 @@ layout: default
 
 <ul>
   {% for group in uniq_posts_group %}
-    {% assign post=group.items | first %}
+    {% assign post=group.items | last %}
     <li>
 
       <div id="float-right">

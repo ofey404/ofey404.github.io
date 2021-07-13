@@ -8,4 +8,7 @@ new:
 	./tools/new-post.sh _posts/
 	./tools/lang-ref.py _posts/
 
+new-draft:
+	./tools/new-post.sh _drafts/
+
 .PHONY: lang-ref
