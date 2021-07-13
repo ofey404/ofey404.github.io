@@ -3,8 +3,7 @@ layout: post
 title:  "Memo of linux performance analysis command"
 date:   2021-07-06 13:24:48 +0800
 lang: English
-lang_ref: 2021-07-06-memo-of-linux-performance-analysis
-lang_ref: 2021-07-06-memo-of-linux-performance-analysis
+lang-ref: 2021-07-06-memo-of-linux-performance-analysis
 ---
 
 This is a short memo for linux performance analysis. 
