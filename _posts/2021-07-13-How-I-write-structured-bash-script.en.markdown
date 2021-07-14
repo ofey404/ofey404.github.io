@@ -39,7 +39,7 @@ control_style() {
     fi
 
     if (( my_var > 3 )); then
-    do_something
+        do_something
     fi
 }
 
