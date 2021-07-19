@@ -14,13 +14,10 @@ lang-ref: 2021-07-19-My-Idea-about-Terminal-Based-Presentation-Tools
 
 没有一个我试用的终端幻灯片程序达到了我心目中的效果，它们本来可以做得更加简洁、小巧而普适。因此我做了一个设计：
 
-幻灯片文件是带有 Markdown 注释的脚本，在预处理阶段解析，然后在讲演中把嵌入的代码传递给解释器（比如 bash 或者 python）。同时也可以在讲演过程中直接往解释器里面输入命令。
-
-这对任何能够逐行解释，并支持注释的脚本语言都适用。
-
-界面参考 [extrawurst/gitui](https://github.com/extrawurst/gitui) 。
-
-可以简单地将这种脚本导出成 Markdown 文本，随后再用其他工具转换为 pdf 等。
+- 幻灯片文件是带有 Markdown 注释的脚本，在预处理阶段解析，然后在讲演中把嵌入的代码传递给解释器（比如 bash 或者 python）。同时也可以在讲演过程中直接往解释器里面输入命令。
+  - 这对任何能够逐行解释，并支持注释的脚本语言都适用。
+- 界面参考 [extrawurst/gitui](https://github.com/extrawurst/gitui) 。
+- 可以简单地将这种脚本导出成 Markdown 文本，随后再用其他工具转换为 pdf 等。
 
 这个设计的最大工作量，大概来自于一个『在终端模拟器中运行的终端模拟器』，参考[zellij.dev](https://zellij.dev/)，工作量应当在一万行以下。
 
