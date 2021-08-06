@@ -17,7 +17,7 @@ lang-ref: 2021-08-06-cmu-15-721-paper-takeaway-1-5
 
 > M. Stonebraker, et al., [What Goes Around Comes Around](https://15721.courses.cs.cmu.edu/spring2020/papers/01-intro/whatgoesaround-stonebraker.pdf), in *Readings in Database Systems, 4th Edition*, 2006 *(Optional)*
 
-Main idea:
+**Main idea:**
 
 1. Understand the history of database to try not to repeat it.
 2. Ideas of databases: data model or interface. Few new ideas occurred.
@@ -25,7 +25,7 @@ Main idea:
 
 
 
-Takeaway:
+**Takeaway:**
 
 - Elephants of the market often settles technical debate.
 - Complex data model will fail, its simplified subset will live.
@@ -33,7 +33,7 @@ Takeaway:
 
 
 
-Systems:
+**Systems:**
 
 | Data model              | System                     | Interface                                          |
 | ----------------------- | -------------------------- | -------------------------------------------------- |
@@ -62,7 +62,7 @@ Systems:
 
 
 
-Main idea:
+**Main idea:**
 
 7 concurrent control algrithms, in 2 schemes(2PL and Timestamp Ordering), on a 1024 core simulator.
 
@@ -76,7 +76,7 @@ Bottlenecks to scalability: lock-thrashing, preemptive abort, deadlock, timestam
 
 
 
-Takeaway:
+**Takeaway:**
 
 | Bottleneck                 | Direction                                       |
 | -------------------------- | ----------------------------------------------- |
@@ -86,13 +86,13 @@ Takeaway:
 
 
 
-System: 
+**System:**
 
 - [mit-carbon/Graphite](https://github.com/mit-carbon/Graphite)
 
 
 
-Workload:
+**Workload:**
 
 - YCSB: Yahoo! Cloud Serving Benchmark.
   - Ziphan distribution.
@@ -108,7 +108,7 @@ Workload:
 
 ## An Empirical Evaluation of In-Memory Multi-Version Concurrency Control
 
-Main idea:
+**Main idea:**
 
 Scaling MVCC on modern multi-core, in-memory hardware setting.
 
@@ -125,7 +125,7 @@ Key design decisions:
 
 
 
-Takeaway:
+**Takeaway:**
 
 - Storage scheme is important, some are influenced by allocation scheme.
   - Delta storage: high write performance, not good at read/table scan.
@@ -138,7 +138,7 @@ Takeaway:
 
 
 
-System: 
+**System:**
 
 **TODO: Fill this table**
 
@@ -149,7 +149,7 @@ System:
 
 
 
-Workload:
+**Workload:**
 
 YCSB and TPC-C04 - Multi-Version Concurrency Control [Protocols]
 ======================
@@ -160,7 +160,7 @@ YCSB and TPC-C04 - Multi-Version Concurrency Control [Protocols]
 
 - T. Neumann, et al., [Fast Serializable Multi-Version Concurrency Control for Main-Memory Database Systems](https://15721.courses.cs.cmu.edu/spring2020/papers/04-mvcc2/p677-neumann.pdf), in *SIGMOD*, 2015 
 
-Main idea:
+**Main idea:**
 
 - Serializability validation: Transaction level validation(modified/deleted/created objects), use a Predicate Tree. Marginal overhead.
   - What goes around: [Precision locks - SIGMOID 81'](https://dl.acm.org/doi/abs/10.1145/582318.582340)
@@ -169,7 +169,7 @@ Main idea:
 
 
 
-Takeaway:
+**Takeaway:**
 
 It's good to know internals of current databases' implementation. They might be simple and out-dated with state-of-art hardware.
 
@@ -179,7 +179,7 @@ Eg: Current serializability validation implementation in 2.3, check entire read 
 
 
 
-System used:
+**System used:**
 
 Research on [HyPer](https://dbdb.io/db/hyper).
 
@@ -187,7 +187,7 @@ This MVCC model suits HTAP databases best, like [SAP HANA](https://www.sap.com/h
 
 
 
-Workload evaluated:
+**Workload evaluated:**
 
 
 
@@ -204,25 +204,25 @@ Workload evaluated:
 
 J. Böttcher, et al., [Scalable Garbage Collection for In-Memory MVCC Systems](https://15721.courses.cs.cmu.edu/spring2020/papers/05-mvcc3/p128-bottcher.pdf), in *VLDB*, 2019 
 
-Main idea:
+**Main idea:**
 
 - STEAM: Eagerly prune obsolete version.
 - Thread local minimum and peek.
 - Extra information in tuple: Insert list, attribute mask.
 
-Takeaway:
+**Takeaway:**
 
 In place GC would make system more robust to skew.
 
 
 
-System used:
+**System used:**
 
 Hyper.
 
 
 
-Workload evaluated:
+**Workload evaluated:**
 
 CH benchmark, a stress test for GC.
 
