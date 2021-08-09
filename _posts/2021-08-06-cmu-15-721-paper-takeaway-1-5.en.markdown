@@ -6,7 +6,7 @@ lang: English
 lang-ref: 2021-08-06-cmu-15-721-paper-takeaway-1-5
 ---
 
-[Youtube Playlist](https://www.youtube.com/playlist?list=PLSE8ODhjZXjasmrEd2_Yi1deeE360zv5O)
+[Youtube Playlist: 15-721 Advanced Database Systems (Spring 2020)](https://www.youtube.com/playlist?list=PLSE8ODhjZXjasmrEd2_Yi1deeE360zv5O)
 
 01 - History of Databases
 ==================
@@ -139,8 +139,6 @@ Key design decisions:
 
 
 **System:**
-
-**TODO: Fill this table**
 
 | Configuration | CC protocol | Storage Scheme | GC     | Index    |
 | ------------- | ----------- | -------------- | ------ | -------- |
